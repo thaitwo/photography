@@ -16,5 +16,9 @@ router.get('/contact', function(req, res, next) {
 	res.render('contact', { title: 'CONTACT'});
 });
 
+/* GET contact page */
+router.get('/funfun', function(req, res, next) {
+  res.render('funfun', { title: 'Woohhoooo!!!!'});
+});
 
 module.exports = router;
