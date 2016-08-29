@@ -7,17 +7,18 @@
 	<body>
 		<!-- Insert Body here -->
 		<div class="container">
-			<h1>THAI TU PHOTOGRAPHY</h1>
 
-			<% include ../views/navbar %>
+			<% include ../views/includes/_navbar %>
 
    			<div class="starter-template">
         		<%- body %>
+        		<% include ../views/includes/_gallerynav %>
     		</div>
 
 		</div><!-- /.container -->
 
-		<footer>Copyright &copy; 2016</footer>
+		<% include ../views/includes/_footer %>
+
 	</body>
 
 </html>

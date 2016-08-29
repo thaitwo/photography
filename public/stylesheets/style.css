@@ -5,12 +5,14 @@ body {
 
 a {
 	color: #00B7FF;
+  text-decoration: none;
 }
 
 h1 {
    	font: 40px "Source Sans Pro";
    	font-weight: bold;
    	text-align: center;
+    text-decoration: none;
 }
 
 h2 {
@@ -18,38 +20,74 @@ h2 {
 	text-align: center;
 }
 
-img {
+/*img {
 	position: relative;
 	width: 100%;
 	height: auto;
 }
-
+*/
+a.center {
+  float: center;
+}
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #000;
+}
+
+/*ul li {
+  list-style: none;
+  text-decoration:none;
+  display:inline-block;  
+  float:right;
+  position: absolute;
+  height: 35px;
+  margin: 0px 50px 0px 0px;
+}
+
+ul li a {
+  list-style-type: none;
+  font: 16px "Avenir Next";
+  font-weight: 500;
+  margin: 5px;
+  padding: 15px;
+  overflow: hidden;
 }
 
 li {
-    position: relative;
     float: right;
 }
 
 li a {
     display: block;
-    color: #ff0000;
+    color: #4DB6AC;
     text-align: center;
-    padding: 14px 16px;
+    padding: 5px 5px;
     text-decoration: none;
 }
 
 a:hover:not(.active) {
-    background-color: #eee;
+  color: #000000;
 }
 
 .active {
+  color: #000000;
 	background-color:#4CAF50;
 }
+
+footer {
+  font: 11px "Avenir Next";
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  position: absolute;
+  float: left;
+  height: 35px;
+  margin: 0px 50px 0px 0px;
+  color: #546E7A;
+  text-align: left;
+  padding: 10px 30px;
+  width: 300px;
+}
+
