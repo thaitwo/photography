@@ -1,0 +1,90 @@
+.homepage-hero {
+  height: 660px;
+  display: block;
+  box-sizing: border-box;
+  padding: 230px 0;
+  text-align: center;
+}
+
+.homepage-hero h1 {
+  font: 64px "Raleway", sans-serif;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  padding: 0 0 30px 0;
+}
+
+.homepage-hero h2 {
+	font: 42px "Euphoria Script", cursive;
+	text-align: center;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  margin: 0 0 -5px 0;
+}
+
+.homepage-hero p {
+  font: 14px "Raleway", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.05em;
+  padding: 170px 0 0 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.half-dome {
+  background: linear-gradient(
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)),
+    url("/images/half-dome-night.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bottom-arrow {
+  position: relative;
+  margin: 200px auto 0;
+  height: 60px;
+  width: 100%;
+}
+
+.bottom-arrow:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: #fff;
+  -webkit-transform: skew(0deg, 4deg);
+  -moz-transform: skew(0deg, 4deg);
+  -ms-transform: skew(0deg, 4deg);
+  -o-transform: skew(0deg, 4deg);
+  transform: skew(0deg, 4deg);
+}
+
+.bottom-arrow:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: #fff;
+  -webkit-transform: skew(0deg, -4deg);
+  -moz-transform: skew(0deg, -4deg);
+  -ms-transform: skew(0deg, -4deg);
+  -o-transform: skew(0deg, -4deg);
+  transform: skew(0deg, -4deg);
+}
+
+.homepage-gallery-header {
+  text-align: center;
+  margin-top: 60px;
+}

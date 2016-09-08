@@ -1,0 +1,55 @@
+.top-nav {
+  list-style-type: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  font-weight: 400;
+  overflow: hidden;
+  padding: 30px 0px 30px 0px;
+  #background: green;
+}
+
+.top-nav h1 {
+  float: left;
+  font: 24px "Raleway", sans-serif;
+  font-weight: 800;
+  margin: 0px 0px 0px 60px;
+  padding: 0px;
+  line-height: 40px;
+}
+
+.top-nav h1 em {
+  float: right;
+  font: 24px "Raleway", sans-serif;
+  font-weight: 300;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  line-height: 40px;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-nav a:hover:not(.active) {
+  color: #;
+}
+
+.top-nav ul {
+  float: right;
+  margin: 0px 60px 0px 0px;
+  #background: blue;
+}
+
+.top-nav li {
+  float: right;
+  font: 14px "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 60px;
+  letter-spacing: 0.1em;
+  line-height: 40px;
+  #background: purple;
+}

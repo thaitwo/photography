@@ -1,41 +1,10 @@
-body {
-  	padding: 10px;
-  	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+h3 {
+  font: 24px "Raleway", sans-serif;
+  font-weight: 300;
+  color: #455A64;
+  letter-spacing: 0.05em;
 }
 
-a {
-	color: #00B7FF;
-  text-decoration: none;
-}
-
-h1 {
-   	font: 40px "Source Sans Pro";
-   	font-weight: bold;
-   	text-align: center;
-    text-decoration: none;
-}
-
-h2 {
-	font: 25px "Source Sans Pro";
-	text-align: center;
-}
-
-/*img {
-	position: relative;
-	width: 100%;
-	height: auto;
-}
-*/
-a.center {
-  float: center;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
 
 /*ul li {
   list-style: none;

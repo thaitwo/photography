@@ -1,0 +1,151 @@
+.contact-hero {
+	display: block;
+	height: 300px;
+	box-sizing: border-box;
+	padding: 140px 0 60px 0;
+}
+
+.contact-hero h1 {
+	font: 48px "Raleway", sans-serif;
+	color: #fff;
+	font-weight: 800;
+	text-align: center;
+}
+
+.contact-hero h2 {
+	font: 32px "Euphoria Script", cursive;
+	text-align: center;
+	color: #fff;
+}
+
+.contact-hero p {
+	font: 14px "Raleway", sans-serif;
+}
+
+.contact-image {
+	background: linear-gradient(
+    rgba(0,0,0, 0.6),
+    rgba(0,0,0, 0.6)),
+		url("/images/landscape.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+	background-size: cover;
+}
+
+.contact-top-blurb {
+	display: block;
+	width: 440px;
+	margin: 10px auto;
+}
+
+.contact-top-blurb p {
+	font: 16px "Raleway", sans-serif;
+	font-weight: 300;
+	color: #455A64;
+	text-align: center;
+	margin: 50px auto 20px;
+	float: left;
+}
+
+.contact-block {
+	display: block;
+	width: 1000px;
+	box-sizing: border-box;
+	margin: 50px auto;
+}
+
+.contact-block p {
+	font: 16px "Raleway", sans-serif;
+	font-weight: 300;
+	color: #455A64;
+	text-align: center;
+}
+
+.contact-block input[type=text] {
+	background-color: #ECEFF1;
+	border: 0;
+	color: #455A64;
+	width: 430px;
+	padding: 15px;
+	font: 14px "Raleway", sans-serif;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+}
+
+.contact-block input[placeholder=""] {
+	color: #4DB6AC;
+}
+
+.contact-block textarea {
+	font: 14px "Raleway", sans-serif;
+	font-weight: 300;
+	border: 0;
+	color: #455A64;
+	background-color: #ECEFF1;
+	height: 165px;
+	width: 430px;
+	padding: 15px;
+	letter-spacing: 0.05em;
+}
+
+.contact-block ul li {
+	font: 14px "Raleway", sans-serif;
+	font-weight: 300;
+	color: #ECEFF1;
+	margin-bottom: 10px;
+}
+
+.contact-block img {
+	float: right;
+	width: 460px;
+}
+
+.contact-form {
+	width: 450px;
+	display: block;
+	float: left;
+}
+
+.contact-text {
+	width: 500px;
+	float: right;
+	margin-left: 80px;
+	display: block;
+}
+
+.header-bottom-arrow {
+  position: relative;
+  margin: 60px auto 0;
+  height: 80px;
+  width: 100%;
+}
+
+.header-bottom-arrow:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: #fff;
+  -webkit-transform: skew(0deg, 4deg);
+  -moz-transform: skew(0deg, 4deg);
+  -ms-transform: skew(0deg, 4deg);
+  -o-transform: skew(0deg, 4deg);
+  transform: skew(0deg, 4deg);
+}
+
+.header-bottom-arrow:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: #fff;
+  -webkit-transform: skew(0deg, -4deg);
+  -moz-transform: skew(0deg, -4deg);
+  -ms-transform: skew(0deg, -4deg);
+  -o-transform: skew(0deg, -4deg);
+  transform: skew(0deg, -4deg);
+}
