@@ -1,0 +1,82 @@
+.grid {
+	width: 960px;
+	margin: 80px auto;
+}
+
+.grid:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.grid .col-1 {
+	width: 50px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-2 {
+	width: 130px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-3 {
+	width: 210px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-4 {
+	width: 290px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-5 {
+	width: 370px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-6 {
+	width: 450px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-7 {
+	width: 530px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-8 {
+	width: 610px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-9 {
+	width: 690px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-10 {
+	width: 770px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-11 {
+	width: 850px;
+	margin: 0 15px;
+	float: left;
+}
+
+.grid .col-12 {
+	width: 930px;
+	margin: 0 15px;
+	float: left;
+}
