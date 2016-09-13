@@ -3,6 +3,7 @@
 	height: 300px;
 	box-sizing: border-box;
 	padding: 140px 0 60px 0;
+  background-color: #000;
 }
 
 .hero h1 {
