@@ -1,6 +1,6 @@
 .hero {
 	display: block;
-	height: 300px;
+	height: 280px;
 	box-sizing: border-box;
 	padding: 140px 0 60px 0;
   background-color: #000;
@@ -22,8 +22,8 @@
 }
 
 .hero.is-large {
-  height: 660px;
-  padding: 230px 0;
+  height: 600px;
+  padding: 210px 0;
   text-align: center;
 }
 
@@ -47,11 +47,11 @@
   background-size: cover;
 }
 
-.img-railay-beach {
+.img-landscape {
   background: linear-gradient(
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.4)),
-    url("/images/railay.jpg") no-repeat center center fixed;
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),
+    url("/images/landscape/landscape-1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -60,8 +60,8 @@
 
 .img-la-night {
 	background: linear-gradient(
-    rgba(0,0,0, 0.6),
-    rgba(0,0,0, 0.6)),
+    rgba(0,0,0, 0.7),
+    rgba(0,0,0, 0.7)),
 		url("/images/la-night.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
@@ -69,15 +69,37 @@
 	background-size: cover;
 }
 
-.img-bay-bridge {
+.img-gallery {
 	background: linear-gradient(
-    rgba(0,0,0, 0.6),
-    rgba(0,0,0, 0.6)),
-		url("/images/bay-bridge.jpg") no-repeat center center fixed;
+    rgba(0,0,0, 0.7),
+    rgba(0,0,0, 0.7)),
+		url("/images/landscape/landscape-11.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
 	background-size: cover;
+}
+
+.img-portrait {
+  background: linear-gradient(
+    rgba(0,0,0, 0.7),
+    rgba(0,0,0, 0.7)),
+    url("/images/portrait/portrait-5.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.img-food {
+  background: linear-gradient(
+    rgba(0,0,0, 0.7),
+    rgba(0,0,0, 0.7)),
+    url("/images/food/food-5.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .hero-bottom-arrow {
@@ -95,11 +117,11 @@
   height: 100%;
   width: 50%;
   background: #fff;
-  -webkit-transform: skew(0deg, 4deg);
-  -moz-transform: skew(0deg, 4deg);
-  -ms-transform: skew(0deg, 4deg);
-  -o-transform: skew(0deg, 4deg);
-  transform: skew(0deg, 4deg);
+  -webkit-transform: skew(0deg, 3deg);
+  -moz-transform: skew(0deg, 3deg);
+  -ms-transform: skew(0deg, 3deg);
+  -o-transform: skew(0deg, 3deg);
+  transform: skew(0deg, 3deg);
 }
 
 .hero-bottom-arrow:after {
@@ -109,13 +131,13 @@
   height: 100%;
   width: 50%;
   background: #fff;
-  -webkit-transform: skew(0deg, -4deg);
-  -moz-transform: skew(0deg, -4deg);
-  -ms-transform: skew(0deg, -4deg);
-  -o-transform: skew(0deg, -4deg);
-  transform: skew(0deg, -4deg);
+  -webkit-transform: skew(0deg, -3deg);
+  -moz-transform: skew(0deg, -3deg);
+  -ms-transform: skew(0deg, -3deg);
+  -o-transform: skew(0deg, -3deg);
+  transform: skew(0deg, -3deg);
 }
 
 .hero-bottom-arrow.is-large {
-  margin-top: 200px;
+  margin-top: 160px;
 }

@@ -1,6 +1,6 @@
 .gallery-nav {
 	position: relative;
-	margin: 30px auto 360px;
+	margin: 50px auto 360px;
 	padding: 1em 0 4em;
 	max-width: 1200px;
 	list-style: none;
@@ -17,7 +17,6 @@
 	max-width: 376px;
 	max-height: 360px;
 	width: 48%;
-	background: #3085a3;
 	text-align: center;
 	cursor: pointer;
 }
@@ -90,7 +89,8 @@
 }
 
 .image-card:hover {
-	background: #000;
+	background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+	background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
 }
 
 .image-card img {
@@ -100,7 +100,7 @@
 }
 
 .image-card:hover img {
-	opacity: 0.45;
+	opacity: 0.50;
 }
 
 .image-card figcaption::before,
@@ -160,99 +160,3 @@
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
-
-/*
-.image-card strong {
-	font: 32px "Raleway", sans-serif;
-	font-weight: 800;
-	letter-spacing: 0.1em;
-	color: #ffffff;
-	line-height: 320px;
-	display: block;
-	text-align: center;
-	text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-} 
-
-.image-card {
-	height: 320px;
-	width: 320px;
-	background: #eee;
-	margin: 0px 15px 0px 15px;
-	display: block;
-	float: left;
-	transition: all .3s;
-	text-decoration: none;
-	box-sizing: border-box;
-}
-
-.image-card:hover {
-	#box-shadow: 0 16px 16px rgba(0,0,0,.24), 0 0 16px rgba(0,0,0,.12);
-	-webkit-transition: opacity 0.55s, -webkit-transform 0.55s;
-	transition: opacity 0.55s, transform 0.55s;
-	-webkit-transform: translate3d(0,-20px,0);
-	transform: translate3d(0,-20px,0);
-}
-
-.bg-landscape {
-	background: -webkit-linear-gradient(
-		rgba(0,0,0,0.4),
-		rgba(0,0,0,0.4)),
-		url("/images/landscape.jpg");
-	background-size: cover;
-}
-
-.bg-portrait {
-	background: linear-gradient(
-		rgba(0,0,0,0.4),
-		rgba(0,0,0,0.4)),
-		url("/images/portrait.jpg");
-	background-size: cover;
-}
-
-.bg-food {
-	background: linear-gradient(
-		rgba(0,0,0,0.4),
-		rgba(0,0,0,0.4)),
-		url("/images/food.jpg");
-	background-size: cover;
-}
-
-.gallery-item {
-	font: 32px "Raleway", sans-serif;
-	font-weight: 700;
-	letter-spacing: 0.1em;
-	display: inline-block;
-	margin: auto;
-	text-align: center;
-	vertical-align: middle;
-	width: 30%;
-	background: yellow;
-}
-
-
-/*
-.background-landscape {
-}
-
-.background-landscape strong {
-	font: 24px "Raleway", sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-}
-
-.background-landscape em {
-	font: 12px "Raleway", sans-serif;
-	font-weight: 300px;
-	letter-spacing: 0.3em;
-}
-
-.background-portrait strong {
-	font: 24px "Raleway", sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-}
-
-.background-portrait em {
-	font: 12px "Raleway", sans-serif;
-	font-weight: 300px;
-	letter-spacing: 0.3em;
