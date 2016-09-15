@@ -86,10 +86,6 @@
   height: 100%;
   width: 50%;
   background: #fff;
-  -webkit-transform: skew(0deg, 3deg);
-  -moz-transform: skew(0deg, 3deg);
-  -ms-transform: skew(0deg, 3deg);
-  -o-transform: skew(0deg, 3deg);
   transform: skew(0deg, 3deg);
 }
 
@@ -100,10 +96,6 @@
   height: 100%;
   width: 50%;
   background: #fff;
-  -webkit-transform: skew(0deg, -3deg);
-  -moz-transform: skew(0deg, -3deg);
-  -ms-transform: skew(0deg, -3deg);
-  -o-transform: skew(0deg, -3deg);
   transform: skew(0deg, -3deg);
 }
 

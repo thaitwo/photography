@@ -35,7 +35,6 @@
   box-sizing: border-box;
   text-transform: uppercase;
   font-size: 1.25em;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -89,13 +88,11 @@
 }
 
 .image-card:hover {
-  background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
   background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
 }
 
 .image-card img {
   opacity: .6;
-  -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
 }
 
@@ -112,51 +109,42 @@
   left: 30px;
   content: '';
   opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
 }
 
 .image-card figcaption::before {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  -webkit-transform: scale(0,1);
   transform: scale(0,1);
 }
 
 .image-card figcaption::after {
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
-  -webkit-transform: scale(1,0);
   transform: scale(1,0);
 }
 
 .image-card h2 {
   padding-top: 40%;
-  -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
-  -webkit-transform: translate3d(0,-20px,0);
   transform: translate3d(0,-20px,0);
 }
 
 .image-card p {
   padding: 10px 2.5em;
   opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0,20px,0);
   transform: translate3d(0,20px,0);
 }
 
 .image-card:hover figcaption::before,
 .image-card:hover figcaption::after {
   opacity: 1;
-  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
 .image-card:hover h2,
 .image-card:hover p {
   opacity: 1;
-  -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
