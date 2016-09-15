@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-	</head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/default-skin/default-skin.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/about.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/button.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/gallery.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/grid.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/form.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/text.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/contact.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/hero.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/top-nav.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/gallery-nav.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Euphoria+Script" rel="stylesheet">
+  </head>
 
-	<body>
-		<!-- Insert Body here -->
-		<div class="container">
+  <body>
+    <!-- Insert Body here -->
+    <div class="container">
 
-			<% include ../views/includes/_top-nav %>
+      <% include ../views/includes/_top-nav %>
 
-   			<div class="starter-template">
-        		<%- body %>
-        		<% include ../views/includes/_gallery-nav %>
-    		</div>
+        <div class="starter-template">
+            <%- body %>
+            <div class="clear"></div>
+        </div>
 
-		</div><!-- /.container -->
+    </div><!-- /.container -->
 
-		<% include ../views/includes/_footer %>
+    <% include ../views/includes/_footer %>
 
-	</body>
+    <script src="/javascripts/photoswipe.min.js"></script>
+    <script src="/javascripts/photoswipe-ui-default.min.js"></script>
+
+  </body>
 
 </html>
 
