@@ -1,162 +1,162 @@
 .gallery-nav {
-	position: relative;
-	margin: 50px auto 360px;
-	padding: 1em 0 4em;
-	max-width: 1200px;
-	list-style: none;
-	text-align: center;
+  position: relative;
+  margin: 50px auto 360px;
+  padding: 1em 0 4em;
+  max-width: 1200px;
+  list-style: none;
+  text-align: center;
 }
 
 /* Common style */
 .image-card {
-	position: relative;
-	float: left;
-	overflow: hidden;
-	margin: 10px 1%;
-	min-width: 320px;
-	max-width: 376px;
-	max-height: 360px;
-	width: 48%;
-	text-align: center;
-	cursor: pointer;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 376px;
+  max-height: 360px;
+  width: 48%;
+  text-align: center;
+  cursor: pointer;
 }
 
 .image-card img {
-	position: relative;
-	display: block;
-	min-height: 100%;
-	max-width: 100%;
-	opacity: 0.8;
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
 }
 
 .image-card figcaption {
-	padding: 2em;
-	color: #fff;
-	box-sizing: border-box;
-	text-transform: uppercase;
-	font-size: 1.25em;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+  padding: 2em;
+  color: #fff;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .image-card figcaption::before,
 .image-card figcaption::after {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .image-card figcaption,
 .image-card figcaption > a {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Anchor will cover the whole item by default */
 .image-card figcaption > a {
-	z-index: 1000;
-	text-indent: 200%;
-	white-space: nowrap;
-	font-size: 0;
-	opacity: 0;
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
 }
 
 .image-card h2 span {
-	font-weight: 800;
+  font-weight: 800;
 }
 
 .image-card h2,
 .image-card p {
-	margin: 0;
+  margin: 0;
 }
 
 .image-card h2 {
-	font: 36px "Raleway", sans-serif;
-	font-weight: 800;
-	letter-spacing: 0.05em;
+  font: 36px "Raleway", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.05em;
 }
 
 .image-card p {
-	font: 14px "Raleway", sans-serif;
-	font-weight: 300;
-	letter-spacing: 2px;
-	font-size: 68.5%;
+  font: 14px "Raleway", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 68.5%;
 }
 
 .image-card {
-	background: #000;
+  background: #000;
 }
 
 .image-card:hover {
-	background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
-	background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
+  background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+  background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
 }
 
 .image-card img {
-	opacity: .6;
-	-webkit-transition: opacity 0.35s;
-	transition: opacity 0.35s;
+  opacity: .6;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
 }
 
 .image-card:hover img {
-	opacity: 0.50;
+  opacity: 0.50;
 }
 
 .image-card figcaption::before,
 .image-card figcaption::after {
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	bottom: 30px;
-	left: 30px;
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
 }
 
 .image-card figcaption::before {
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
 }
 
 .image-card figcaption::after {
-	border-right: 1px solid #fff;
-	border-left: 1px solid #fff;
-	-webkit-transform: scale(1,0);
-	transform: scale(1,0);
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1,0);
+  transform: scale(1,0);
 }
 
 .image-card h2 {
-	padding-top: 40%;
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,-20px,0);
-	transform: translate3d(0,-20px,0);
+  padding-top: 40%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,-20px,0);
+  transform: translate3d(0,-20px,0);
 }
 
 .image-card p {
-	padding: 10px 2.5em;
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,20px,0);
-	transform: translate3d(0,20px,0);
+  padding: 10px 2.5em;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,20px,0);
+  transform: translate3d(0,20px,0);
 }
 
 .image-card:hover figcaption::before,
 .image-card:hover figcaption::after {
-	opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .image-card:hover h2,
 .image-card:hover p {
-	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }

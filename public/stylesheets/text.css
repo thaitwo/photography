@@ -1,15 +1,15 @@
 /* Body Text Styles */
 .text-subtitle {
-	font: 24px "Raleway", sans-serif;
-	font-weight: 300;
-	color: #455A64;
+  font: 24px "Raleway", sans-serif;
+  font-weight: 300;
+  color: #455A64;
 }
 
 .text-content {
-	font: 16px "Raleway", sans-serif;
-	font-weight: 300;
-	color: #455A64;
-	line-height: 24px;
+  font: 16px "Raleway", sans-serif;
+  font-weight: 300;
+  color: #455A64;
+  line-height: 24px;
 }
 
 .homepage-gallery-nav-header {
@@ -19,6 +19,6 @@
 
 /* Text Alignment */
 .text-content-center {
-	margin: 60px auto 20px;
-	text-align: center;
+  margin: 60px auto 20px;
+  text-align: center;
 }

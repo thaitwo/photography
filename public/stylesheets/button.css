@@ -1,33 +1,33 @@
 /* -- Default button styles -- */
 .button {
-	font: 14px "Raleway", sans-serif;
-	font-weight: 300;
-	display: inline-block;
-	letter-spacing: 0.1em;
-	padding: 14px 36px;
-	text-decoration: none;
+  font: 14px "Raleway", sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  padding: 14px 36px;
+  text-decoration: none;
 }
 
 /* Various button styles */
 .button-secondary {
-	color: #fff;
-	background-color: #64B5F6;
+  color: #fff;
+  background-color: #64B5F6;
 }
 
 .button-secondary:hover {
-	background-color: #2196F3;
-	transition: all .3s;
+  background-color: #2196F3;
+  transition: all .3s;
 }
 
 .button-primary {
-	color: #fff;
+  color: #fff;
   border: 1px solid #fff;
   letter-spacing: 0.2em;
   text-align: center;
 }
 
 .button-primary:hover {
-	background: #fff;
+  background: #fff;
   color: #000;
   transition: all .3s;
 }

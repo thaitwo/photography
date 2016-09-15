@@ -1,82 +1,82 @@
 .grid {
-	width: 960px;
-	margin: 80px auto;
+  width: 960px;
+  margin: 80px auto;
 }
 
 .grid:after {
-	content: "";
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .grid .col-1 {
-	width: 60px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 60px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-2 {
-	width: 140px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 140px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-3 {
-	width: 220px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 220px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-4 {
-	width: 300px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 300px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-5 {
-	width: 380px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 380px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-6 {
-	width: 460px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 460px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-7 {
-	width: 520px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 520px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-8 {
-	width: 600px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 600px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-9 {
-	width: 680px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 680px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-10 {
-	width: 760px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 760px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-11 {
-	width: 840px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 840px;
+  margin: 0 10px 18px;
+  float: left;
 }
 
 .grid .col-12 {
-	width: 920px;
-	margin: 0 10px 18px;
-	float: left;
+  width: 920px;
+  margin: 0 10px 18px;
+  float: left;
 }
