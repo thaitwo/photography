@@ -7,13 +7,12 @@ var $next = $('#next');
 var $prev = $('#prev');
 
 
-// LOOP THROUGH ARRAY OF LINKS
+// LOOP THROUGH ARRAY OF LINKS AND DISPLAY IMAGE
 
 $links.each(function(index, item) {
 
   $(item).click(function(event) {
     event.preventDefault();
-    // Set currentIndex to 0
     currentIndex = index;
     var link = event.currentTarget;
     var imageUrl = link.href;
@@ -59,8 +58,6 @@ $next.click(function() {
     nextIndex = currentIndex + 1;
     currentIndex = nextIndex;
   }
-
-  console.log($links[nextIndex]);
 
   var image = $('<img>');
   image.attr({
