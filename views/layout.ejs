@@ -7,10 +7,10 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/default-skin/default-skin.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/button.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/grid.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/animate.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/form.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/test.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/text.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/viewer.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/gallery.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/hero.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/top-nav.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/gallery-nav.css">
@@ -20,27 +20,17 @@
 
   </head>
   <body>
-    <!-- Insert Body here -->
-    <div class="container" id="dog">
 
-      <% include ../views/includes/_top-nav %>
-
-        <div class="starter-template">
-            <%- body %>
-            <div class="clear"></div>
-        </div>
-
-    </div><!-- /.container -->
-
+    <% include ../views/includes/_top-nav %>
+    <%- body %>
+    <div class="clear"></div>
     <% include ../views/includes/_footer %>
-    <% include ../views/includes/_photoswipe %>
 
     <script src="/javascripts/jquery-3.1.0.js"></script>
     <script src="/javascripts/photoswipe.min.js"></script>
     <script src="/javascripts/photoswipe-ui-default.min.js"></script>
-    <script src="/javascripts/test.js"></script>
+    <script src="/javascripts/gallery.js"></script>
 
   </body>
-
 </html>
 

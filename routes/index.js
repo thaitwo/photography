@@ -36,4 +36,12 @@ router.get('/gallery/food', function(req, res, next) {
   res.render('gallery-food', { title: 'Food'});
 });
 
+/* GET freestyle page */
+router.get('/freestyle', function(req, res, next) {
+  res.render('freestyle', {
+  	title: 'Freestyle',
+  	layout: 'layout-freestyle'
+  });
+});
+
 module.exports = router;

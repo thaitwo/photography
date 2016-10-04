@@ -1,55 +1,104 @@
-/*
-+ Find all links and create a var for them
-+ Loop through all links and create an object for photoswipe 
-- Add a click handler to all links that launches photoswipe when any link is click (canceling out the default click event) 
-- Create a single function for all of this logic (ex. activatePhotoswipe() )
-- Call that new function when the web page has loaded (tip. $(document).ready.. 
-*/
+var $viewer = $('.viewer');
+var $imageviewer = $('.imageviewer');
+var $links = $('.gallery a');
+var $closeviewer = $('.closeviewer');
+var currentIndex = 0;
+var $next = $('#next');
+var $prev = $('#prev');
 
-// PHOTOSWIPE FUNCTION
 
-// Activate Gallery
-var activateGallery = function() {
+// LOOP THROUGH ARRAY OF LINKS
 
-  // Register all HTML elements
-  var container = document.querySelectorAll('.pswp')[0];
-  var links = $('.gallery a');
+$links.each(function(index, item) {
 
-  // Empty array of items
-  var items = [];
+  $(item).click(function(event) {
+    event.preventDefault();
+    // Set currentIndex to 0
+    currentIndex = index;
+    var link = event.currentTarget;
+    var imageUrl = link.href;
 
-  // Loop through all HTML links
-  links.each(function() {
-
-    // Push data for each link into array
-    items.push({
-      src: this.href,
-      w: 900,
-      h: 600,
-    });
-  });
-
-  // Give Photoswipe a container and date for images
-  var gallery = new PhotoSwipe(container, false, items);
-
-  // Activate Photoswipe on image click
-  // links.on('click', function(event) {
-  //   event.preventDefault();
-  //   console.log(event);
-  //   gallery.init();
-  // });
-  links.on('click', function(event) {
     console.log(event);
-    backgroundColor = 'green';
-    gallery.init();
+
+    $viewer.addClass('is-visible');
+
+    var image = $('<img>');
+    image.attr({
+      src: imageUrl,
+      width: 900,
+      height: 600,
+      alt: 'Larger image'
+    });
+
+    image.hide();
+
+    $imageviewer.html(image);
+
+    image.fadeIn(500);
   });
-};
+})
 
 
+// CLOSE GALLERY VIEWER
 
-
-// CALL PHOTOSWIPE FUNCTION
-
-$(document).ready(function() {
-  activateGallery();
+$closeviewer.click(function() {
+  $viewer.removeClass('is-visible');
 });
+
+
+// NEXT BUTTON
+
+$next.click(function() {
+  var nextIndex;
+
+  if (currentIndex === $links.length - 1) {
+    currentIndex = 0;
+    nextIndex = 0;
+  }
+  else {
+    nextIndex = currentIndex + 1;
+    currentIndex = nextIndex;
+  }
+
+  console.log($links[nextIndex]);
+
+  var image = $('<img>');
+  image.attr({
+    src: $links[nextIndex],
+    width: 900,
+    height: 600,
+  });
+
+  image.hide();
+
+  $imageviewer.html(image);
+
+  image.fadeIn(500);
+});
+
+
+// PREVIOUS BUTTON
+
+$prev.click(function() {
+  if (currentIndex === 0) {
+    currentIndex = $links.length;
+  }
+
+  var prevIndex = currentIndex - 1;
+  currentIndex = prevIndex;
+  console.log($links[prevIndex]);
+
+  var image = $('<img>');
+  image.attr({
+    src: $links[prevIndex],
+    width: 900,
+    height: 600,
+  });
+
+  image.hide();
+
+  $imageviewer.html(image);
+
+  image.fadeIn(500);
+});
+
