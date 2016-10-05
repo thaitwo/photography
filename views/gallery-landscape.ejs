@@ -1,40 +1,23 @@
 <%- include('../views/includes/_hero', {background:"img-landscape"}); %>
 
-<div id="message">
-
-</div>
-
-<div id="viewer" class="viewer">
-
-  <i class="closeviewer fa fa-times fa-3x"></i>
-
-  <i id="prev" class="fa fa-chevron-left fa-3x"></i>
-  <i id="next" class="fa fa-chevron-right fa-3x"></i>
-
-  <div class="imageviewer">
-    <!-- Image goes here -->
-  </div>
-
-  <div class="caption"></div>
-
-</div>
-
 <div class="grid gallery">
-  <a class="col-4" href="/images/landscape/landscape-1.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-1.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-2.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-2.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-9.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-9.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-4.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-4.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-5.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-5.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-6.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-6.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-7.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-7.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-8.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-8.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-3.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-3.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-10.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-10.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-11.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-11.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-12.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-12.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-13.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-13.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-14.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-14.jpg"></a>
-  <a class="col-4" href="/images/landscape/landscape-15.jpg"><img src="/images/thumbnails-landscape/landscape-thumbnail-15.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-1.jpg" title="Bay Bridge during a summer night"><img src="/images/thumbnails-landscape/landscape-thumbnail-1.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-2.jpg" title="Lake Tahoe"><img src="/images/thumbnails-landscape/landscape-thumbnail-2.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-9.jpg" title="Half Dome, Yosemite"><img src="/images/thumbnails-landscape/landscape-thumbnail-9.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-4.jpg" title="Railay Beach, Thailand"><img src="/images/thumbnails-landscape/landscape-thumbnail-4.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-5.jpg" title="New York City from atop the Rockefeller Center"><img src="/images/thumbnails-landscape/landscape-thumbnail-5.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-6.jpg" title="Los Angeles night traffic"><img src="/images/thumbnails-landscape/landscape-thumbnail-6.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-7.jpg" title="View from Highway 1"><img src="/images/thumbnails-landscape/landscape-thumbnail-7.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-8.jpg" title="McWay Falls, Big Sur"><img src="/images/thumbnails-landscape/landscape-thumbnail-8.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-3.jpg" title="Railay Beach, Thailand"><img src="/images/thumbnails-landscape/landscape-thumbnail-3.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-10.jpg" title="Sunrise view from atop Half Dome, Yosemite"><img src="/images/thumbnails-landscape/landscape-thumbnail-10.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-11.jpg" title="Berry Creek Falls, Big Basin"><img src="/images/thumbnails-landscape/landscape-thumbnail-11.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-12.jpg" title="9/11 Memorial, New York"><img src="/images/thumbnails-landscape/landscape-thumbnail-12.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-13.jpg" title="Marlette Lake, Tahoe"><img src="/images/thumbnails-landscape/landscape-thumbnail-13.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-14.jpg" title="San Gregorio State Beach"><img src="/images/thumbnails-landscape/landscape-thumbnail-14.jpg"></a>
+  <a class="col-4" href="/images/landscape/landscape-15.jpg" title="View of Bixby Bridge on Highway 1"><img src="/images/thumbnails-landscape/landscape-thumbnail-15.jpg"></a>
 </div>
+
+<% include ../views/includes/_viewer %>
 
 <% include ../views/includes/_gallery-nav %>

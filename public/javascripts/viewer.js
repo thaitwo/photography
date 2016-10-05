@@ -5,17 +5,21 @@ var $closeviewer = $('.closeviewer');
 var currentIndex = 0;
 var $next = $('#next');
 var $prev = $('#prev');
+var $caption = $('.caption');
 
 
-// LOOP THROUGH ARRAY OF LINKS AND DISPLAY IMAGE
+// GALERY VIEW FUNCTION
 
-$links.each(function(index, item) {
+function startView() {
+  // LOOP THROUGH ARRAY OF LINKS AND DISPLAY IMAGE
+  $links.each(function(index, item) {
 
   $(item).click(function(event) {
     event.preventDefault();
     currentIndex = index;
     var link = event.currentTarget;
     var imageUrl = link.href;
+    var title = link.title;
 
     console.log(event);
 
@@ -24,14 +28,13 @@ $links.each(function(index, item) {
     var image = $('<img>');
     image.attr({
       src: imageUrl,
-      width: 900,
-      height: 600,
       alt: 'Larger image'
     });
 
     image.hide();
 
     $imageviewer.html(image);
+    $caption.text(title);
 
     image.fadeIn(500);
   });
@@ -59,17 +62,17 @@ $next.click(function() {
     currentIndex = nextIndex;
   }
 
+  var imageUrl = $links[nextIndex].href;
+  var title = $links[nextIndex].title;
+
   var image = $('<img>');
   image.attr({
-    src: $links[nextIndex],
-    width: 900,
-    height: 600,
+    src: imageUrl,
   });
 
   image.hide();
-
   $imageviewer.html(image);
-
+  $caption.text(title);
   image.fadeIn(500);
 });
 
@@ -83,19 +86,24 @@ $prev.click(function() {
 
   var prevIndex = currentIndex - 1;
   currentIndex = prevIndex;
-  console.log($links[prevIndex]);
+  var imageUrl = $links[prevIndex].href; 
+  var title = $links[prevIndex].title; 
 
   var image = $('<img>');
   image.attr({
-    src: $links[prevIndex],
-    width: 900,
-    height: 600,
+    src: imageUrl,
   });
 
   image.hide();
-
   $imageviewer.html(image);
-
+  $caption.text(title);
   image.fadeIn(500);
 });
+}
 
+
+$(document).ready(function() {
+  if($('.viewer')) {
+    startView(); 
+  }
+})
