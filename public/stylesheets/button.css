@@ -9,15 +9,6 @@
 }
 
 /* Various button styles */
-.button-secondary {
-  color: #fff;
-  background-color: #64B5F6;
-}
-
-.button-secondary:hover {
-  background-color: #2196F3;
-  transition: all .3s;
-}
 
 .button-primary {
   color: #fff;
@@ -30,4 +21,31 @@
   background: #fff;
   color: #000;
   transition: all .3s;
+}
+
+.button-secondary {
+  color: #fff;
+  background-color: #64B5F6;
+}
+
+.button-secondary:hover {
+  background-color: #2196F3;
+  transition: all .3s;
+}
+
+.button-tertiary {
+  font: 16px "Raleway", sans-serif;
+  margin: 17px 0px;
+  color: #fff;
+  background-color: #64B5F6;
+  padding: 21px;
+}
+
+.button-tertiary:hover {
+  background-color: #2196F3;
+  transition: all .3s;
+}
+
+.button-wide {
+  display: block;
 }

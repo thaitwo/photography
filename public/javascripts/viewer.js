@@ -8,97 +8,73 @@ var $prev = $('#prev');
 var $caption = $('.caption');
 
 
-// GALERY VIEW FUNCTION
+
+function createImage(link) {
+  var imageUrl = link.href;
+  var title = link.title;
+  var image = $('<img>');
+  image.attr({
+    src: imageUrl,
+  });
+
+  image.hide();
+  $imageviewer.html(image);
+  $caption.text(title);
+  image.fadeIn(500);
+};
+
+
+
+// GALLERY VIEW FUNCTION
 
 function startView() {
   // LOOP THROUGH ARRAY OF LINKS AND DISPLAY IMAGE
   $links.each(function(index, item) {
+    $(item).click(function(event) {
+      event.preventDefault();
+      currentIndex = index;
+      var link = event.currentTarget;
 
-  $(item).click(function(event) {
-    event.preventDefault();
-    currentIndex = index;
-    var link = event.currentTarget;
-    var imageUrl = link.href;
-    var title = link.title;
-
-    console.log(event);
-
-    $viewer.addClass('is-visible');
-
-    var image = $('<img>');
-    image.attr({
-      src: imageUrl,
-      alt: 'Larger image'
+      $viewer.addClass('is-visible');
+      createImage(link);
     });
-
-    image.hide();
-
-    $imageviewer.html(image);
-    $caption.text(title);
-
-    image.fadeIn(500);
-  });
-})
+  })
 
 
-// CLOSE GALLERY VIEWER
-
-$closeviewer.click(function() {
-  $viewer.removeClass('is-visible');
-});
-
-
-// NEXT BUTTON
-
-$next.click(function() {
-  var nextIndex;
-
-  if (currentIndex === $links.length - 1) {
-    currentIndex = 0;
-    nextIndex = 0;
-  }
-  else {
-    nextIndex = currentIndex + 1;
-    currentIndex = nextIndex;
-  }
-
-  var imageUrl = $links[nextIndex].href;
-  var title = $links[nextIndex].title;
-
-  var image = $('<img>');
-  image.attr({
-    src: imageUrl,
+  // CLOSE GALLERY VIEWER
+  $closeviewer.click(function() {
+    $viewer.removeClass('is-visible');
   });
 
-  image.hide();
-  $imageviewer.html(image);
-  $caption.text(title);
-  image.fadeIn(500);
-});
 
+  // NEXT BUTTON
+  $next.click(function() {
+    var nextIndex;
 
-// PREVIOUS BUTTON
+    if (currentIndex === $links.length - 1) {
+      currentIndex = 0;
+      nextIndex = 0;
+    }
+    else {
+      nextIndex = currentIndex + 1;
+      currentIndex = nextIndex;
+    }
 
-$prev.click(function() {
-  if (currentIndex === 0) {
-    currentIndex = $links.length;
-  }
-
-  var prevIndex = currentIndex - 1;
-  currentIndex = prevIndex;
-  var imageUrl = $links[prevIndex].href; 
-  var title = $links[prevIndex].title; 
-
-  var image = $('<img>');
-  image.attr({
-    src: imageUrl,
+    createImage($links[nextIndex]);
   });
 
-  image.hide();
-  $imageviewer.html(image);
-  $caption.text(title);
-  image.fadeIn(500);
-});
+
+  // PREVIOUS BUTTON
+  $prev.click(function() {
+    if (currentIndex === 0) {
+      currentIndex = $links.length;
+    }
+
+    var prevIndex = currentIndex - 1;
+    currentIndex = prevIndex;
+
+    createImage($links[prevIndex]);
+  });
 }
 
 
