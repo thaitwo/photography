@@ -1,13 +1,15 @@
 <%- include('../views/includes/_hero', {background:"img-food"}); %>
 
-<div class="grid">
-  <a class="col-4" href="/images/food/food-1.jpg"><img src="/images/thumbnails-food/food-thumbnail-1.jpg"></a>
-  <a class="col-4" href="/images/food/food-2.jpg"><img src="/images/thumbnails-food/food-thumbnail-2.jpg"></a>
-  <a class="col-4" href="/images/food/food-3.jpg"><img src="/images/thumbnails-food/food-thumbnail-3.jpg"></a>
-  <a class="col-4" href="/images/food/food-4.jpg"><img src="/images/thumbnails-food/food-thumbnail-4.jpg"></a>
-  <a class="col-4" href="/images/food/food-5.jpg"><img src="/images/thumbnails-food/food-thumbnail-5.jpg"></a>
-  <a class="col-4" href="/images/food/food-6.jpg"><img src="/images/thumbnails-food/food-thumbnail-6.jpg"></a>
-  <a class="col-4" href="/images/food/food-7.jpg"><img src="/images/thumbnails-food/food-thumbnail-7.jpg"></a>
+<div id="box" class="grid gallery">
+  <a class="col-4" href="/images/food/food-1.jpg" title="BBQ Pulled Pork Sandwich"><img src="/images/thumbnails-food/food-thumbnail-1.jpg"></a>
+  <a class="col-4" href="/images/food/food-2.jpg" title="Pad Kee Mao"><img src="/images/thumbnails-food/food-thumbnail-2.jpg"></a>
+  <a class="col-4" href="/images/food/food-3.jpg" title="Chicken Noodle Bowl"><img src="/images/thumbnails-food/food-thumbnail-3.jpg"></a>
+  <a class="col-4" href="/images/food/food-4.jpg" title="Tiger Beer"><img src="/images/thumbnails-food/food-thumbnail-4.jpg"></a>
+  <a class="col-4" href="/images/food/food-5.jpg" title="Chow Fun in Malaysia"><img src="/images/thumbnails-food/food-thumbnail-5.jpg"></a>
+  <a class="col-4" href="/images/food/food-6.jpg" title="Ramen at Airport in China"><img src="/images/thumbnails-food/food-thumbnail-6.jpg"></a>
+  <a class="col-4" href="/images/food/food-7.jpg" title="Chicken Tikka at Indikitch, New York"><img src="/images/thumbnails-food/food-thumbnail-7.jpg"></a>
 </div>
+
+<% include ../views/includes/_viewer %>
 
 <% include ../views/includes/_gallery-nav %>
