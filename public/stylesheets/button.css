@@ -10,42 +10,29 @@
 
 /* Various button styles */
 
-.button-primary {
+.button.primary {
   color: #fff;
   border: 1px solid #fff;
   letter-spacing: 0.2em;
   text-align: center;
 }
 
-.button-primary:hover {
+.button.primary:hover {
   background: #fff;
   color: #000;
   transition: all .3s;
 }
 
-.button-secondary {
+.button.secondary {
   color: #fff;
   background-color: #64B5F6;
 }
 
-.button-secondary:hover {
+.button.secondary:hover {
   background-color: #2196F3;
   transition: all .3s;
 }
 
-.button-tertiary {
-  font: 16px "Raleway", sans-serif;
-  margin: 17px 0px;
-  color: #fff;
-  background-color: #64B5F6;
-  padding: 21px;
-}
-
-.button-tertiary:hover {
-  background-color: #2196F3;
-  transition: all .3s;
-}
-
-.button-wide {
-  display: block;
+.button.medium-text {
+  font-size: 16px;
 }
