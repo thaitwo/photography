@@ -1,11 +1,11 @@
 var $viewer = $('.viewer');
-var $imageviewer = $('.imageviewer');
+var $imageviewer = $('.viewer-image-container');
 var $links = $('.gallery a');
-var $closeviewer = $('.closeviewer');
+var $closeviewer = $('.viewer-close-button');
 var currentIndex = 0;
 var $next = $('#next');
 var $prev = $('#prev');
-var $caption = $('.caption');
+var $caption = $('.viewer-caption');
 
 
 
