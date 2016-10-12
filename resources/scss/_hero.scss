@@ -1,0 +1,112 @@
+/* HERO
+============================================================== */
+
+.hero {
+  display: block;
+  height: 280px;
+  box-sizing: border-box;
+  padding: 140px 0 60px 0;
+  background-color: $black;
+
+  h1 {
+    font-family: $font-family;
+    font-size: $font-size-5x;
+    color: $white;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: $font-family-secondary;
+    font-size: 42px;
+    text-align: center;
+    color: $white;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    margin: 0 0 -5px 0;
+  }
+
+  &.is-large {
+    height: 600px;
+    padding: 210px 0;
+    text-align: center;
+
+    h1 {
+      font-family: $font-family;
+      font-size: 64px;
+      font-weight: 800;
+      color: $white;
+      text-align: center;
+      text-shadow: 0 0 8px rgba(0,0,0,0.4);
+      padding: 0 0 30px 0;
+      text-transform: none;
+    }
+  }
+}
+
+.img-featured {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.img-landscape {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/images/landscape/landscape-1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.img-about {
+  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape/landscape-8.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.img-contact {
+  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape-fall.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.img-gallery {
+  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape/landscape-11.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.img-portrait {
+  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/portrait/portrait-5.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.img-food {
+  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.hero-bottom-arrow {
+  position: relative;
+  margin: 70px auto 0;
+  height: 60px;
+  width: 100%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: $white;
+    transform: skew(0deg, 3deg);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: $white;
+    transform: skew(0deg, -3deg);
+  }
+
+  &.is-large {
+    margin-top: 175px;
+  }
+}

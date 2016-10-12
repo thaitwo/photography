@@ -1,0 +1,81 @@
+/* VIEWER
+============================================================== */
+
+.viewer {
+  background: $black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+
+  &.is-visible {
+    display: block;
+  }
+
+  &.close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: $white;
+
+    &:hover {
+      color: $blue-grey-100;
+      transition: .3s;
+      cursor: pointer;
+    }
+  }
+}
+
+.viewer-image-container {
+  height: 600px;
+  width: 900px;
+  margin: 40px auto 0px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+  }
+}
+
+.viewer-caption {
+  font-family: $font-family;
+  font-size: $font-size-2x;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  display: block;
+  color: $white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-arrow, .forward-arrow {
+  border: none;
+  color:$white;
+  position: absolute;
+  z-index: 10;
+}
+
+.back-arrow {
+  left: 180px;
+  top: 45%;
+
+  &:hover {
+    color: $blue-grey-100;
+    cursor: pointer;
+  }
+}
+
+.forward-arrow {
+  right: 180px;
+  top: 45%;
+
+  &:hover {
+    color: $blue-grey-100;
+    cursor: pointer;
+  }
+}

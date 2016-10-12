@@ -1,0 +1,34 @@
+/* TEXT
+============================================================== */
+
+/* Body Text Styles */
+.text-subtitle {
+  font-family: $font-family;
+  font-size: $font-size-3x;
+  font-weight: 300;
+  color: $blue-grey-700;
+}
+
+.text-content {
+  font-family: $font-family;
+  font-size: $font-size-2x;
+  font-weight: 300;
+  color: $blue-grey-700;
+  line-height: 24px;
+}
+
+.homepage-gallery-nav-header {
+  text-align: center;
+  margin-top: 55px;
+}
+
+
+/* Text Alignment */
+.text-content-center {
+  margin: 60px auto 20px;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}

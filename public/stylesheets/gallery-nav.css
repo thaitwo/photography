@@ -9,6 +9,7 @@
 
 /* Common style */
 .image-card {
+  background: #000;
   position: relative;
   float: left;
   overflow: hidden;
@@ -26,7 +27,8 @@
   display: block;
   min-height: 100%;
   max-width: 100%;
-  opacity: 0.8;
+  opacity: 0.6;
+  transition: opacity 0.35s;
 }
 
 .image-card figcaption {
@@ -40,6 +42,14 @@
 
 .image-card figcaption::before,
 .image-card figcaption::after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
   pointer-events: none;
 }
 
@@ -74,6 +84,9 @@
   font: 36px "Raleway", sans-serif;
   font-weight: 800;
   letter-spacing: 0.05em;
+  padding-top: 40%;
+  transition: transform 0.35s;
+  transform: translate3d(0,-20px,0);
 }
 
 .image-card p {
@@ -81,35 +94,18 @@
   font-weight: 300;
   letter-spacing: 2px;
   font-size: 68.5%;
-}
-
-.image-card {
-  background: #000;
+  padding: 10px 2.5em;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(0,20px,0);
 }
 
 .image-card:hover {
   background: #000;
 }
 
-.image-card img {
-  opacity: .6;
-  transition: opacity 0.35s;
-}
-
 .image-card:hover img {
   opacity: 0.50;
-}
-
-.image-card figcaption::before,
-.image-card figcaption::after {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 30px;
-  content: '';
-  opacity: 0;
-  transition: opacity 0.35s, transform 0.35s;
 }
 
 .image-card figcaption::before {
@@ -122,19 +118,6 @@
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
   transform: scale(1,0);
-}
-
-.image-card h2 {
-  padding-top: 40%;
-  transition: transform 0.35s;
-  transform: translate3d(0,-20px,0);
-}
-
-.image-card p {
-  padding: 10px 2.5em;
-  opacity: 0;
-  transition: opacity 0.35s, transform 0.35s;
-  transform: translate3d(0,20px,0);
 }
 
 .image-card:hover figcaption::before,

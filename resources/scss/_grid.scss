@@ -1,0 +1,29 @@
+/* GRID
+============================================================== */
+
+$grid: grid !default;
+$grid-column: col !default;
+$grid-width: 60px;
+$grid-margin: 0 10px 18px;
+
+
+.grid {
+  width: 960px;
+  margin: 80px auto;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @for $i from 1 through 12 {
+  $grid-width: $grid-width;
+  .#{$grid-column}-#{$i} {
+    width: $grid-width;
+    margin: $grid-margin;
+    float: left;
+  }
+  $grid-width: $grid-width + 80px;
+}
+}
