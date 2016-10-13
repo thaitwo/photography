@@ -12,8 +12,8 @@
   @media handheld and (max-width: $phone-breakpoint),
   screen and (max-device-width: $phone-breakpoint),
   screen and (max-width: $tablet-breakpoint) {
-    background: green;
     width: 100%;
+    margin: 0;
   }
 }
 
@@ -28,16 +28,6 @@
   height: 360px;
   text-align: center;
   cursor: pointer;
-
-  @media handheld and (max-width: $phone-breakpoint),
-  screen and (max-device-width: $phone-breakpoint),
-  screen and (max-width: $tablet-breakpoint) {
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    float: none;
-
-  }
 
   &:hover {
     background: $black;
@@ -148,5 +138,18 @@
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(0,20px,0);
+  }
+
+  @media handheld and (max-width: $phone-breakpoint),
+  screen and (max-device-width: $phone-breakpoint),
+  screen and (max-width: $tablet-breakpoint) {
+    width: 90%;
+    height: 90%;
+    margin: 5% auto;
+    float: none;
+
+    img {
+      width: 100%;
+    }
   }
 }

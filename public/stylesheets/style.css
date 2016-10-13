@@ -86,6 +86,9 @@ table {
       text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
       padding: 0 0 30px 0;
       text-transform: none; }
+  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+    .hero.is-large h1 {
+      font-size: 54px; } }
 
 .img-featured {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
@@ -139,6 +142,13 @@ table {
     transform: skew(0deg, -3deg); }
   .hero-bottom-arrow.is-large {
     margin-top: 175px; }
+  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+    .hero-bottom-arrow {
+      margin: 0px; }
+      .hero-bottom-arrow.is-large {
+        display: none; }
+        .hero-bottom-arrow.is-large h1 {
+          font-size: 30px; } }
 
 /* TOP NAVIGATION
 ============================================================== */
@@ -216,8 +226,8 @@ table {
   text-align: center; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .gallery-nav {
-      background: green;
-      width: 100%; } }
+      width: 100%;
+      margin: 0; } }
 
 /* Common style */
 .image-card {
@@ -230,12 +240,6 @@ table {
   height: 360px;
   text-align: center;
   cursor: pointer; }
-  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
-    .image-card {
-      width: 500px;
-      height: 500px;
-      margin: 0 auto;
-      float: none; } }
   .image-card:hover {
     background: #000000; }
     .image-card:hover img {
@@ -316,6 +320,14 @@ table {
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(0, 20px, 0); }
+  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+    .image-card {
+      width: 90%;
+      height: 90%;
+      margin: 5% auto;
+      float: none; }
+      .image-card img {
+        width: 100%; } }
 
 /* TEXT
 ============================================================== */
@@ -369,6 +381,14 @@ table {
     .button.secondary:hover {
       background-color: #2196F3;
       transition: all .3s; }
+  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+    .button {
+      width: auto;
+      display: block;
+      padding: 20px;
+      margin: auto; }
+      .button.primary {
+        margin: 0 30px; } }
 
 /* FOOTER
 ============================================================== */
@@ -392,6 +412,19 @@ footer {
     display: inline-block;
     line-height: 32px;
     padding: 0px 0px 0px 8px; }
+  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+    footer {
+      text-align: center; }
+      footer small {
+        float: none;
+        margin: 10px auto;
+        display: block; }
+      footer ul {
+        float: none;
+        display: block;
+        margin: auto; }
+      footer li {
+        float: none; } }
 
 /* GRID
 ============================================================== */
@@ -450,6 +483,41 @@ footer {
     width: 940px;
     margin: 0 10px 18px;
     float: left; }
+  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+    .grid {
+      width: auto;
+      display: block;
+      margin: auto; }
+      .grid .col-1,
+      .grid .col-2,
+      .grid .col-3,
+      .grid .col-4,
+      .grid .col-5,
+      .grid .col-6,
+      .grid .col-7,
+      .grid .col-8,
+      .grid .col-9,
+      .grid .col-10,
+      .grid .col-11,
+      .grid .col-12 {
+        width: auto;
+        display: block;
+        margin: 0 0 30px 0;
+        float: none;
+        padding: 30px; }
+        .grid .col-1.is-full-width,
+        .grid .col-2.is-full-width,
+        .grid .col-3.is-full-width,
+        .grid .col-4.is-full-width,
+        .grid .col-5.is-full-width,
+        .grid .col-6.is-full-width,
+        .grid .col-7.is-full-width,
+        .grid .col-8.is-full-width,
+        .grid .col-9.is-full-width,
+        .grid .col-10.is-full-width,
+        .grid .col-11.is-full-width,
+        .grid .col-12.is-full-width {
+          padding: 0; } }
 
 /* VIEWER
 ============================================================== */

@@ -1,13 +1,13 @@
 /* GRID
 ============================================================== */
 
-$grid: grid !default;
-$grid-column: col !default;
+$grid: '.grid' !default;
+$grid-column: '.col' !default;
 $grid-width: 60px;
 $grid-margin: 0 10px 18px;
 
 
-.grid {
+#{$grid} {
   width: 960px;
   margin: 80px auto;
 
@@ -17,13 +17,49 @@ $grid-margin: 0 10px 18px;
     clear: both;
   }
 
-  @for $i from 1 through 12 {
-  $grid-width: $grid-width;
-  .#{$grid-column}-#{$i} {
-    width: $grid-width;
-    margin: $grid-margin;
-    float: left;
+  @for $i from 1 through 12 {   
+    $width: $grid-width;
+
+    @if($i > 1) {
+      $num: $i - 1;
+      $width: $grid-width * $i + ($num * 20); // Account for margins on additional columns 
+    }
+
+    #{$grid-column}-#{$i} {
+      width: $width;
+      margin: $grid-margin;
+      float: left;
+    }
   }
-  $grid-width: $grid-width + 80px;
-}
+
+  @media handheld and (max-width: $phone-breakpoint),
+  screen and (max-device-width: $phone-breakpoint),
+  screen and (max-width: $tablet-breakpoint) {
+    width: auto;
+    display: block;
+    margin: auto;
+
+    #{$grid-column}-1,
+    #{$grid-column}-2,
+    #{$grid-column}-3,
+    #{$grid-column}-4,
+    #{$grid-column}-5,
+    #{$grid-column}-6,
+    #{$grid-column}-7,
+    #{$grid-column}-8,
+    #{$grid-column}-9,
+    #{$grid-column}-10,
+    #{$grid-column}-11,
+    #{$grid-column}-12 {
+      width: auto;
+      display: block;
+      margin: 0 0 30px 0;
+      float: none;
+      padding: 30px;
+
+      &.is-full-width {
+        padding: 0;
+      }
+    }
+  }
 }

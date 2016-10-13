@@ -27,4 +27,26 @@ footer {
     line-height: 32px;
     padding: 0px 0px 0px 8px;
   }
+
+  @media handheld and (max-width: $phone-breakpoint),
+  screen and (max-device-width: $phone-breakpoint),
+  screen and (max-width: $tablet-breakpoint) {
+    text-align: center;
+
+    small {
+      float: none;
+      margin: 10px auto;
+      display: block;
+    }
+
+    ul {
+      float: none;
+      display: block;
+      margin: auto;
+    }
+
+    li {
+      float: none;
+    }
+  }
 }

@@ -31,4 +31,17 @@
       transition: all .3s;
     }
   }
+
+  @media handheld and (max-width: $phone-breakpoint),
+  screen and (max-device-width: $phone-breakpoint),
+  screen and (max-width: $tablet-breakpoint) {
+    width: auto;
+    display: block;
+    padding: 20px;
+    margin: auto;
+
+    &.primary {
+      margin: 0 30px;
+    }
+  }
 }

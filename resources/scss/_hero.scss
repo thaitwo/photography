@@ -42,6 +42,18 @@
       text-transform: none;
     }
   }
+
+  @media handheld and (max-width: $phone-breakpoint),
+  screen and (max-device-width: $phone-breakpoint),
+  screen and (max-width: $tablet-breakpoint) {
+    
+    &.is-large {
+
+      h1 {
+        font-size: 54px;
+      }
+    }
+  }
 }
 
 .img-featured {
@@ -108,5 +120,19 @@
 
   &.is-large {
     margin-top: 175px;
+  }
+
+  @media handheld and (max-width: $phone-breakpoint),
+  screen and (max-device-width: $phone-breakpoint),
+  screen and (max-width: $tablet-breakpoint) {
+    margin: 0px;
+
+    &.is-large {
+      display: none;
+
+      h1 {
+        font-size: 30px;
+      }
+    }
   }
 }
