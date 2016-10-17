@@ -2,7 +2,8 @@
 ============================================================== */
 
 footer {
-  padding: 20px 0px 20px 0px;
+
+  padding: 50px 0px 20px 0px;
 
   small {
     font-family: $font-family;
@@ -28,9 +29,9 @@ footer {
     padding: 0px 0px 0px 8px;
   }
 
-  @media handheld and (max-width: $phone-breakpoint),
-  screen and (max-device-width: $phone-breakpoint),
-  screen and (max-width: $tablet-breakpoint) {
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
     text-align: center;
 
     small {

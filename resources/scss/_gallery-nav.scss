@@ -3,15 +3,21 @@
 
 .gallery-nav {
   position: relative;
-  margin: 50px auto 360px;
-  padding: 1em 0 4em;
+  margin: 30px auto;
   max-width: 1200px;
   list-style: none;
   text-align: center;
 
-  @media handheld and (max-width: $phone-breakpoint),
-  screen and (max-device-width: $phone-breakpoint),
-  screen and (max-width: $tablet-breakpoint) {
+  @media handheld and (max-width: $breakpoint-large),
+  screen and (max-device-width: $breakpoint-large),
+  screen and (max-width: $breakpoint-large) {
+    max-width: 100%;
+    margin: 50px 20px;
+  }
+
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
     width: 100%;
     margin: 0;
   }
@@ -25,7 +31,7 @@
   overflow: hidden;
   margin: 10px 1%;
   width: 376px;
-  height: 360px;
+  height: 376px;
   text-align: center;
   cursor: pointer;
 
@@ -116,7 +122,7 @@
 
   h2 {
     font-family: $font-family;
-    font-size: $font-size-4x;
+    font-size: 2em;
     font-weight: 800;
     letter-spacing: 0.05em;
     padding-top: 40%;
@@ -140,9 +146,29 @@
     transform: translate3d(0,20px,0);
   }
 
-  @media handheld and (max-width: $phone-breakpoint),
-  screen and (max-device-width: $phone-breakpoint),
-  screen and (max-width: $tablet-breakpoint) {
+  @media handheld and (max-width: $breakpoint-large),
+  screen and (max-device-width: $breakpoint-large),
+  screen and (max-width: $breakpoint-large) {
+    margin: 10px 0.6%;
+    width: 32%;
+    height: 100%;
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    p {
+      font-size: .55em;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
     width: 90%;
     height: 90%;
     margin: 5% auto;

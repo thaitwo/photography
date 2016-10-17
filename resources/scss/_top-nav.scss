@@ -33,6 +33,15 @@
     }
   }
 
+  #dropdown-bar {
+      margin-top: 20px;
+      margin-right: 20px; 
+      color: $white;
+      float: right;
+      line-height: 40px;
+      display: none;
+    }
+
   ul {
     float: right;
     margin: 0px 60px 0px 0px;
@@ -43,8 +52,8 @@
     font-family: $font-family;
     font-size: $font-size-1x;
     font-weight: 400;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 60px;
+    margin: 0;
+    padding: 0 0 0 60px;
     letter-spacing: 0.1em;
     line-height: 40px;
     text-transform: uppercase;
@@ -54,36 +63,64 @@
     color: $white;
     text-decoration: none;
 
-    &:hover:not(.active) {
+    &:hover {
       color: $blue-grey-100;
     }
   }
 
-  @media handheld and (max-width: $phone-breakpoint),
-  screen and (max-device-width: $phone-breakpoint),
-  screen and (max-width: $tablet-breakpoint) {
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
     height: 60px; 
     padding: 0;
     overflow: visible;
 
     h1 {
-      margin: 20px 0 0 20px; 
+      margin: 20px 0 0 30px; 
     }
 
-    ul {
+    #dropdown-bar {
+      margin-top: 20px;
+      margin-right: 30px; 
+      color: $white;
+      float: right;
+      line-height: 40px;
+      display: block;
+      cursor: pointer;
+    }
+
+    .dropdown {
       float: none;
       display: none;
       position: absolute;
       margin: 0;
       top: 0; 
       right: 0;
-      background: green;
-    }
+      background: $white;
+      padding: 0;
 
-    li {
+      &.is-visible {
+        display: block;
+      }
+
+      li {
       float: none;
-      padding: 0px 10px; 
       margin: 0;
+      padding: 0;
+      line-height: 0;
+        a {
+          background: $white;
+          color: $blue-grey-700;
+          border-bottom: 1px solid $blue-grey-100;
+          display: block;
+          width: 180px;
+          padding: 30px 50px;
+
+          &:hover {
+            color: $blue-grey-200;
+          }
+        }
+      }
     }
-  }  
+  }
 }
