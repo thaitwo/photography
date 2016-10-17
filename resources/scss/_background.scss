@@ -1,42 +1,5 @@
-.hero {
-  display: block;
-  height: 280px;
-  box-sizing: border-box;
-  padding: 140px 0 60px 0;
-  background-color: #000;
-}
-
-.hero h1 {
-  font: 48px "Raleway", sans-serif;
-  color: #fff;
-  font-weight: 800;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.hero h2 {
-  font: 42px "Euphoria Script", cursive;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-  margin: 0 0 -5px 0;
-}
-
-.hero.is-large {
-  height: 600px;
-  padding: 210px 0;
-  text-align: center;
-}
-
-.hero.is-large h1 {
-  font: 64px "Raleway", sans-serif;
-  font-weight: 800;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 0 8px rgba(0,0,0,0.4);
-  padding: 0 0 30px 0;
-  text-transform: none;
-}
+/* BACKGROUND IMAGES
+============================================================== */
 
 .img-featured {
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
@@ -71,36 +34,4 @@
 .img-food {
   background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed;
   background-size: cover;
-}
-
-.hero-bottom-arrow {
-  position: relative;
-  margin: 70px auto 0;
-  height: 60px;
-  width: 100%;
-}
-
-.hero-bottom-arrow:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 50%;
-  background: #fff;
-  transform: skew(0deg, 3deg);
-}
-
-.hero-bottom-arrow:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  height: 100%;
-  width: 50%;
-  background: #fff;
-  transform: skew(0deg, -3deg);
-}
-
-.hero-bottom-arrow.is-large {
-  margin-top: 160px;
 }

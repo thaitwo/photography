@@ -1,0 +1,52 @@
+/* FOOTER
+============================================================== */
+
+footer {
+  padding: 50px 0px 20px 0px;
+
+  small {
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 300;
+    color: $blue-grey-100;
+    letter-spacing: 0.1em;
+    float: left;
+    line-height: 32px;
+    margin: 0px 60px;
+  }
+
+  ul {
+    float: right;
+    margin: 0px 60px 10px 0px;
+  }
+
+  li {
+    float: right;
+    list-style: none;
+    display: inline-block;
+    line-height: 32px;
+    padding: 0px 0px 0px 8px;
+  }
+
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
+    text-align: center;
+
+    small {
+      float: none;
+      margin: 10px auto;
+      display: block;
+    }
+
+    ul {
+      float: none;
+      display: block;
+      margin: auto;
+    }
+
+    li {
+      float: none;
+    }
+  }
+}

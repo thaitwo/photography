@@ -35,20 +35,32 @@ function startView() {
       currentIndex = index;
       var link = event.currentTarget;
 
-      $viewer.addClass('is-visible');
+      $viewer.show();
       createImage(link);
     });
   })
 
 
   // CLOSE GALLERY VIEWER
-  $closeviewer.click(function() {
-    $viewer.removeClass('is-visible');
+  $closeviewer.click(function(event) {
+    event.stopPropagation();
+    $viewer.fadeOut(200);
+  });
+
+  // Closes entire gallery viewer container on click anywhere within the container
+  $viewer.click(function() {
+    $viewer.fadeOut(200);
+  });
+
+  // Prevents the image container from closing on click by preventing bubbling
+  $imageviewer.click(function(event) {
+    event.stopPropagation();
   });
 
 
   // NEXT BUTTON
-  $next.click(function() {
+  $next.click(function(event) {
+    event.stopPropagation();
     var nextIndex;
 
     if (currentIndex === $links.length - 1) {
@@ -65,7 +77,8 @@ function startView() {
 
 
   // PREVIOUS BUTTON
-  $prev.click(function() {
+  $prev.click(function(event) {
+    event.stopPropagation();
     if (currentIndex === 0) {
       currentIndex = $links.length;
     }
