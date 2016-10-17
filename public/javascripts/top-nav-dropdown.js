@@ -3,7 +3,6 @@ var $dropdownButton = $('#dropdown-button');
 
 function activateDropdown() {
   $dropdownButton.click(function() {
-    $dropdownButton.hide();
     $dropdownMenu.slideToggle();
   })
 };
