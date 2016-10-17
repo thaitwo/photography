@@ -1,15 +1,15 @@
-var $dropdown = $('.dropdown');
-var $bar = $('#dropdown-bar');
+var $dropdownMenu = $('.dropdown');
+var $dropdownButton = $('#dropdown-button');
 
-function showDropdown() {
-  $bar.click(function() {
-    $bar.hide();
-    $dropdown.slideToggle();
+function activateDropdown() {
+  $dropdownButton.click(function() {
+    $dropdownButton.hide();
+    $dropdownMenu.slideToggle();
   })
 };
 
 $(document).ready(function() {
   if($('.dropdown')) {
-    showDropdown(); 
+    activateDropdown(); 
   }
 })

@@ -77,7 +77,7 @@
   margin-top: 60px;
 }
 
-.back-arrow, .forward-arrow {
+.viewer-arrow-forward, .viewer-arrow-back {
   border: none;
   color: $white;
   position: absolute;
@@ -90,8 +90,8 @@
   }
 }
 
-.back-arrow {
-  left: 20px;
+.viewer-arrow-forward {
+  right: 20px;
   top: 45%;
 
   &:hover {
@@ -100,8 +100,8 @@
   }
 }
 
-.forward-arrow {
-  right: 20px;
+.viewer-arrow-back {
+  left: 20px;
   top: 45%;
 
   &:hover {
