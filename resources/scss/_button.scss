@@ -52,4 +52,13 @@
       margin: 20px auto;
     }
   }
+
+  @media handheld and (max-width: $breakpoint-small),
+  screen and (max-device-width: $breakpoint-small),
+  screen and (max-width: $breakpoint-small) {
+
+    &.primary {
+      font-size: 12px;
+    }
+  }
 }

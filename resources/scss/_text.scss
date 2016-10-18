@@ -7,12 +7,6 @@
   font-size: $font-size-3x;
   font-weight: 300;
   color: $blue-grey-700;
-
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
-    margin-top: 15px;
-  }
 }
 
 .text-content {
@@ -25,5 +19,11 @@
   &.center {
     margin: 60px 30px 20px;
     text-align: center;
+
+    @media handheld and (max-width: $breakpoint-medium),
+    screen and (max-device-width: $breakpoint-medium),
+    screen and (max-width: $breakpoint-medium) {
+      margin: 30px 30px 30px;
+    }
   }
 }

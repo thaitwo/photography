@@ -46,7 +46,7 @@
   @media handheld and (max-width: $breakpoint-medium),
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     
     &.is-large {
 
@@ -55,7 +55,7 @@
       }
 
       h2 {
-        margin-top: 90px;
+        margin-top: 60px;
       }
     }
   }

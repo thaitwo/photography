@@ -87,12 +87,10 @@ table {
       text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
       margin: 0 0 -5px 0; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
-    .hero {
-      margin-bottom: 15px; }
-      .hero.is-large h1 {
-        font-size: 54px; }
-      .hero.is-large h2 {
-        margin-top: 90px; } }
+    .hero.is-large h1 {
+      font-size: 54px; }
+    .hero.is-large h2 {
+      margin-top: 60px; } }
 
 .hero-bottom-arrow {
   position: relative;
@@ -210,11 +208,11 @@ table {
       padding: 0;
       overflow: visible; }
       .top-nav h1 {
-        margin: 20px 0 0 30px; }
+        margin: 10px 0 0 20px; }
       .top-nav #dropdown-button {
         padding: 0px 10px;
-        margin-top: 20px;
-        margin-right: 30px;
+        margin-top: 10px;
+        margin-right: 15px;
         color: #ffffff;
         float: right;
         line-height: 40px;
@@ -225,23 +223,29 @@ table {
         display: none;
         position: absolute;
         margin: 0;
-        top: 70px;
-        left: 30px;
-        right: 30px; }
+        top: 60px;
+        left: 20px;
+        right: 20px; }
         .top-nav .dropdown li {
           float: none;
           margin: 0;
           padding: 0;
           line-height: 0;
           display: block;
-          margin-bottom: 2px; }
+          margin-bottom: 3px; }
           .top-nav .dropdown li a {
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.6);
             color: #ffffff;
             display: block;
-            padding: 30px 30px; }
+            padding: 30px 30px;
+            border-radius: 3px; }
             .top-nav .dropdown li a:hover {
               color: #B0BEC5; } }
+  @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 480px) {
+    .top-nav h1 {
+      font-size: 22px; }
+      .top-nav h1 em {
+        font-size: 22px; } }
 
 /* GALLERY
 ============================================================== */
@@ -364,9 +368,9 @@ table {
         width: 100%; } }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .image-card {
-      width: 90%;
-      height: 90%;
-      margin: 5% auto;
+      width: auto;
+      display: block;
+      margin: 30px 30px;
       float: none; }
       .image-card img {
         width: 100%; } }
@@ -379,9 +383,6 @@ table {
   font-size: 24px;
   font-weight: 300;
   color: #455A64; }
-  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
-    .text-subtitle {
-      margin-top: 15px; } }
 
 .text-content {
   font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
@@ -392,6 +393,9 @@ table {
   .text-content.center {
     margin: 60px 30px 20px;
     text-align: center; }
+    @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+      .text-content.center {
+        margin: 30px 30px 30px; } }
 
 /* BUTTON
 ============================================================== */
@@ -431,6 +435,9 @@ table {
       .button.secondary {
         padding: 22px 20px;
         margin: 20px auto; } }
+  @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 480px) {
+    .button.primary {
+      font-size: 12px; } }
 
 /* FOOTER
 ============================================================== */
@@ -440,7 +447,7 @@ footer {
     font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: 300;
-    color: #CFD8DC;
+    color: #90A4AE;
     letter-spacing: 0.1em;
     float: left;
     line-height: 32px;
@@ -551,7 +558,7 @@ footer {
         display: block;
         margin: 0;
         float: none;
-        padding: 15px 30px; }
+        padding: 30px 30px 0; }
         .grid .col-1 img,
         .grid .col-2 img,
         .grid .col-3 img,
