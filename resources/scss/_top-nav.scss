@@ -87,14 +87,13 @@
     }
 
     .dropdown {
-      background: rgba(0,0,0,.6);
       float: none;
       display: none;
       position: absolute;
       margin: 0;
-      top: 60px; 
-      left: 20px; 
-      right: 20px; 
+      top: 70px; 
+      left: 30px; 
+      right: 30px; 
 
       li {
         float: none;
@@ -102,12 +101,13 @@
         padding: 0;
         line-height: 0;
         display: block;
+        margin-bottom: 2px;
 
         a {
+          background: rgba(0,0,0,.7);
           color: $white;
-          border-bottom: 1px solid $blue-grey-700;
           display: block;
-          padding: 30px 10px;
+          padding: 30px 30px;
 
           &:hover {
             color: $blue-grey-200;
