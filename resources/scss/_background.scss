@@ -1,37 +1,38 @@
 /* BACKGROUND IMAGES
 ============================================================== */
 
-.img-featured {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
+
+
+.bg-featured {
+  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
-.img-landscape {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/images/landscape/landscape-1.jpg") no-repeat center center fixed;
-  background-size: cover;
+.bg-landscape {
+  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape/landscape-1.jpg") no-repeat center center fixed;
 }
 
-.img-about {
+.bg-about {
   background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape/landscape-8.jpg") no-repeat center center fixed;
-  background-size: cover;
 }
 
-.img-contact {
+.bg-contact {
   background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape-fall.jpg") no-repeat center center fixed;
-  background-size: cover;
 }
 
-.img-gallery {
+.bg-gallery {
   background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape/landscape-11.jpg") no-repeat center center fixed;
-  background-size: cover;
 }
 
-.img-portrait {
+.bg-portrait {
   background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/portrait/portrait-5.jpg") no-repeat center center fixed;
-  background-size: cover;
 }
 
-.img-food {
+.bg-food {
   background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed;
+}
+
+.bg {
   background-size: cover;
+  max-height: 100%;
 }

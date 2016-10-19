@@ -170,6 +170,7 @@
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
     width: auto;
+    height: auto;
     display: block;
     margin: 30px 30px;
     float: none;

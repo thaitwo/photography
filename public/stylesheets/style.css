@@ -90,7 +90,7 @@ table {
     .hero.is-large h1 {
       font-size: 54px; }
     .hero.is-large h2 {
-      margin-top: 60px; } }
+      margin-top: 50px; } }
 
 .hero-bottom-arrow {
   position: relative;
@@ -126,33 +126,31 @@ table {
 
 /* BACKGROUND IMAGES
 ============================================================== */
-.img-featured {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
+.bg-featured {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
   background-size: cover; }
 
-.img-landscape {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-1.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-landscape {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-1.jpg") no-repeat center center fixed; }
 
-.img-about {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-8.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-about {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-8.jpg") no-repeat center center fixed; }
 
-.img-contact {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape-fall.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape-fall.jpg") no-repeat center center fixed; }
 
-.img-gallery {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-11.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-gallery {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-11.jpg") no-repeat center center fixed; }
 
-.img-portrait {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portrait/portrait-5.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-portrait {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portrait/portrait-5.jpg") no-repeat center center fixed; }
 
-.img-food {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-food {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed; }
+
+.bg {
+  background-size: cover;
+  max-height: 100%; }
 
 /* TOP NAVIGATION
 ============================================================== */
@@ -188,7 +186,7 @@ table {
     float: right;
     margin: 0px 60px 0px 0px; }
     .top-nav ul li {
-      float: right;
+      float: left;
       font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
       font-size: 14px;
       font-weight: 400;
@@ -210,9 +208,8 @@ table {
       .top-nav h1 {
         margin: 10px 0 0 20px; }
       .top-nav #dropdown-button {
-        padding: 0px 10px;
         margin-top: 10px;
-        margin-right: 15px;
+        margin-right: 20px;
         color: #ffffff;
         float: right;
         line-height: 40px;
@@ -369,6 +366,7 @@ table {
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .image-card {
       width: auto;
+      height: auto;
       display: block;
       margin: 30px 30px;
       float: none; }
@@ -447,22 +445,23 @@ footer {
     font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: 300;
-    color: #90A4AE;
+    color: #B0BEC5;
     letter-spacing: 0.1em;
     float: left;
-    line-height: 32px;
+    line-height: 50px;
     margin: 0px 60px; }
   footer ul {
     float: right;
-    margin: 0px 60px 10px 0px; }
-  footer li {
-    float: right;
-    list-style: none;
-    display: inline-block;
-    line-height: 32px;
-    padding: 0px 0px 0px 8px; }
+    margin: 0px 60px 0px 0px; }
+    footer ul li {
+      float: left;
+      list-style: none;
+      display: inline-block;
+      line-height: 50px;
+      padding: 0px 0px 0px 8px; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     footer {
+      padding: 20px 0px;
       text-align: center; }
       footer small {
         float: none;
@@ -472,8 +471,13 @@ footer {
         float: none;
         display: block;
         margin: auto; }
-      footer li {
-        float: none; } }
+        footer ul li {
+          float: none; } }
+  @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 480px) {
+    footer small em {
+      text-align: center;
+      display: block;
+      line-height: 20px; } }
 
 /* GRID
 ============================================================== */
@@ -700,5 +704,46 @@ footer {
       .l-center .l-max-width {
         width: 100%;
         display: block; } }
+
+/* MATERIAL DESIGN
+============================================================== */
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px; }
+
+.material-icons.md-24 {
+  font-size: 24px; }
+
+.material-icons.md-36 {
+  font-size: 36px; }
+
+.material-icons.md-48 {
+  font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54); }
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: white; }
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3); }
+
+.sm-icon {
+  color: #90A4AE;
+  width: 12px;
+  height: 12px;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 100px; }
+
+.fa-circle {
+  color: #B0BEC5; }
 
 /*# sourceMappingURL=style.css.map */

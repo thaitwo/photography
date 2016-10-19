@@ -5,10 +5,15 @@ var $heroTitle = $('#hero-title');
 
 function activateDropdown() {
   $dropdownButton.click(function() {
-  	$dropdownButton.toggleClass('fa-bars');
-  	$dropdownButton.toggleClass('fa-times');
 
-  	$heroTitle.toggle();
+    if ($dropdownButton.text() == 'menu') {
+      $dropdownButton.text('clear')
+    }
+    else {
+      $dropdownButton.text('menu')
+    }
+
+    $heroTitle.toggle();
 
     $dropdownMenu.slideToggle();
   })
