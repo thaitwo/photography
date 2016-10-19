@@ -223,6 +223,8 @@ table {
         top: 60px;
         left: 20px;
         right: 20px; }
+        .top-nav .dropdown.is-visible {
+          display: block; }
         .top-nav .dropdown li {
           float: none;
           margin: 0;
@@ -254,8 +256,7 @@ table {
   text-align: center; }
   @media handheld and (max-width: 1200px), screen and (max-device-width: 1200px), screen and (max-width: 1200px) {
     .gallery-nav {
-      max-width: 100%;
-      margin: 50px 20px; } }
+      margin: 50px 10px; } }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .gallery-nav {
       width: 100%;
@@ -267,11 +268,12 @@ table {
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 10px 1%;
-  width: 376px;
-  height: 376px;
+  width: 33.3333%;
+  height: 500px;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 10px solid #ffffff;
+  box-sizing: border-box; }
   .image-card:hover {
     background: #000000; }
     .image-card:hover img {
@@ -288,7 +290,6 @@ table {
     position: relative;
     display: block;
     min-height: 100%;
-    max-width: 100%;
     opacity: 0.6;
     transition: opacity 0.35s; }
   .image-card figcaption,
@@ -299,11 +300,9 @@ table {
     width: 100%;
     height: 100%; }
   .image-card figcaption {
-    padding: 2em;
     color: #fff;
     box-sizing: border-box;
     text-transform: uppercase;
-    font-size: 1.25em;
     backface-visibility: hidden; }
     .image-card figcaption::before, .image-card figcaption::after {
       position: absolute;
@@ -334,42 +333,38 @@ table {
     margin: 0; }
   .image-card h2 {
     font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-size: 36px;
     font-weight: 800;
     letter-spacing: 0.05em;
-    padding-top: 40%;
+    padding-top: 210px;
     transition: transform 0.35s;
-    transform: translate3d(0, -20px, 0); }
-    .image-card h2 span {
-      font-weight: 800; }
+    transform: translate3d(0, -5px, 0); }
   .image-card p {
     font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 2px;
-    font-size: 68.5%;
-    padding: 10px 2.5em;
+    font-size: 14px;
+    padding: 10px;
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(0, 20px, 0); }
   @media handheld and (max-width: 1200px), screen and (max-device-width: 1200px), screen and (max-width: 1200px) {
-    .image-card {
-      margin: 10px 0.6%;
-      width: 32%;
-      height: 100%; }
-      .image-card h2 {
-        font-size: 1.3em; }
-      .image-card p {
-        font-size: .55em; }
-      .image-card img {
-        width: 100%; } }
+    .image-card img {
+      width: auto; }
+    .image-card h2 {
+      font-size: 30px; } }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .image-card {
       width: auto;
-      height: auto;
+      height: 200px;
       display: block;
       margin: 30px 30px;
       float: none; }
+      .image-card h2 {
+        padding-top: 75px; }
+      .image-card p {
+        padding: 0; }
       .image-card img {
         width: 100%; } }
 
@@ -733,15 +728,6 @@ footer {
 
 .material-icons.md-light.md-inactive {
   color: rgba(255, 255, 255, 0.3); }
-
-.sm-icon {
-  color: #90A4AE;
-  width: 12px;
-  height: 12px;
-  margin: auto;
-  padding: 10px;
-  border: 1px solid;
-  border-radius: 100px; }
 
 .fa-circle {
   color: #B0BEC5; }

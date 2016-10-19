@@ -90,7 +90,11 @@
       margin: 0;
       top: 60px; 
       left: 20px; 
-      right: 20px; 
+      right: 20px;
+
+      &.is-visible {
+        display: block;
+      }
 
       li {
         float: none;
