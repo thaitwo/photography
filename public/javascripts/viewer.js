@@ -1,5 +1,6 @@
 var $viewer = $('.viewer');
 var $imageviewer = $('.viewer-image-container');
+var $img = $('.viewer-image-container img');
 var $links = $('.gallery a');
 var $closeviewer = $('.viewer-close-button');
 var currentIndex = 0;
@@ -23,6 +24,31 @@ function createImage(link) {
   image.fadeIn(500);
 };
 
+function nextImage() {
+  var nextIndex;
+
+  if (currentIndex === $links.length - 1) {
+    currentIndex = 0;
+    nextIndex = 0;
+  }
+  else {
+    nextIndex = currentIndex + 1;
+    currentIndex = nextIndex;
+  }
+
+  createImage($links[nextIndex]);
+};
+
+function prevImage() {
+  if (currentIndex === 0) {
+    currentIndex = $links.length;
+  }
+
+  var prevIndex = currentIndex - 1;
+  currentIndex = prevIndex;
+
+  createImage($links[prevIndex]);
+};
 
 
 // GALLERY VIEW FUNCTION
@@ -58,35 +84,35 @@ function startView() {
   });
 
 
-  // NEXT BUTTON
+  // NEXT BUTTON - Displays the next image in the gallery
   $next.click(function(event) {
     event.stopPropagation();
-    var nextIndex;
-
-    if (currentIndex === $links.length - 1) {
-      currentIndex = 0;
-      nextIndex = 0;
-    }
-    else {
-      nextIndex = currentIndex + 1;
-      currentIndex = nextIndex;
-    }
-
-    createImage($links[nextIndex]);
+    
+    nextImage();
   });
 
 
-  // PREVIOUS BUTTON
+  // SWIPE LEFT - NEXT IMAGE
+  $imageviewer.swipe({
+    swipeLeft:function() {
+      nextImage();
+    }
+  });
+
+
+  // PREVIOUS BUTTON - Displays the previous image in the gallery
   $prev.click(function(event) {
     event.stopPropagation();
-    if (currentIndex === 0) {
-      currentIndex = $links.length;
+    
+    prevImage();
+  });
+
+
+  // SWIPE RIGHT - PREVIOUS IMAGE
+  $imageviewer.swipe({
+    swipeRight:function() {
+      prevImage();
     }
-
-    var prevIndex = currentIndex - 1;
-    currentIndex = prevIndex;
-
-    createImage($links[prevIndex]);
   });
 }
 

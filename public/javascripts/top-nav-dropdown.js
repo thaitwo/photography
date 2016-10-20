@@ -1,6 +1,7 @@
 var $dropdownMenu = $('.dropdown');
 var $dropdownButton = $('#dropdown-button');
 var $heroTitle = $('.hero-title');
+var $buttonPrimary = $('.button-primary');
 
 function activateDropdown() {
   $dropdownButton.click(function() {
@@ -13,6 +14,7 @@ function activateDropdown() {
     }
 
     $heroTitle.toggle();
+    $buttonPrimary.toggle();
 
     $dropdownMenu.toggleClass('is-visible animated fadeIn');
   })
