@@ -8,12 +8,12 @@
   letter-spacing: 0.1em;
   padding: 18px 36px;
   text-decoration: none;
-  margin: 20px 0;
+  margin: auto;
   
   &.button-primary {
     color: $white;
     border: 1px solid $white;
-    letter-spacing: 0.2em;
+    letter-spacing: 4px;
     text-align: center;
 
     &:hover {
@@ -36,29 +36,16 @@
   @media handheld and (max-width: $breakpoint-medium),
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
-    // width: auto;
-    // display: block;
-    padding: 20px;
     margin: auto;
     text-align: center;
 
     &.button-primary {
-      padding: 22px 20px;
-      margin: 0 20px;
+      padding: 18px 36px;
     }
 
     &.button-secondary {
       padding: 22px 20px;
       margin: 20px auto;
-    }
-  }
-
-  @media handheld and (max-width: $breakpoint-small),
-  screen and (max-device-width: $breakpoint-small),
-  screen and (max-width: $breakpoint-small) {
-
-    &.button-primary {
-      display: none;
     }
   }
 }

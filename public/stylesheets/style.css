@@ -118,7 +118,7 @@ table {
     background: #ffffff;
     transform: skew(0deg, -3deg); }
   .hero-bottom-arrow.is-large {
-    margin-top: 135px; }
+    margin-top: 160px; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .hero-bottom-arrow {
       margin: 0px; }
@@ -400,11 +400,11 @@ table {
   letter-spacing: 0.1em;
   padding: 18px 36px;
   text-decoration: none;
-  margin: 20px 0; }
+  margin: auto; }
   .button.button-primary {
     color: #ffffff;
     border: 1px solid #ffffff;
-    letter-spacing: 0.2em;
+    letter-spacing: 4px;
     text-align: center; }
     .button.button-primary:hover {
       background: #ffffff;
@@ -418,18 +418,13 @@ table {
       transition: all .3s; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .button {
-      padding: 20px;
       margin: auto;
       text-align: center; }
       .button.button-primary {
-        padding: 22px 20px;
-        margin: 0 20px; }
+        padding: 18px 36px; }
       .button.button-secondary {
         padding: 22px 20px;
         margin: 20px auto; } }
-  @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 480px) {
-    .button.button-primary {
-      display: none; } }
 
 /* FOOTER
 ============================================================== */
