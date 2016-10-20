@@ -1,6 +1,5 @@
 var $viewer = $('.viewer');
 var $imageviewer = $('.viewer-image-container');
-var $img = $('.viewer-image-container img');
 var $links = $('.gallery a');
 var $closeviewer = $('.viewer-close-button');
 var currentIndex = 0;
@@ -10,20 +9,24 @@ var $caption = $('.viewer-caption');
 
 
 
+// CREATES IMAGE AND CAPTION
 function createImage(link) {
-  var imageUrl = link.href;
-  var title = link.title;
-  var image = $('<img>');
+  var imageUrl = link.href;   // Finds href key in image link
+  var title = link.title;     // Finds title key in image link
+  var image = $('<img>');     // Creates an <img> tag
   image.attr({
-    src: imageUrl,
+    src: imageUrl,            // Inserts href into <img src=" ">
   });
 
-  image.hide();
-  $imageviewer.html(image);
-  $caption.text(title);
+  image.hide();               // Hides image
+  $imageviewer.html(image);   // Displays image in the viewer container
+  $caption.text(title);       // Displays caption in the caption container
   image.fadeIn(500);
 };
 
+
+
+// NEXT IMAGE IN GALLERY
 function nextImage() {
   var nextIndex;
 
@@ -39,6 +42,9 @@ function nextImage() {
   createImage($links[nextIndex]);
 };
 
+
+
+// PREVIOUS IMAGE IN GALLERY
 function prevImage() {
   if (currentIndex === 0) {
     currentIndex = $links.length;
@@ -51,10 +57,10 @@ function prevImage() {
 };
 
 
-// GALLERY VIEW FUNCTION
 
+// GALLERY VIEW FUNCTION
 function startView() {
-  // LOOP THROUGH ARRAY OF LINKS AND DISPLAY IMAGE
+  // LOOPS THROUGH ARRAY OF LINKS AND DISPLAY IMAGE
   $links.each(function(index, item) {
     $(item).click(function(event) {
       event.preventDefault();
@@ -67,24 +73,39 @@ function startView() {
   })
 
 
+
   // CLOSE GALLERY VIEWER
   $closeviewer.click(function(event) {
     event.stopPropagation();
     $viewer.fadeOut(200);
   });
 
-  // Closes entire gallery viewer container on click anywhere within the container
+  // Closes gallery viewer container on click anywhere within the container
   $viewer.click(function() {
     $viewer.fadeOut(200);
   });
 
-  // Prevents the image container from closing on click by preventing bubbling
+  // Prevents image container from closing on click by preventing bubbling
   $imageviewer.click(function(event) {
     event.stopPropagation();
   });
 
+  // SWIPE UP & DOWN - Closes gallery viewer
+  $viewer.swipe({
+    swipeDown: function() {
+      $viewer.fadeOut(200);
+    }
+  });
 
-  // NEXT BUTTON - Displays the next image in the gallery
+  $viewer.swipe({
+    swipeUp: function() {
+      $viewer.fadeOut(200);
+    }
+  });
+
+
+
+  // NEXT BUTTON - Displays next image in gallery
   $next.click(function(event) {
     event.stopPropagation();
     
@@ -92,15 +113,17 @@ function startView() {
   });
 
 
-  // SWIPE LEFT - NEXT IMAGE
-  $imageviewer.swipe({
+
+  // SWIPE LEFT - Displays next image in gallery
+  $viewer.swipe({
     swipeLeft:function() {
       nextImage();
     }
   });
 
 
-  // PREVIOUS BUTTON - Displays the previous image in the gallery
+
+  // PREVIOUS BUTTON - Displays previous image in gallery
   $prev.click(function(event) {
     event.stopPropagation();
     
@@ -108,8 +131,9 @@ function startView() {
   });
 
 
-  // SWIPE RIGHT - PREVIOUS IMAGE
-  $imageviewer.swipe({
+
+  // SWIPE RIGHT - Displays previous image in gallery
+  $viewer.swipe({
     swipeRight:function() {
       prevImage();
     }

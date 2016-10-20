@@ -89,7 +89,7 @@ table {
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .hero.is-large {
       height: 450px;
-      padding: 160px 0; }
+      padding: 140px 0; }
       .hero.is-large h1 {
         font-size: 54px; }
       .hero.is-large h2 {
@@ -609,10 +609,6 @@ footer {
     color: #ffffff;
     position: absolute;
     z-index: 10; }
-    @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
-      .viewer .viewer-arrow-forward, .viewer .viewer-arrow-back {
-        position: fixed;
-        display: none; } }
   .viewer .viewer-arrow-forward {
     right: 20px;
     top: 45%; }
@@ -644,16 +640,21 @@ footer {
       max-width: 100%;
       max-height: 100%;
       transform: translate(0%, 0%); }
-    @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
-      .viewer .viewer-image-container {
-        width: 100%; } }
-    @media handheld and (max-height: 800px), screen and (max-device-height: 800px), screen and (max-height: 800px) {
-      .viewer .viewer-image-container {
-        height: 70%;
-        width: auto;
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto; } }
+  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+    .viewer .viewer-arrow-forward, .viewer .viewer-arrow-back {
+      display: none; }
+    .viewer .viewer-caption {
+      margin-top: 30px; }
+    .viewer .viewer-image-container {
+      width: 100%;
+      margin-top: 60px; } }
+  @media handheld and (max-height: 800px), screen and (max-device-height: 800px), screen and (max-height: 800px) {
+    .viewer .viewer-image-container {
+      height: 70%;
+      width: auto;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto; } }
 
 /* ANIMATION
 ============================================================== */
