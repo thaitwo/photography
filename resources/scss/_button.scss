@@ -10,7 +10,7 @@
   text-decoration: none;
   margin: 20px 0;
   
-  &.primary {
+  &.button-primary {
     color: $white;
     border: 1px solid $white;
     letter-spacing: 0.2em;
@@ -23,7 +23,7 @@
     }
   }
 
-  &.secondary {
+  &.button-secondary {
     color: $white;
     background-color: $blue-300;
 
@@ -36,18 +36,18 @@
   @media handheld and (max-width: $breakpoint-medium),
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
-    width: auto;
-    display: block;
+    // width: auto;
+    // display: block;
     padding: 20px;
     margin: auto;
     text-align: center;
 
-    &.primary {
+    &.button-primary {
       padding: 22px 20px;
-      margin: 0 30px;
+      margin: 0 20px;
     }
 
-    &.secondary {
+    &.button-secondary {
       padding: 22px 20px;
       margin: 20px auto;
     }
@@ -57,8 +57,8 @@
   screen and (max-device-width: $breakpoint-small),
   screen and (max-width: $breakpoint-small) {
 
-    &.primary {
-      font-size: 12px;
+    &.button-primary {
+      display: none;
     }
   }
 }

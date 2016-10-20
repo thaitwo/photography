@@ -1,7 +1,6 @@
 var $dropdownMenu = $('.dropdown');
 var $dropdownButton = $('#dropdown-button');
-var $faBars = $('.fa-bars');
-var $heroTitle = $('#hero-title');
+var $heroTitle = $('.hero-title');
 
 function activateDropdown() {
   $dropdownButton.click(function() {

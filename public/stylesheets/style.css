@@ -87,10 +87,13 @@ table {
       text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
       margin: 0 0 -5px 0; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
-    .hero.is-large h1 {
-      font-size: 54px; }
-    .hero.is-large h2 {
-      margin-top: 50px; } }
+    .hero.is-large {
+      height: 450px;
+      padding: 160px 0; }
+      .hero.is-large h1 {
+        font-size: 54px; }
+      .hero.is-large h2 {
+        margin-top: 0px; } }
 
 .hero-bottom-arrow {
   position: relative;
@@ -120,15 +123,12 @@ table {
     .hero-bottom-arrow {
       margin: 0px; }
       .hero-bottom-arrow.is-large {
-        display: none; }
-        .hero-bottom-arrow.is-large h1 {
-          font-size: 30px; } }
+        display: none; } }
 
 /* BACKGROUND IMAGES
 ============================================================== */
 .bg-featured {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
-  background-size: cover; }
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/half-dome-night.jpg") no-repeat center center fixed; }
 
 .bg-landscape {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-1.jpg") no-repeat center center fixed; }
@@ -359,8 +359,9 @@ table {
       width: auto;
       height: 200px;
       display: block;
-      margin: 30px 30px;
-      float: none; }
+      margin: 20px;
+      float: none;
+      border: 0; }
       .image-card h2 {
         padding-top: 75px; }
       .image-card p {
@@ -400,37 +401,35 @@ table {
   padding: 18px 36px;
   text-decoration: none;
   margin: 20px 0; }
-  .button.primary {
+  .button.button-primary {
     color: #ffffff;
     border: 1px solid #ffffff;
     letter-spacing: 0.2em;
     text-align: center; }
-    .button.primary:hover {
+    .button.button-primary:hover {
       background: #ffffff;
       color: #000000;
       transition: all .3s; }
-  .button.secondary {
+  .button.button-secondary {
     color: #ffffff;
     background-color: #64B5F6; }
-    .button.secondary:hover {
+    .button.button-secondary:hover {
       background-color: #2196F3;
       transition: all .3s; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .button {
-      width: auto;
-      display: block;
       padding: 20px;
       margin: auto;
       text-align: center; }
-      .button.primary {
+      .button.button-primary {
         padding: 22px 20px;
-        margin: 0 30px; }
-      .button.secondary {
+        margin: 0 20px; }
+      .button.button-secondary {
         padding: 22px 20px;
         margin: 20px auto; } }
   @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 480px) {
-    .button.primary {
-      font-size: 12px; } }
+    .button.button-primary {
+      display: none; } }
 
 /* FOOTER
 ============================================================== */
@@ -557,7 +556,7 @@ footer {
         display: block;
         margin: 0;
         float: none;
-        padding: 30px 30px 0; }
+        padding: 20px 20px 0; }
         .grid .col-1 img,
         .grid .col-2 img,
         .grid .col-3 img,
@@ -616,9 +615,7 @@ footer {
       width: 100%; } }
   @media handheld and (max-height: 800px), screen and (max-device-height: 800px), screen and (max-height: 800px) {
     .viewer-image-container {
-      height: 70%; }
-      .viewer-image-container img {
-        padding-bottom: 50px; } }
+      height: 70%; } }
 
 .viewer-close-button {
   position: absolute;
