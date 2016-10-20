@@ -8,29 +8,30 @@ footer {
     font-family: $font-family;
     font-size: 12px;
     font-weight: 300;
-    color: $blue-grey-100;
+    color: $blue-grey-200;
     letter-spacing: 0.1em;
     float: left;
-    line-height: 32px;
+    line-height: 50px;
     margin: 0px 60px;
   }
 
   ul {
     float: right;
-    margin: 0px 60px 10px 0px;
-  }
+    margin: 0px 60px 0px 0px;
 
-  li {
-    float: right;
+    li {
+    float: left;
     list-style: none;
     display: inline-block;
-    line-height: 32px;
+    line-height: 50px;
     padding: 0px 0px 0px 8px;
+    }
   }
 
   @media handheld and (max-width: $breakpoint-medium),
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
+    padding: 20px 0px;
     text-align: center;
 
     small {
@@ -43,10 +44,24 @@ footer {
       float: none;
       display: block;
       margin: auto;
-    }
 
-    li {
+      li {
       float: none;
+      }
     }
   }
+
+  @media handheld and (max-width: $breakpoint-small),
+  screen and (max-device-width: $breakpoint-small),
+  screen and (max-width: $breakpoint-small) {
+
+    small {
+
+      em {
+        text-align: center;
+        display: block;
+        line-height: 20px;
+      }
+    }
+  }  
 }

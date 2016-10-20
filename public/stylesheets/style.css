@@ -87,10 +87,13 @@ table {
       text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
       margin: 0 0 -5px 0; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
-    .hero {
-      margin-bottom: 15px; }
+    .hero.is-large {
+      height: 450px;
+      padding: 160px 0; }
       .hero.is-large h1 {
-        font-size: 54px; } }
+        font-size: 54px; }
+      .hero.is-large h2 {
+        margin-top: 0px; } }
 
 .hero-bottom-arrow {
   position: relative;
@@ -115,44 +118,39 @@ table {
     background: #ffffff;
     transform: skew(0deg, -3deg); }
   .hero-bottom-arrow.is-large {
-    margin-top: 135px; }
+    margin-top: 160px; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .hero-bottom-arrow {
       margin: 0px; }
       .hero-bottom-arrow.is-large {
-        display: none; }
-        .hero-bottom-arrow.is-large h1 {
-          font-size: 30px; } }
+        display: none; } }
 
 /* BACKGROUND IMAGES
 ============================================================== */
-.img-featured {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-featured {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/half-dome-night.jpg") no-repeat center center fixed; }
 
-.img-landscape {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-1.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-landscape {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-1.jpg") no-repeat center center fixed; }
 
-.img-about {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-8.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-about {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-8.jpg") no-repeat center center fixed; }
 
-.img-contact {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape-fall.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape-fall.jpg") no-repeat center center fixed; }
 
-.img-gallery {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-11.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-gallery {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-11.jpg") no-repeat center center fixed; }
 
-.img-portrait {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portrait/portrait-5.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-portrait {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portrait/portrait-5.jpg") no-repeat center center fixed; }
 
-.img-food {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed;
-  background-size: cover; }
+.bg-food {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed; }
+
+.bg {
+  background-size: cover;
+  max-height: 100%; }
 
 /* TOP NAVIGATION
 ============================================================== */
@@ -164,7 +162,8 @@ table {
   left: 0px;
   font-weight: 400;
   overflow: hidden;
-  padding: 30px 0px 30px 0px; }
+  padding: 30px 0px 30px 0px;
+  z-index: 100; }
   .top-nav h1 {
     float: left;
     font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
@@ -182,25 +181,20 @@ table {
       padding: 0px;
       line-height: 40px; }
   .top-nav #dropdown-button {
-    margin-top: 20px;
-    margin-right: 20px;
-    color: #ffffff;
-    float: right;
-    line-height: 40px;
     display: none; }
   .top-nav ul {
     float: right;
     margin: 0px 60px 0px 0px; }
-  .top-nav li {
-    float: right;
-    font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0 0 0 60px;
-    letter-spacing: 0.1em;
-    line-height: 40px;
-    text-transform: uppercase; }
+    .top-nav ul li {
+      float: left;
+      font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0;
+      padding: 0 0 0 60px;
+      letter-spacing: 0.1em;
+      line-height: 40px;
+      text-transform: uppercase; }
   .top-nav a {
     color: #ffffff;
     text-decoration: none; }
@@ -212,10 +206,10 @@ table {
       padding: 0;
       overflow: visible; }
       .top-nav h1 {
-        margin: 20px 0 0 30px; }
+        margin: 10px 0 0 20px; }
       .top-nav #dropdown-button {
-        margin-top: 20px;
-        margin-right: 30px;
+        margin-top: 10px;
+        margin-right: 20px;
         color: #ffffff;
         float: right;
         line-height: 40px;
@@ -226,26 +220,31 @@ table {
         display: none;
         position: absolute;
         margin: 0;
-        top: 0;
-        right: 0;
-        background: #ffffff;
-        padding: 0; }
+        top: 60px;
+        left: 20px;
+        right: 20px; }
         .top-nav .dropdown.is-visible {
           display: block; }
         .top-nav .dropdown li {
           float: none;
           margin: 0;
           padding: 0;
-          line-height: 0; }
+          line-height: 0;
+          display: block;
+          margin-bottom: 3px; }
           .top-nav .dropdown li a {
-            background: #ffffff;
-            color: #455A64;
-            border-bottom: 1px solid #CFD8DC;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
             display: block;
-            width: 180px;
-            padding: 30px 50px; }
+            padding: 30px 30px;
+            border-radius: 3px; }
             .top-nav .dropdown li a:hover {
               color: #B0BEC5; } }
+  @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 480px) {
+    .top-nav h1 {
+      font-size: 22px; }
+      .top-nav h1 em {
+        font-size: 22px; } }
 
 /* GALLERY
 ============================================================== */
@@ -257,8 +256,7 @@ table {
   text-align: center; }
   @media handheld and (max-width: 1200px), screen and (max-device-width: 1200px), screen and (max-width: 1200px) {
     .gallery-nav {
-      max-width: 100%;
-      margin: 50px 20px; } }
+      margin: 50px 10px; } }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .gallery-nav {
       width: 100%;
@@ -270,11 +268,12 @@ table {
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 10px 1%;
-  width: 376px;
-  height: 376px;
+  width: 33.3333%;
+  height: 500px;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 10px solid #ffffff;
+  box-sizing: border-box; }
   .image-card:hover {
     background: #000000; }
     .image-card:hover img {
@@ -291,7 +290,6 @@ table {
     position: relative;
     display: block;
     min-height: 100%;
-    max-width: 100%;
     opacity: 0.6;
     transition: opacity 0.35s; }
   .image-card figcaption,
@@ -302,11 +300,9 @@ table {
     width: 100%;
     height: 100%; }
   .image-card figcaption {
-    padding: 2em;
     color: #fff;
     box-sizing: border-box;
     text-transform: uppercase;
-    font-size: 1.25em;
     backface-visibility: hidden; }
     .image-card figcaption::before, .image-card figcaption::after {
       position: absolute;
@@ -337,41 +333,39 @@ table {
     margin: 0; }
   .image-card h2 {
     font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-size: 36px;
     font-weight: 800;
     letter-spacing: 0.05em;
-    padding-top: 40%;
+    padding-top: 210px;
     transition: transform 0.35s;
-    transform: translate3d(0, -20px, 0); }
-    .image-card h2 span {
-      font-weight: 800; }
+    transform: translate3d(0, -5px, 0); }
   .image-card p {
     font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 2px;
-    font-size: 68.5%;
-    padding: 10px 2.5em;
+    font-size: 14px;
+    padding: 10px;
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(0, 20px, 0); }
   @media handheld and (max-width: 1200px), screen and (max-device-width: 1200px), screen and (max-width: 1200px) {
-    .image-card {
-      margin: 10px 0.6%;
-      width: 32%;
-      height: 100%; }
-      .image-card h2 {
-        font-size: 1.3em; }
-      .image-card p {
-        font-size: .55em; }
-      .image-card img {
-        width: 100%; } }
+    .image-card img {
+      width: auto; }
+    .image-card h2 {
+      font-size: 30px; } }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .image-card {
-      width: 90%;
-      height: 90%;
-      margin: 5% auto;
-      float: none; }
+      width: auto;
+      height: 200px;
+      display: block;
+      margin: 20px;
+      float: none;
+      border: 0; }
+      .image-card h2 {
+        padding-top: 75px; }
+      .image-card p {
+        padding: 0; }
       .image-card img {
         width: 100%; } }
 
@@ -383,9 +377,6 @@ table {
   font-size: 24px;
   font-weight: 300;
   color: #455A64; }
-  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
-    .text-subtitle {
-      margin-top: 15px; } }
 
 .text-content {
   font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
@@ -396,6 +387,9 @@ table {
   .text-content.center {
     margin: 60px 30px 20px;
     text-align: center; }
+    @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+      .text-content.center {
+        margin: 30px 30px 30px; } }
 
 /* BUTTON
 ============================================================== */
@@ -406,33 +400,29 @@ table {
   letter-spacing: 0.1em;
   padding: 18px 36px;
   text-decoration: none;
-  margin: 20px 0; }
-  .button.primary {
+  margin: auto; }
+  .button.button-primary {
     color: #ffffff;
     border: 1px solid #ffffff;
-    letter-spacing: 0.2em;
+    letter-spacing: 4px;
     text-align: center; }
-    .button.primary:hover {
+    .button.button-primary:hover {
       background: #ffffff;
       color: #000000;
       transition: all .3s; }
-  .button.secondary {
+  .button.button-secondary {
     color: #ffffff;
     background-color: #64B5F6; }
-    .button.secondary:hover {
+    .button.button-secondary:hover {
       background-color: #2196F3;
       transition: all .3s; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .button {
-      width: auto;
-      display: block;
-      padding: 20px;
       margin: auto;
       text-align: center; }
-      .button.primary {
-        padding: 22px 20px;
-        margin: 0 30px; }
-      .button.secondary {
+      .button.button-primary {
+        padding: 18px 36px; }
+      .button.button-secondary {
         padding: 22px 20px;
         margin: 20px auto; } }
 
@@ -444,22 +434,23 @@ footer {
     font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: 300;
-    color: #CFD8DC;
+    color: #B0BEC5;
     letter-spacing: 0.1em;
     float: left;
-    line-height: 32px;
+    line-height: 50px;
     margin: 0px 60px; }
   footer ul {
     float: right;
-    margin: 0px 60px 10px 0px; }
-  footer li {
-    float: right;
-    list-style: none;
-    display: inline-block;
-    line-height: 32px;
-    padding: 0px 0px 0px 8px; }
+    margin: 0px 60px 0px 0px; }
+    footer ul li {
+      float: left;
+      list-style: none;
+      display: inline-block;
+      line-height: 50px;
+      padding: 0px 0px 0px 8px; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     footer {
+      padding: 20px 0px;
       text-align: center; }
       footer small {
         float: none;
@@ -469,8 +460,13 @@ footer {
         float: none;
         display: block;
         margin: auto; }
-      footer li {
-        float: none; } }
+        footer ul li {
+          float: none; } }
+  @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 480px) {
+    footer small em {
+      text-align: center;
+      display: block;
+      line-height: 20px; } }
 
 /* GRID
 ============================================================== */
@@ -555,7 +551,7 @@ footer {
         display: block;
         margin: 0;
         float: none;
-        padding: 15px 30px; }
+        padding: 20px 20px 0; }
         .grid .col-1 img,
         .grid .col-2 img,
         .grid .col-3 img,
@@ -614,9 +610,7 @@ footer {
       width: 100%; } }
   @media handheld and (max-height: 800px), screen and (max-device-height: 800px), screen and (max-height: 800px) {
     .viewer-image-container {
-      height: 70%; }
-      .viewer-image-container img {
-        padding-bottom: 50px; } }
+      height: 70%; } }
 
 .viewer-close-button {
   position: absolute;
@@ -697,5 +691,37 @@ footer {
       .l-center .l-max-width {
         width: 100%;
         display: block; } }
+
+/* MATERIAL DESIGN
+============================================================== */
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px; }
+
+.material-icons.md-24 {
+  font-size: 24px; }
+
+.material-icons.md-36 {
+  font-size: 36px; }
+
+.material-icons.md-48 {
+  font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54); }
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: white; }
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3); }
+
+.fa-circle {
+  color: #B0BEC5; }
 
 /*# sourceMappingURL=style.css.map */

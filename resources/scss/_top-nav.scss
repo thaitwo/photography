@@ -10,8 +10,7 @@
   font-weight: 400;
   overflow: hidden;
   padding: 30px 0px 30px 0px;
-
-
+  z-index: 100;
 
   h1 {
     float: left;
@@ -34,29 +33,24 @@
   }
 
   #dropdown-button {
-      margin-top: 20px;
-      margin-right: 20px; 
-      color: $white;
-      float: right;
-      line-height: 40px;
-      display: none;
-    }
+    display: none;
+  }
 
   ul {
     float: right;
     margin: 0px 60px 0px 0px;
-  }
 
-  li {
-    float: right;
-    font-family: $font-family;
-    font-size: $font-size-1x;
-    font-weight: 400;
-    margin: 0;
-    padding: 0 0 0 60px;
-    letter-spacing: 0.1em;
-    line-height: 40px;
-    text-transform: uppercase;
+    li {
+      float: left;
+      font-family: $font-family;
+      font-size: $font-size-1x;
+      font-weight: 400;
+      margin: 0;
+      padding: 0 0 0 60px;
+      letter-spacing: 0.1em;
+      line-height: 40px;
+      text-transform: uppercase;
+    }
   }
 
   a {
@@ -76,12 +70,12 @@
     overflow: visible;
 
     h1 {
-      margin: 20px 0 0 30px; 
+      margin: 10px 0 0 20px; 
     }
 
     #dropdown-button {
-      margin-top: 20px;
-      margin-right: 30px; 
+      margin-top: 10px;
+      margin-right: 20px; 
       color: $white;
       float: right;
       line-height: 40px;
@@ -94,27 +88,28 @@
       display: none;
       position: absolute;
       margin: 0;
-      top: 0; 
-      right: 0;
-      background: $white;
-      padding: 0;
+      top: 60px; 
+      left: 20px; 
+      right: 20px;
 
       &.is-visible {
         display: block;
       }
 
       li {
-      float: none;
-      margin: 0;
-      padding: 0;
-      line-height: 0;
+        float: none;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+        display: block;
+        margin-bottom: 3px;
+
         a {
-          background: $white;
-          color: $blue-grey-700;
-          border-bottom: 1px solid $blue-grey-100;
+          background: rgba(0,0,0,.6);
+          color: $white;
           display: block;
-          width: 180px;
-          padding: 30px 50px;
+          padding: 30px 30px;
+          border-radius: 3px;
 
           &:hover {
             color: $blue-grey-200;
@@ -123,4 +118,17 @@
       }
     }
   }
+
+  @media handheld and (max-width: $breakpoint-small),
+  screen and (max-device-width: $breakpoint-small),
+  screen and (max-width: $breakpoint-small) {
+
+    h1 {
+      font-size: 22px;
+
+      em {
+        font-size: 22px;
+      }
+    }
+  }  
 }

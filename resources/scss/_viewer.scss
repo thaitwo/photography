@@ -39,10 +39,6 @@
   screen and (max-device-height: $breakpoint-medium),
   screen and (max-height: $breakpoint-medium) {
     height: 70%;
-
-    img {
-    padding-bottom: 50px;
-    }
   }
 }
 

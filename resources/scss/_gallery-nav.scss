@@ -11,8 +11,7 @@
   @media handheld and (max-width: $breakpoint-large),
   screen and (max-device-width: $breakpoint-large),
   screen and (max-width: $breakpoint-large) {
-    max-width: 100%;
-    margin: 50px 20px;
+    margin: 50px 10px;
   }
 
   @media handheld and (max-width: $breakpoint-medium),
@@ -29,11 +28,12 @@
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 10px 1%;
-  width: 376px;
-  height: 376px;
+  width: 33.3333%;
+  height: 500px;
   text-align: center;
   cursor: pointer;
+  border: 10px solid $white;
+  box-sizing: border-box;
 
   &:hover {
     background: $black;
@@ -59,7 +59,6 @@
     position: relative;
     display: block;
     min-height: 100%;
-    max-width: 100%;
     opacity: 0.6;
     transition: opacity 0.35s;
   }
@@ -74,11 +73,9 @@
   }
 
   figcaption {
-    padding: 2em;
     color: #fff;
     box-sizing: border-box;
     text-transform: uppercase;
-    font-size: 1.25em;
     backface-visibility: hidden;
 
     &::before,
@@ -115,64 +112,63 @@
     }
   }
 
-  h2,
-  p {
-    margin: 0;
-  }
+    h2,
+    p {
+      margin: 0;
+    }
 
-  h2 {
+    h2 {
     font-family: $font-family;
-    font-size: 2em;
+    font-size: $font-size-4x;
     font-weight: 800;
     letter-spacing: 0.05em;
-    padding-top: 40%;
+    padding-top: 210px;
     transition: transform 0.35s;
-    transform: translate3d(0,-20px,0);
-
-    span {
-      font-weight: 800;
+    transform: translate3d(0,-5px,0);
     }
-  }
 
-  p {
+    p {
     font-family: $font-family;
     font-size: $font-size-1x;
     font-weight: 300;
     letter-spacing: 2px;
-    font-size: 68.5%;
-    padding: 10px 2.5em;
+    font-size: 14px;
+    padding: 10px;
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(0,20px,0);
-  }
+    }
 
   @media handheld and (max-width: $breakpoint-large),
   screen and (max-device-width: $breakpoint-large),
   screen and (max-width: $breakpoint-large) {
-    margin: 10px 0.6%;
-    width: 32%;
-    height: 100%;
-
-    h2 {
-      font-size: 1.3em;
-    }
-
-    p {
-      font-size: .55em;
-    }
 
     img {
-      width: 100%;
+      width: auto;
+    }
+
+    h2 {
+      font-size: 30px;
     }
   }
 
   @media handheld and (max-width: $breakpoint-medium),
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
-    width: 90%;
-    height: 90%;
-    margin: 5% auto;
+    width: auto;
+    height: 200px;
+    display: block;
+    margin: 20px;
     float: none;
+    border: 0;
+
+    h2 {
+      padding-top: 75px;
+    }
+
+    p {
+      padding: 0;
+    }
 
     img {
       width: 100%;
