@@ -128,10 +128,12 @@ function startView() {
 
   // TAP - Displays next image
   $imageviewer.swipe({
-    tap:function() {
+    tap:function(event) {
+      event.preventDefault();
+      event.stopPropagation();
       nextImage();
     }
-  })
+  });
 
 
   // NEXT/PREVIOUS BUTTONS
@@ -151,6 +153,24 @@ function startView() {
     event.stopPropagation();
     
     prevImage();
+  });
+
+
+  // ARROWS LEFT/RIGHT - Switch images
+  // ----------------------------------------
+
+  $(document).keydown(function(e) {
+    switch(e.which) {
+      case 37: // left
+      prevImage();
+      break;
+
+      case 39: // right
+      nextImage();
+      break;
+    }
+
+    e.preventDefault(); // prevent the default action (scroll / move caret)
   });
 }
 

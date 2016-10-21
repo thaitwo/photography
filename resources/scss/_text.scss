@@ -24,6 +24,10 @@
     screen and (max-device-width: $breakpoint-medium),
     screen and (max-width: $breakpoint-medium) {
       margin: 30px 30px 30px;
+
+      p {
+        margin-bottom: 0;
+      }
     }
   }
 }

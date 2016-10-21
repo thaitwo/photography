@@ -26,6 +26,7 @@
   &.button-secondary {
     color: $white;
     background-color: $blue-300;
+    margin: 26px 0 0;
 
     &:hover {
       background-color: $blue-500;
@@ -44,8 +45,16 @@
     }
 
     &.button-secondary {
-      padding: 22px 20px;
       margin: 20px auto;
     }
+  }
+}
+
+@media handheld and (max-width: $breakpoint-medium),
+screen and (max-device-width: $breakpoint-medium),
+screen and (max-width: $breakpoint-medium) {
+
+  .cta {
+    text-align: center;
   }
 }

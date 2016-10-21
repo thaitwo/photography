@@ -389,7 +389,9 @@ table {
     text-align: center; }
     @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
       .text-content.center {
-        margin: 30px 30px 30px; } }
+        margin: 30px 30px 30px; }
+        .text-content.center p {
+          margin-bottom: 0; } }
 
 /* BUTTON
 ============================================================== */
@@ -412,7 +414,8 @@ table {
       transition: all .3s; }
   .button.button-secondary {
     color: #ffffff;
-    background-color: #64B5F6; }
+    background-color: #64B5F6;
+    margin: 26px 0 0; }
     .button.button-secondary:hover {
       background-color: #2196F3;
       transition: all .3s; }
@@ -423,9 +426,11 @@ table {
       .button.button-primary {
         padding: 18px 36px; }
       .button.button-secondary {
-        padding: 22px 20px;
         margin: 20px auto; } }
 
+@media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+  .cta {
+    text-align: center; } }
 /* FOOTER
 ============================================================== */
 footer {
