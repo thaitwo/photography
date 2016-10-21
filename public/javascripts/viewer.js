@@ -10,6 +10,7 @@ var $caption = $('.viewer-caption');
 
 
 // CREATES IMAGE AND CAPTION
+// -------------------------------------------------
 function createImage(link) {
   var imageUrl = link.href;   // Finds href key in image link
   var title = link.title;     // Finds title key in image link
@@ -25,8 +26,8 @@ function createImage(link) {
 };
 
 
-
 // NEXT IMAGE IN GALLERY
+// ----------------------------------------
 function nextImage() {
   var nextIndex;
 
@@ -43,8 +44,8 @@ function nextImage() {
 };
 
 
-
 // PREVIOUS IMAGE IN GALLERY
+// ----------------------------------------
 function prevImage() {
   if (currentIndex === 0) {
     currentIndex = $links.length;
@@ -59,6 +60,8 @@ function prevImage() {
 
 
 // GALLERY VIEW FUNCTION
+// ===============================================================
+
 function startView() {
   // LOOPS THROUGH ARRAY OF LINKS AND DISPLAY IMAGE
   $links.each(function(index, item) {
@@ -75,6 +78,8 @@ function startView() {
 
 
   // CLOSE GALLERY VIEWER
+  // ----------------------------------------
+
   $closeviewer.click(function(event) {
     event.stopPropagation();
     $viewer.fadeOut(200);
@@ -90,7 +95,11 @@ function startView() {
     event.stopPropagation();
   });
 
-  // SWIPE UP & DOWN - Closes gallery viewer
+
+  // SWIPING CAPABILITIES
+  // ----------------------------------------
+
+  // SWIPE UP/DOWN - Closes gallery viewer
   $viewer.swipe({
     swipeDown: function() {
       $viewer.fadeOut(200);
@@ -103,9 +112,32 @@ function startView() {
     }
   });
 
+  // SWIPE LEFT - Displays next image
+  $viewer.swipe({
+    swipeLeft:function() {
+      nextImage();
+    }
+  });
+
+  // SWIPE RIGHT - Displays previous image
+  $viewer.swipe({
+    swipeRight:function() {
+      prevImage();
+    }
+  });
+
+  // TAP - Displays next image
+  $imageviewer.swipe({
+    tap:function() {
+      nextImage();
+    }
+  })
 
 
-  // NEXT BUTTON - Displays next image in gallery
+  // NEXT/PREVIOUS BUTTONS
+  // ----------------------------------------
+
+  // NEXT BUTTON - Displays next image
   $next.click(function(event) {
     event.stopPropagation();
     
@@ -114,29 +146,11 @@ function startView() {
 
 
 
-  // SWIPE LEFT - Displays next image in gallery
-  $viewer.swipe({
-    swipeLeft:function() {
-      nextImage();
-    }
-  });
-
-
-
-  // PREVIOUS BUTTON - Displays previous image in gallery
+  // PREVIOUS BUTTON - Displays previous image
   $prev.click(function(event) {
     event.stopPropagation();
     
     prevImage();
-  });
-
-
-
-  // SWIPE RIGHT - Displays previous image in gallery
-  $viewer.swipe({
-    swipeRight:function() {
-      prevImage();
-    }
   });
 }
 
