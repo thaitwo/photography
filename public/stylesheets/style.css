@@ -158,16 +158,16 @@ table {
   max-height: 100%; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .bg-large {
-      height: 400px;
-      background-position: bottom center; } }
+      background-position: top center;
+      background-size: 780px auto; } }
 
 .bg {
   background-size: cover;
   max-height: 100%; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .bg {
-      height: 260px;
-      background-position: bottom center; } }
+      background-position: top center;
+      background-size: 400px auto; } }
 
 /* TOP NAVIGATION
 ============================================================== */

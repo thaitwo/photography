@@ -38,8 +38,9 @@
   @media handheld and (max-width: $breakpoint-medium),
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
-    height: 400px;
-    background-position: bottom center;
+    // height: 400px;
+    background-position: top center;
+    background-size: 780px auto;
   }
 }
 
@@ -50,7 +51,8 @@
   @media handheld and (max-width: $breakpoint-medium),
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
-    height: 260px;
-    background-position: bottom center;
+    // height: 260px;
+    background-position: top center;
+    background-size: 400px auto;
   }
 }
