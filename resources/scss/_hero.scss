@@ -46,13 +46,19 @@
   @media handheld and (max-width: $breakpoint-medium),
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
+    height: 260px;
+    padding: 120px 0;
+
+    h1 {
+      font-size: $font-size-4x;
+    }
     
     &.is-large {
-      height: 450px;
-      padding: 140px 0; 
+      height: 400px;
+      padding: 140px 0;
 
       h1 {
-        font-size: 54px;
+        font-size: 52px;
       }
 
       h2 {

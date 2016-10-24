@@ -31,7 +31,26 @@
   background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed;
 }
 
+.bg-large {
+  background-size: cover;
+  max-height: 100%;
+
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
+    height: 400px;
+    background-position: bottom center;
+  }
+}
+
 .bg {
   background-size: cover;
   max-height: 100%;
+
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
+    height: 260px;
+    background-position: bottom center;
+  }
 }
