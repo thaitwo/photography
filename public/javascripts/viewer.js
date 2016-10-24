@@ -6,6 +6,8 @@ var currentIndex = 0;
 var $next = $('#next');
 var $prev = $('#prev');
 var $caption = $('.viewer-caption');
+var $gridMasonry = $('.grid-masonry');
+
 
 
 
@@ -179,4 +181,13 @@ $(document).ready(function() {
   if($('.viewer')) {
     startView(); 
   }
-})
+});
+
+
+$(document).ready(function() {
+  $gridMasonry.masonry({
+    itemSelector: '.grid-masonry-item',
+    columnWdith: 60,
+    fitWidth: true
+  });
+});
