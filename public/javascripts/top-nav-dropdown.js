@@ -4,7 +4,7 @@ var $heroTitle = $('.hero-title');
 var $buttonPrimary = $('.button-primary');
 
 function activateDropdown() {
-  $dropdownButton.on('click touchstart', function() {
+  $dropdownButton.on('click touch', function() {
 
     if ($dropdownButton.text() == 'menu') {
       $dropdownButton.text('clear')

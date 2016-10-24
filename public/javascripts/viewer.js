@@ -82,7 +82,7 @@ function startView() {
   // CLOSE GALLERY VIEWER
   // ----------------------------------------
 
-  $closeviewer.on('click touchstart', function(event) {
+  $closeviewer.on('click touch', function(event) {
     event.stopPropagation();
     $viewer.fadeOut(200);
   });
