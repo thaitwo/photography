@@ -24,7 +24,7 @@
 }
 
 .bg-portrait {
-  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/portrait/portrait-10.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/portrait/portrait-15.jpg") no-repeat center center fixed;
 }
 
 .bg-food {
@@ -39,7 +39,7 @@
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
     background-position: top center;
-    background-size: 110%;
+    background-size: 165%;
   }
 
   @media handheld and (max-width: $breakpoint-small),

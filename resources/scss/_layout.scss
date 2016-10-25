@@ -18,3 +18,13 @@
     }
   }
 }
+
+.round-corners {
+  border-radius: 2px;
+
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
+    border-radius: 0;
+  }
+}

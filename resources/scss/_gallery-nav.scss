@@ -26,6 +26,7 @@
 .image-card {
   background: $black;
   position: relative;
+  border-radius: 12px;
   float: left;
   overflow: hidden;
   width: 33.3333%;
@@ -161,6 +162,7 @@
     margin: 20px;
     float: none;
     border: 0;
+    border-radius: 2px;
 
     h2 {
       padding-top: 75px;

@@ -149,7 +149,7 @@ table {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/landscape/landscape-11.jpg") no-repeat center center fixed; }
 
 .bg-portrait {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portrait/portrait-10.jpg") no-repeat center center fixed; }
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portrait/portrait-15.jpg") no-repeat center center fixed; }
 
 .bg-food {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed; }
@@ -160,7 +160,7 @@ table {
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .bg-large {
       background-position: top center;
-      background-size: 110%; } }
+      background-size: 165%; } }
   @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 480px) {
     .bg-large {
       background-position: top center;
@@ -292,6 +292,7 @@ table {
 .image-card {
   background: #000000;
   position: relative;
+  border-radius: 12px;
   float: left;
   overflow: hidden;
   width: 33.3333%;
@@ -387,7 +388,8 @@ table {
       display: block;
       margin: 20px;
       float: none;
-      border: 0; }
+      border: 0;
+      border-radius: 2px; }
       .image-card h2 {
         padding-top: 75px; }
       .image-card p {
@@ -398,6 +400,22 @@ table {
 /* TEXT
 ============================================================== */
 /* Body Text Styles */
+h3 {
+  font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #455A64; }
+
+.grid p {
+  font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #455A64;
+  line-height: 24px; }
+
+.text-center {
+  margin: auto; }
+
 .text-subtitle {
   font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -423,12 +441,13 @@ table {
 ============================================================== */
 .button {
   font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   display: inline-block;
   letter-spacing: 0.1em;
   padding: 18px 36px;
   text-decoration: none;
-  margin: auto; }
+  margin: auto;
+  border-radius: 2px; }
   .button.button-primary {
     color: #ffffff;
     border: 1px solid #ffffff;
@@ -440,10 +459,10 @@ table {
       transition: all .3s; }
   .button.button-secondary {
     color: #ffffff;
-    background-color: #64B5F6;
+    background-color: #FF5722;
     margin: 26px 0 0; }
     .button.button-secondary:hover {
-      background-color: #2196F3;
+      background-color: #FF7043;
       transition: all .3s; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .button {
@@ -512,6 +531,8 @@ footer {
   .grid-masonry .grid-masonry-item {
     width: 300px;
     margin: 0 10px 18px; }
+  .grid-masonry img {
+    border-radius: 2px; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .grid-masonry {
       margin: 20px auto; } }
@@ -593,19 +614,6 @@ footer {
         margin: 0;
         float: none;
         padding: 20px 20px 0; }
-        .grid .col-1 img,
-        .grid .col-2 img,
-        .grid .col-3 img,
-        .grid .col-4 img,
-        .grid .col-5 img,
-        .grid .col-6 img,
-        .grid .col-7 img,
-        .grid .col-8 img,
-        .grid .col-9 img,
-        .grid .col-10 img,
-        .grid .col-11 img,
-        .grid .col-12 img {
-          width: 100%; }
         .grid .col-1.is-full-width,
         .grid .col-2.is-full-width,
         .grid .col-3.is-full-width,
@@ -686,10 +694,10 @@ footer {
     .viewer .viewer-arrow-forward, .viewer .viewer-arrow-back {
       display: none; }
     .viewer .viewer-caption {
-      margin-top: 60px; }
+      margin-top: 50px; }
     .viewer .viewer-image-container {
       width: 100%;
-      margin-top: 100px; }
+      margin-top: 85px; }
     .viewer .viewer-directions {
       font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
       font-size: 24px;
@@ -741,6 +749,12 @@ footer {
       .l-center .l-max-width {
         width: 100%;
         display: block; } }
+
+.round-corners {
+  border-radius: 2px; }
+  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+    .round-corners {
+      border-radius: 0; } }
 
 /* MATERIAL DESIGN
 ============================================================== */
