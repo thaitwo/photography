@@ -419,9 +419,6 @@ h3 {
   color: #455A64;
   line-height: 24px; }
 
-.text-center {
-  margin: auto; }
-
 .text-subtitle {
   font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -745,21 +742,20 @@ footer {
 /* LAYOUT
 ============================================================== */
 .l-center {
-  text-align: center;
-  margin: 40px auto; }
+  text-align: center; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .l-center {
       width: auto;
-      display: block;
-      margin: 40px auto; }
+      display: block; }
       .l-center .l-max-width {
         width: 100%;
         display: block; } }
 
-.round-corners {
+/* Styles */
+.is-rounded {
   border-radius: 2px; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
-    .round-corners {
+    .is-rounded {
       border-radius: 0; } }
 
 /* MATERIAL DESIGN
