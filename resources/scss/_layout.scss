@@ -3,18 +3,27 @@
 
 .l-center {
   text-align: center;
-  margin: 40px auto;
 
   @media handheld and (max-width: $breakpoint-medium),
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
     width: auto;
     display: block;
-    margin: 40px auto;
 
     .l-max-width {
       width: 100%;
       display: block;
     }
+  }
+}
+
+/* Styles */
+.is-rounded {
+  border-radius: 2px;
+
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
+    border-radius: 0;
   }
 }

@@ -4,7 +4,7 @@
 
 
 .bg-featured {
-  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
 }
 
 .bg-landscape {
@@ -24,14 +24,47 @@
 }
 
 .bg-portrait {
-  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/portrait/portrait-5.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/portrait/portrait-15.jpg") no-repeat center center fixed;
 }
 
 .bg-food {
   background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed;
 }
 
+.bg-large {
+  background-size: cover;
+  max-height: 100%;
+
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
+    background-position: top center;
+    background-size: 165%;
+  }
+
+  @media handheld and (max-width: $breakpoint-small),
+  screen and (max-device-width: $breakpoint-small),
+  screen and (max-width: $breakpoint-small) {
+    background-position: top center;
+    background-size: 250%;
+  }
+}
+
 .bg {
   background-size: cover;
   max-height: 100%;
+
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
+    background-position: top center;
+    background-size: 100%;
+  }
+
+  @media handheld and (max-width: $breakpoint-small),
+  screen and (max-device-width: $breakpoint-small),
+  screen and (max-width: $breakpoint-small) {
+    background-position: top center;
+    background-size: 130%;
+  }
 }

@@ -1,9 +1,10 @@
 var $dropdownMenu = $('.dropdown');
 var $dropdownButton = $('#dropdown-button');
 var $heroTitle = $('.hero-title');
+var $buttonPrimary = $('.button-primary');
 
 function activateDropdown() {
-  $dropdownButton.click(function() {
+  $dropdownButton.on('click touch', function() {
 
     if ($dropdownButton.text() == 'menu') {
       $dropdownButton.text('clear')

@@ -2,6 +2,21 @@
 ============================================================== */
 
 /* Body Text Styles */
+h3 {
+  font-family: $font-family;
+  font-size: $font-size-3x;
+  font-weight: 300;
+  color: $blue-grey-700;
+}
+
+.grid p {
+  font-family: $font-family;
+  font-size: $font-size-2x;
+  font-weight: 300;
+  color: $blue-grey-700;
+  line-height: 24px;
+}
+
 .text-subtitle {
   font-family: $font-family;
   font-size: $font-size-3x;
@@ -24,6 +39,10 @@
     screen and (max-device-width: $breakpoint-medium),
     screen and (max-width: $breakpoint-medium) {
       margin: 30px 30px 30px;
+
+      p {
+        margin-bottom: 0;
+      }
     }
   }
 }

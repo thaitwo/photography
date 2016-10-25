@@ -1,37 +1,37 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET HOME PAGE. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Thaitwo' });
 });
 
-/* GET about page */
+/* GET ABOUT PAGE */
 router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About'});
 });
 
-/* GET contact page */
+/* GET CONTACT PAGE */
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact'});
 });
 
-/* GET gallery page */
+/* GET GALLERY PAGE */
 router.get('/gallery', function(req, res, next) {
   res.render('gallery', { title: 'Galleries'});
 });
 
-/* GET gallery landscape page */
+/* GET GALLERY LANDSCAPE PAGE */
 router.get('/gallery/landscape', function(req, res, next) {
   res.render('gallery-landscape', { title: 'Landscape'});
 });
 
-/* GET gallery portrait page */
+/* GET GALLERY PORTRAIT PAGE */
 router.get('/gallery/portrait', function(req, res, next) {
   res.render('gallery-portrait', { title: 'Portrait'});
 });
 
-/* GET gallery food page */
+/* GET GALLERY FOOD PAGE */
 router.get('/gallery/food', function(req, res, next) {
   res.render('gallery-food', { title: 'Food'});
 });
