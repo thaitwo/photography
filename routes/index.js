@@ -16,6 +16,13 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact'});
 });
 
+router.post('/contact', function(req, res, next) {
+  var name = req.body.name;
+  var email = req.body.email;
+  console.log(email);
+  res.render('contact', { title: 'Contact'});
+});
+
 /* GET GALLERY PAGE */
 router.get('/gallery', function(req, res, next) {
   res.render('gallery', { title: 'Galleries'});
@@ -27,8 +34,8 @@ router.get('/gallery/landscape', function(req, res, next) {
 });
 
 /* GET GALLERY PORTRAIT PAGE */
-router.get('/gallery/portrait', function(req, res, next) {
-  res.render('gallery-portrait', { title: 'Portrait'});
+router.get('/gallery/people', function(req, res, next) {
+  res.render('gallery-people', { title: 'People'});
 });
 
 /* GET GALLERY FOOD PAGE */
