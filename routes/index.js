@@ -16,13 +16,6 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact'});
 });
 
-router.post('/contact', function(req, res, next) {
-  var name = req.body.name;
-  var email = req.body.email;
-  console.log(email);
-  res.render('contact', { title: 'Contact'});
-});
-
 /* GET GALLERY PAGE */
 router.get('/gallery', function(req, res, next) {
   res.render('gallery', { title: 'Galleries'});
