@@ -27,8 +27,8 @@ router.get('/gallery/landscape', function(req, res, next) {
 });
 
 /* GET GALLERY PORTRAIT PAGE */
-router.get('/gallery/portrait', function(req, res, next) {
-  res.render('gallery-portrait', { title: 'Portrait'});
+router.get('/gallery/people', function(req, res, next) {
+  res.render('gallery-people', { title: 'People'});
 });
 
 /* GET GALLERY FOOD PAGE */
