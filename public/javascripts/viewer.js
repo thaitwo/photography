@@ -165,14 +165,14 @@ function startView() {
     switch(e.which) {
       case 37: // left
       prevImage();
+      e.preventDefault(); // prevent the default action (scroll / move caret)
       break;
 
       case 39: // right
       nextImage();
+      e.preventDefault(); // prevent the default action (scroll / move caret)
       break;
     }
-
-    e.preventDefault(); // prevent the default action (scroll / move caret)
   });
 }
 

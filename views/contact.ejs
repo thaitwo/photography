@@ -1,18 +1,24 @@
 <%- include('../views/includes/_hero', {background:"bg-contact"}); %>
 
-<article class="grid">
-  <img class="col-5 is-full-width is-rounded" src="/images/marlette.jpg">
 
-  <div class="col-1"></div>
+
+<article class="grid">
+  <div class="col-7">
+    <h3>GET IN TOUCH</h3><br>
+    <p>Feel free to contact me if you have any questions.</p>
+
+    <% if (alert) { %>
+      <h1 id="form-alert"><%- alert %></h1>
+    <% } %>
+  </div>
+
+
 
   <div class="col-6">
-    <h3>GET IN TOUCH</h3><br>
-    <p>Feel free to contact me via Twitter if you have any questions. Or simply just to say hi.</p>
-
-    <div class="cta">
-      <a class="button button-secondary" href="https://twitter.com/thaitwo" target="_blank">CONTACT VIA TWITTER</a>
-    </div>
+    <% include ../views/includes/_form %>
   </div>
+
+  <img class="col-6 is-full-width is-rounded" src="/images/marlette.jpg">
 
   <div class="clear"></div>
 </article>

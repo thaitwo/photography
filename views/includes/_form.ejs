@@ -1,14 +1,14 @@
-<form class="form">
+<form class="form" name="contactForm" method="post" action="/contact">
     <ul>
       <li>
-        <input type="text" name="name" placeholder="YOUR NAME">
+        <input type="text" name="name" placeholder="YOUR NAME" value="<%= name %>">
       </li>
       <li>
-        <input type="text" name="email" placeholder="YOUR EMAIL">
+        <input type="email" name="email" placeholder="YOUR EMAIL" value="<%= email %>">
       </li>
       <li>
-        <textarea placeholder="YOUR MESSAGE"></textarea>
+        <textarea name="message" placeholder="YOUR MESSAGE"><%= message %></textarea>
       </li>
-      <a class="button button-secondary" href="#">SEND MESSAGE</a>
+      <input type="submit" value="SEND MESSAGE" class="button button-secondary">
     </ul>
 </form>
