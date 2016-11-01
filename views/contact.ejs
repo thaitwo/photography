@@ -7,15 +7,31 @@
     <h3>GET IN TOUCH</h3><br>
     <p>Feel free to contact me if you have any questions.</p>
 
-    <% if (alert) { %>
-      <h1 id="form-alert"><%- alert %></h1>
+<!-- If there are dog, then for every error, list the error: create a ul, then generate a list item for every error -->
+    <% if (errors) { %>
+      <ul id="form-alert">
+        <% errors.forEach(function(error){ %>
+          <li><%= error.msg %></li>
+        <% }); %>
+      </ul>
     <% } %>
   </div>
 
-
-
   <div class="col-6">
-    <% include ../views/includes/_form %>
+    <form class="form" name="contactForm" method="post" action="/contact">
+      <ul>
+        <li>
+          <input type="text" name="name" placeholder="YOUR NAME" value="<%= name %>">
+        </li>
+        <li>
+          <input type="email" name="email" placeholder="YOUR EMAIL" value="<%= email %>">
+        </li>
+        <li>
+          <textarea name="message" placeholder="YOUR MESSAGE"><%= message %></textarea>
+        </li>
+        <input type="submit" value="SEND MESSAGE" class="button button-secondary">
+      </ul>
+    </form>
   </div>
 
   <img class="col-6 is-full-width is-rounded" src="/images/marlette.jpg">

@@ -15,41 +15,42 @@ router.get('/about', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('contact', {
     title: 'Contact',
-    alert: null,
+    errors: null,
     name: null,
     email: null,
-    message: null
+    message: null,
   });
 });
+
 
 /* POST CONTACT FORM */
 router.post('/contact', function(req, res, next) {
   var name = req.body.name;
   var email = req.body.email;
   var message = req.body.message;
-  var alert = '';
 
-  if (!name) {
-    alert = 'PLEASE ENTER YOUR NAME.';
-  }
+  // VALIDATE USER FORM CONTENT
+  req.checkBody('name', 'PLEASE ENTER YOUR NAME').notEmpty();
+  req.checkBody('email', 'PLEASE MUST ENTER AN EMAIL').notEmpty().isEmail().withMessage('PLEASE ENTER A VALID EMAIL');
+  req.checkBody('message', 'PLEASE ENTER YOUR MESSAGE').notEmpty();
 
-  if (!email) {
-    alert = alert + '<br>PLEASE ENTER YOUR EMAIL.';
-  }
+  // ESCAPE USER FORM CONTENT (TAKES OUT HTML)
+  req.sanitizeBody('name').toString();
+  req.sanitizeBody('email').toString();
+  req.sanitizeBody('message').toString();
 
-  if (!message) {
-    alert = alert + '<br>PLEASE ENTER YOUR MESSAGE.';
-  }
+  // CHECK FOR ERRORS
+  var errors = req.validationErrors();
 
-  if (!name || !email || !message) {
-    // FAILED
+  if (errors) {
+    // FAILED - FIELDS STILL POPULATED
     res.render('contact', {
       title: 'Contact',
-      alert: alert,
+      errors: errors,
       name: name,
       email: email,
       message: message
-    });
+    })
   }
   else {
     // SUCCESS

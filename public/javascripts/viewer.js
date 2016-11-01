@@ -144,7 +144,7 @@ function startView() {
   // NEXT BUTTON - Displays next image
   $next.click(function(event) {
     event.stopPropagation();
-    
+
     nextImage();
   });
 
@@ -153,7 +153,7 @@ function startView() {
   // PREVIOUS BUTTON - Displays previous image
   $prev.click(function(event) {
     event.stopPropagation();
-    
+
     prevImage();
   });
 
@@ -179,7 +179,7 @@ function startView() {
 
 $(document).ready(function() {
   if($('.viewer')) {
-    startView(); 
+    startView();
   }
 });
 

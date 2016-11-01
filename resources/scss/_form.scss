@@ -38,7 +38,7 @@
     margin-bottom: 10px;
   }
 }
- 
+
 
 #form-alert {
   font-family: $font-family;
@@ -47,6 +47,18 @@
   font-weight: 400;
   box-sizing: border-box;
   line-height: 18px;
+  margin-top: 10px;
+}
+
+#form-success {
+  font-family: $font-family;
+
+  & h1 {
+    font-size: $font-size-4x;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $blue-grey-800;
+  }
 }
 
 @media handheld and (max-width: $breakpoint-medium),
