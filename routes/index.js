@@ -1,5 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var api_key = 'key-d0a20155f81d1b9337d53b4f282f306a';
+var domain = 'mail.thaitwo.com';
+var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
 
 /* GET HOME PAGE. */
 router.get('/', function(req, res, next) {
@@ -42,6 +45,14 @@ router.post('/contact', function(req, res, next) {
   // CHECK FOR ERRORS
   var errors = req.validationErrors();
 
+  // MAILGUN
+  var data = {
+    from: 'thaitwo@thaitwo.com',
+    to: 'thethaitu@gmail.com',
+    subject: 'thaitwo photography',
+    text: 'Name: ' + name + '\n' + '\n' + 'Email: ' + email + '\n' + '\n' + 'Message: ' + message
+  };
+
   if (errors) {
     // FAILED - FIELDS STILL POPULATED
     res.render('contact', {
@@ -53,6 +64,9 @@ router.post('/contact', function(req, res, next) {
     })
   }
   else {
+    // SEND TO EMAIL
+    mailgun.messages().send(data, function (error, body) {
+    });
     // SUCCESS
     res.render('contact-success', {
       title: 'Contact',
