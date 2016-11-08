@@ -130,7 +130,7 @@ table {
     background: #ffffff;
     transform: skew(0deg, -3deg); }
   .hero-bottom-arrow.is-large {
-    margin-top: 160px; }
+    margin-top: 165px; }
   @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
     .hero-bottom-arrow {
       margin: 0px; }
@@ -212,7 +212,7 @@ table {
       margin: 0px 0px 0px 0px;
       padding: 0px;
       line-height: 40px; }
-  .top-nav #dropdown-button {
+  .top-nav .dropdown-button {
     display: none; }
   .top-nav ul {
     float: right;
@@ -239,7 +239,7 @@ table {
       overflow: visible; }
       .top-nav h1 {
         margin: 10px 0 0 20px; }
-      .top-nav #dropdown-button {
+      .top-nav .dropdown-button {
         margin-top: 10px;
         margin-right: 20px;
         color: #ffffff;
@@ -725,10 +725,10 @@ footer {
   width: 420px;
   display: block;
   float: left; }
-  .form input[type=email],
-  .form input[type=text] {
+  .form input {
     background-color: #ECEFF1;
     border: 0;
+    color: #263238;
     width: 420px;
     padding: 15px;
     font-family: "Raleway", sans-serif;
@@ -737,11 +737,12 @@ footer {
     letter-spacing: 1px;
     border-radius: 2px; }
   .form textarea {
+    background-color: #ECEFF1;
     font-family: "Raleway", sans-serif;
     font-size: 12px;
     font-weight: 400;
     border: 0;
-    background-color: #ECEFF1;
+    color: #263238;
     height: 169px;
     width: 420px;
     padding: 15px;

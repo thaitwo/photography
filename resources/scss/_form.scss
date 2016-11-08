@@ -3,11 +3,10 @@
   display: block;
   float: left;
 
-  & input[type=email],
-  input[type=text] {
+  input {
     background-color: $blue-grey-50;
     border: 0;
-    // color: $blue-grey-300;
+    color: $blue-grey-900;
     width: 420px;
     padding: 15px;
     font-family: "Raleway", sans-serif;
@@ -17,16 +16,13 @@
     border-radius: 2px;
   }
 
-  & input[placeholder=""] {
-    // color: $blue-grey-800;
-  }
-
-  & textarea {
+  textarea {
+    background-color: $blue-grey-50;
     font-family: "Raleway", sans-serif;
     font-size: $font-size-0x;
     font-weight: 400;
     border: 0;
-    background-color: $blue-grey-50;
+    color: $blue-grey-900;
     height: 169px;
     width: 420px;
     padding: 15px;
@@ -34,7 +30,7 @@
     border-radius: 2px;
   }
 
-  & ul li {
+  ul li {
     margin-bottom: 10px;
   }
 }

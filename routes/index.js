@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var api_key = 'key-d0a20155f81d1b9337d53b4f282f306a';
-var domain = 'mail.thaitwo.com';
+var api_key = process.env.MAILGUN_API_KEY;
+var domain = process.env.MAILGUN_DOMAIN;
 var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
 
 /* GET HOME PAGE. */
@@ -28,33 +28,35 @@ router.get('/contact', function(req, res, next) {
 
 /* POST CONTACT FORM */
 router.post('/contact', function(req, res, next) {
+  // GET VALUES FROM CONTACT FORM FIELDS
   var name = req.body.name;
   var email = req.body.email;
   var message = req.body.message;
 
-  // VALIDATE USER FORM CONTENT
+  // VALIDATE USER FORM CONTENT WITH MAILGUN-JS
   req.checkBody('name', 'PLEASE ENTER YOUR NAME').notEmpty();
   req.checkBody('email', 'PLEASE MUST ENTER AN EMAIL').notEmpty().isEmail().withMessage('PLEASE ENTER A VALID EMAIL');
   req.checkBody('message', 'PLEASE ENTER YOUR MESSAGE').notEmpty();
 
-  // ESCAPE USER FORM CONTENT (TAKES OUT HTML)
+  // ESCAPE USER FORM CONTENT (TAKES OUT HTML) WITH MAILGUN-JS
   req.sanitizeBody('name').toString();
   req.sanitizeBody('email').toString();
   req.sanitizeBody('message').toString();
 
-  // CHECK FOR ERRORS
+  // CHECK FOR MAILGUN-JS ERRORS
   var errors = req.validationErrors();
 
-  // MAILGUN
-  var data = {
-    from: 'thaitwo@thaitwo.com',
-    to: 'thethaitu@gmail.com',
+  // MESSAGE FORMAT FOR MAILGUN TO SEND ME
+  var emailMessage = {
+    from: process.env.FROM_EMAIL,
+    to: process.env.TO_EMAIL,
     subject: 'thaitwo photography',
     text: 'Name: ' + name + '\n' + '\n' + 'Email: ' + email + '\n' + '\n' + 'Message: ' + message
   };
 
+  // CHECK FOR ERRORS (FROM MAILGUN-JS)
   if (errors) {
-    // FAILED - FIELDS STILL POPULATED
+    // FAILED - DISPLAY ERRORS, POPULATE FIELDS WITH SUBMITTED VALUES
     res.render('contact', {
       title: 'Contact',
       errors: errors,
@@ -64,15 +66,25 @@ router.post('/contact', function(req, res, next) {
     })
   }
   else {
-    // SEND TO EMAIL
-    mailgun.messages().send(data, function (error, body) {
-    });
-    // SUCCESS
-    res.render('contact-success', {
-      title: 'Contact',
-      name: name,
-      email: email,
-      message: message
+    // SEND TO MAILGUN TO EMAIL TO ME
+    mailgun.messages().send(emailMessage, function (error, body) {
+      // CHECK FOR ANY MAILGUN ERRORS
+      if (error) {
+        // FAILED - SHOW ERRORS, POPULATE FIELDS WITH SUBMITTED VALUES
+        res.render('contact', {
+          title: 'Contact',
+          errors: [{msg: 'Sorry, your email did not send.'}],
+          name: name,
+          email: email,
+          message: message
+        });
+      }
+      else {
+        // SUCCESS - SHOW SUCCESS PAGE
+        res.render('contact-success', {
+          title: 'Contact',
+        });
+      }
     });
   }
 });

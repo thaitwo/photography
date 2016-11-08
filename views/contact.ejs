@@ -7,11 +7,11 @@
     <h3>GET IN TOUCH</h3><br>
     <p>Feel free to contact me if you have any questions.</p>
 
-<!-- If there are dog, then for every error, list the error: create a ul, then generate a list item for every error -->
+    <!-- If there are errors, list error msg for each error. -->
     <% if (errors) { %>
       <ul id="form-alert">
-        <% errors.forEach(function(error){ %>
-          <li><%= error.msg %></li>
+        <% errors.forEach(function(obj){ %>
+          <li><%= obj.msg %></li>
         <% }); %>
       </ul>
     <% } %>
@@ -29,7 +29,7 @@
         <li>
           <textarea name="message" placeholder="YOUR MESSAGE"><%= message %></textarea>
         </li>
-        <input type="submit" value="SEND MESSAGE" class="button button-secondary">
+        <button class="button button-secondary">SEND MESSAGE</button>
       </ul>
     </form>
   </div>

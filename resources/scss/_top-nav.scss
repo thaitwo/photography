@@ -32,7 +32,7 @@
     }
   }
 
-  #dropdown-button {
+  .dropdown-button {
     display: none;
   }
 
@@ -65,17 +65,17 @@
   @media handheld and (max-width: $breakpoint-medium),
   screen and (max-device-width: $breakpoint-medium),
   screen and (max-width: $breakpoint-medium) {
-    height: 60px; 
+    height: 60px;
     padding: 0;
     overflow: visible;
 
     h1 {
-      margin: 10px 0 0 20px; 
+      margin: 10px 0 0 20px;
     }
 
-    #dropdown-button {
+    .dropdown-button {
       margin-top: 10px;
-      margin-right: 20px; 
+      margin-right: 20px;
       color: $white;
       float: right;
       line-height: 40px;
@@ -88,8 +88,8 @@
       display: none;
       position: absolute;
       margin: 0;
-      top: 60px; 
-      left: 20px; 
+      top: 60px;
+      left: 20px;
       right: 20px;
 
       &.is-visible {
@@ -130,5 +130,5 @@
         font-size: 22px;
       }
     }
-  }  
+  }
 }
