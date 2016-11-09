@@ -33,10 +33,25 @@
   ul li {
     margin-bottom: 10px;
   }
+
+  @media handheld and (max-width: $breakpoint-medium),
+  screen and (max-device-width: $breakpoint-medium),
+  screen and (max-width: $breakpoint-medium) {
+    width: 90%;
+    margin: auto;
+
+    input {
+      width: 100%;
+    }
+
+    textarea {
+      width: 100%;
+    }
+  }
 }
 
 
-#form-alert {
+.form-alert {
   font-family: $font-family;
   font-size: $font-size-1x;
   color: $red-800;
@@ -46,7 +61,7 @@
   margin-top: 10px;
 }
 
-#form-success {
+.form-success {
   font-family: $font-family;
 
   & h1 {
@@ -55,9 +70,4 @@
     text-transform: uppercase;
     color: $blue-grey-800;
   }
-}
-
-@media handheld and (max-width: $breakpoint-medium),
-screen and (max-device-width: $breakpoint-medium),
-screen and (max-width: $breakpoint-medium) {
 }

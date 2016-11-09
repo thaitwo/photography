@@ -35,7 +35,7 @@ router.post('/contact', function(req, res, next) {
 
   // VALIDATE USER FORM CONTENT WITH MAILGUN-JS
   req.checkBody('name', 'PLEASE ENTER YOUR NAME').notEmpty();
-  req.checkBody('email', 'PLEASE MUST ENTER AN EMAIL').notEmpty().isEmail().withMessage('PLEASE ENTER A VALID EMAIL');
+  req.checkBody('email', 'PLEASE ENTER AN EMAIL').notEmpty().isEmail().withMessage('PLEASE ENTER A VALID EMAIL');
   req.checkBody('message', 'PLEASE ENTER YOUR MESSAGE').notEmpty();
 
   // ESCAPE USER FORM CONTENT (TAKES OUT HTML) WITH MAILGUN-JS

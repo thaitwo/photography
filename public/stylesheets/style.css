@@ -485,7 +485,7 @@ h3 {
         margin: 20px auto; } }
 
 @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
-  .cta {
+  .ctr {
     text-align: center; } }
 /* FOOTER
 ============================================================== */
@@ -754,8 +754,16 @@ footer {
     border-radius: 2px; }
   .form ul li {
     margin-bottom: 10px; }
+  @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
+    .form {
+      width: 90%;
+      margin: auto; }
+      .form input {
+        width: 100%; }
+      .form textarea {
+        width: 100%; } }
 
-#form-alert {
+.form-alert {
   font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #C62828;
@@ -764,9 +772,9 @@ footer {
   line-height: 18px;
   margin-top: 10px; }
 
-#form-success {
+.form-success {
   font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif; }
-  #form-success h1 {
+  .form-success h1 {
     font-size: 36px;
     font-weight: 800;
     text-transform: uppercase;

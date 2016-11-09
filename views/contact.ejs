@@ -9,7 +9,7 @@
 
     <!-- If there are errors, list error msg for each error. -->
     <% if (errors) { %>
-      <ul id="form-alert">
+      <ul class="form-alert">
         <% errors.forEach(function(obj){ %>
           <li><%= obj.msg %></li>
         <% }); %>
@@ -18,7 +18,7 @@
   </div>
 
   <div class="col-6">
-    <form class="form" name="contactForm" method="post" action="/contact">
+    <form class="form ctr" name="contactForm" method="post" action="/contact">
       <ul>
         <li>
           <input type="text" name="name" placeholder="YOUR NAME" value="<%= name %>">
