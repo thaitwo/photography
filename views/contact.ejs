@@ -1,18 +1,40 @@
 <%- include('../views/includes/_hero', {background:"bg-contact"}); %>
 
-<article class="grid">
-  <img class="col-5 is-full-width is-rounded" src="/images/marlette.jpg">
 
-  <div class="col-1"></div>
+
+<article class="grid">
+  <div class="col-7">
+    <h3>GET IN TOUCH</h3><br>
+    <p>Feel free to contact me if you have any questions.</p>
+
+    <!-- If there are errors, list error msg for each error. -->
+    <% if (errors) { %>
+      <ul class="form-alert">
+        <% errors.forEach(function(obj){ %>
+          <li><%= obj.msg %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+  </div>
 
   <div class="col-6">
-    <h3>GET IN TOUCH</h3><br>
-    <p>Feel free to contact me via Twitter if you have any questions. Or simply just to say hi.</p>
-
-    <div class="cta">
-      <a class="button button-secondary" href="https://twitter.com/thaitwo" target="_blank">CONTACT VIA TWITTER</a>
-    </div>
+    <form class="form ctr" name="contactForm" method="post" action="/contact">
+      <ul>
+        <li>
+          <input type="text" name="name" placeholder="YOUR NAME" value="<%= name %>">
+        </li>
+        <li>
+          <input type="email" name="email" placeholder="YOUR EMAIL" value="<%= email %>">
+        </li>
+        <li>
+          <textarea name="message" placeholder="YOUR MESSAGE"><%= message %></textarea>
+        </li>
+        <button class="button button-secondary">SEND MESSAGE</button>
+      </ul>
+    </form>
   </div>
+
+  <img class="col-6 is-full-width is-rounded" src="/images/marlette.jpg">
 
   <div class="clear"></div>
 </article>

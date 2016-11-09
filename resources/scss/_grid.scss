@@ -36,6 +36,7 @@ $grid-margin: 0 10px 18px;
 #{$grid} {
   width: 960px;
   margin: 80px auto 30px;
+  box-sizing: border-box;
 
   &:after {
     content: "";

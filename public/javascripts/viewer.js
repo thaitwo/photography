@@ -18,7 +18,7 @@ function createImage(link) {
   var title = link.title;     // Finds title key in image link
   var image = $('<img>');     // Creates an <img> tag
   image.attr({
-    src: imageUrl,            // Inserts href into <img src=" ">
+    src: imageUrl,            // Inserts href value into <img src=" ">
   });
 
   image.hide();               // Hides image
@@ -33,30 +33,30 @@ function createImage(link) {
 function nextImage() {
   var nextIndex;
 
-  if (currentIndex === $links.length - 1) {
+  if (currentIndex === $links.length - 1) {   // If current image is last image
     currentIndex = 0;
-    nextIndex = 0;
+    nextIndex = 0;                            // Set image to first image
   }
   else {
     nextIndex = currentIndex + 1;
     currentIndex = nextIndex;
   }
 
-  createImage($links[nextIndex]);
+  createImage($links[nextIndex]);             // Display next image
 };
 
 
 // PREVIOUS IMAGE IN GALLERY
 // ----------------------------------------
 function prevImage() {
-  if (currentIndex === 0) {
+  if (currentIndex === 0) {           // If current image is first image
     currentIndex = $links.length;
   }
 
-  var prevIndex = currentIndex - 1;
+  var prevIndex = currentIndex - 1;   // Set image to the last image
   currentIndex = prevIndex;
 
-  createImage($links[prevIndex]);
+  createImage($links[prevIndex]);     // Display previous image
 };
 
 
@@ -67,13 +67,13 @@ function prevImage() {
 function startView() {
   // LOOPS THROUGH ARRAY OF LINKS AND DISPLAY IMAGE
   $links.each(function(index, item) {
-    $(item).click(function(event) {
+    $(item).click(function(event) {       // Each time an image link is clicked
       event.preventDefault();
       currentIndex = index;
       var link = event.currentTarget;
 
       $viewer.show();
-      createImage(link);
+      createImage(link);                  // Display image that is clicked on
     });
   })
 
@@ -144,7 +144,7 @@ function startView() {
   // NEXT BUTTON - Displays next image
   $next.click(function(event) {
     event.stopPropagation();
-    
+
     nextImage();
   });
 
@@ -153,7 +153,7 @@ function startView() {
   // PREVIOUS BUTTON - Displays previous image
   $prev.click(function(event) {
     event.stopPropagation();
-    
+
     prevImage();
   });
 
@@ -165,21 +165,21 @@ function startView() {
     switch(e.which) {
       case 37: // left
       prevImage();
+      e.preventDefault(); // prevent the default action (scroll / move caret)
       break;
 
       case 39: // right
       nextImage();
+      e.preventDefault(); // prevent the default action (scroll / move caret)
       break;
     }
-
-    e.preventDefault(); // prevent the default action (scroll / move caret)
   });
 }
 
 
 $(document).ready(function() {
   if($('.viewer')) {
-    startView(); 
+    startView();
   }
 });
 
