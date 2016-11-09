@@ -1,11 +1,7 @@
 # photography portfolio
 This project is my personal photography portfolio featuring multiple galleries, a gallery viewer, and a contact form. The website is also responsive and mobile-friendly.
 
-[![thaitwo](/images/thaitwo-homepage.png)](http://www.thaitwo.com)
-
-## Table of Contents
-  - [Prerequisites](#prerequisites)
-  - [Deployment](#deployment)
+[![thaitwo](http://www.thaitwo.com/images/thaitwo-homepage.png)](http://www.thaitwo.com)
 
 ## Prerequisites
 Install [Express](http://expressjs.com/)
