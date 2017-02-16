@@ -96,3 +96,23 @@ TO_EMAIL=<youremail>@<email>.com
 
 ## Deployment
 This website was deployed using Heroku.
+
+Deployment Method should be set to GitHub.
+
+Before deploying website, make sure to go to the "Settings" tab in Heroku and create the following Config Variables below and give each variable the corresponding value from the **".env"** file.
+
+```
+MAILGUN_API_KEY
+```
+
+```
+MAILGUN_DOMAIN
+```
+
+```
+FROM_EMAIL
+```
+
+```
+TO_EMAIL
+```
