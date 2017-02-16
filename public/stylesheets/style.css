@@ -487,6 +487,7 @@ h3 {
 @media handheld and (max-width: 800px), screen and (max-device-width: 800px), screen and (max-width: 800px) {
   .ctr {
     text-align: center; } }
+
 /* FOOTER
 ============================================================== */
 footer {
@@ -793,11 +794,13 @@ footer {
     opacity: 0; }
   to {
     opacity: 1; } }
+
 @keyframes fadeIn {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
+
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn; }
@@ -852,5 +855,3 @@ footer {
 
 .fa-circle {
   color: #B0BEC5; }
-
-/*# sourceMappingURL=style.css.map */
