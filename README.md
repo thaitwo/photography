@@ -83,7 +83,7 @@ Gulp Livereload is best used with Google Chrome. After installing Gulp Livereloa
 
 ## .env File
 
-Create a file and name it **".env"**
+Create a file and name it **".env"**. (This file contains information that will always be hidden to the public. It will only be visible locally.)
 
 Insert the following lines below into the file. Make sure to replace whatever is in the brackets (< >) with your own info.
 
@@ -92,6 +92,16 @@ MAILGUN_API_KEY=<mailgunapikey>
 MAILGUN_DOMAIN=mail.<sitename>.com
 FROM_EMAIL=<sitename>@<sitename>.com
 TO_EMAIL=<youremail>@<email>.com
+```
+
+## Running Website Locally
+
+Because this website is hosted through Heroku and there is an .env file, typing **"npm start"** in the command line will throw an error since the Mailgun API Key will be undefined because it is hidden in the .env file.
+
+Instead, type **"heroku local"** into the command line to get the website running locally. This allows the website to fetch the Mailgun API Key from Heroku.
+
+```
+heroku local
 ```
 
 ## Deployment
