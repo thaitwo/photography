@@ -1,7 +1,11 @@
 # Photography Portfolio
-This project is my personal photography portfolio featuring multiple galleries, a gallery viewer, and a contact form. The website is also responsive.
+A responsive photography portfolio website created to display my photography works. It features a full-width layout with multiple galleries, a gallery viewer, and a contact form that connects with Mailgun.
 
-[![thaitwo](http://www.thaitwo.com/images/thaitwo-homepage.png)](http://www.thaitwo.com)
+## View Project
+
+[View Project](http://www.thaitwo.com "Thai Two Photography")
+
+[![Thaitwo Photography](http://www.thaitwo.com/images/thaitwo-homepage.png)](http://www.thaitwo.com)
 
 ## Technologies Used
 * [Express](http://expressjs.com/)
