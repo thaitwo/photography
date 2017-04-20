@@ -3,20 +3,16 @@
 
 .gallery-nav {
   position: relative;
-  margin: 50px auto;
-  max-width: 1200px;
+  margin: auto;
+  max-width: 100%;
   list-style: none;
   text-align: center;
 
-  @media handheld and (max-width: $breakpoint-large),
-  screen and (max-device-width: $breakpoint-large),
-  screen and (max-width: $breakpoint-large) {
+  @media only screen and (max-width: $breakpoint-large) {
     margin: 50px 10px;
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     width: 100%;
     margin: 0;
   }
@@ -26,14 +22,12 @@
 .image-card {
   background: $black;
   position: relative;
-  border-radius: 12px;
   float: left;
   overflow: hidden;
   width: 33.3333%;
   height: 500px;
   text-align: center;
   cursor: pointer;
-  border: 10px solid $white;
   box-sizing: border-box;
 
   &:hover {
@@ -64,7 +58,7 @@
     transition: opacity 0.35s;
   }
 
-  figcaption, 
+  figcaption,
   figcaption > a {
     position: absolute;
     top: 0;
@@ -140,9 +134,7 @@
     transform: translate3d(0,20px,0);
     }
 
-  @media handheld and (max-width: $breakpoint-large),
-  screen and (max-device-width: $breakpoint-large),
-  screen and (max-width: $breakpoint-large) {
+  @media only screen and (max-width: $breakpoint-large) {
 
     img {
       width: auto;
@@ -153,9 +145,7 @@
     }
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     width: auto;
     height: 200px;
     display: block;

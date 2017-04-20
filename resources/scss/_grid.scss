@@ -25,9 +25,7 @@ $grid-margin: 0 10px 18px;
     border-radius: 2px;
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     margin: 20px auto;
 
   }
@@ -44,12 +42,12 @@ $grid-margin: 0 10px 18px;
     clear: both;
   }
 
-  @for $i from 1 through 12 {   
+  @for $i from 1 through 12 {
     $width: $grid-width;
 
     @if($i > 1) {
       $num: $i - 1;
-      $width: $grid-width * $i + ($num * 20); // Account for margins on additional columns 
+      $width: $grid-width * $i + ($num * 20); // Account for margins on additional columns
     }
 
     #{$grid-column}-#{$i} {
@@ -59,9 +57,7 @@ $grid-margin: 0 10px 18px;
     }
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     width: auto;
     display: block;
     margin: 0 auto;

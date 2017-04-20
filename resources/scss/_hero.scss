@@ -18,14 +18,14 @@
   }
 
   &.is-large {
-    height: 600px;
+    height: 680px;
     padding: 210px 0;
     text-align: center;
 
     h1 {
       font-family: $font-family;
       font-size: 64px;
-      font-weight: 800;
+      font-weight: 700;
       color: $white;
       text-align: center;
       text-shadow: 0 0 8px rgba(0,0,0,0.4);
@@ -53,9 +53,7 @@
     }
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     height: 260px;
     padding: 120px 0;
 
@@ -92,7 +90,7 @@
     left: 0;
     height: 100%;
     width: 50%;
-    background: $white;
+    background: -webkit-linear-gradient(0deg, #F44336 0%, #FFB74D 100%);
     transform: skew(0deg, 3deg);
   }
 
@@ -102,17 +100,15 @@
     right: 0;
     height: 100%;
     width: 50%;
-    background: $white;
+    background: -webkit-linear-gradient(0deg, #FFB74D 0%, #F44336 100%);
     transform: skew(0deg, -3deg);
   }
 
   &.is-large {
-    margin-top: 165px;
+    margin-top: 255px;
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     margin: 0px;
 
     &.is-large {

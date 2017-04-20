@@ -15,8 +15,8 @@
   h1 {
     float: left;
     font-family: $font-family;
-    font-size: $font-size-3x;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 700;
     margin: 0 0 0 60px;
     padding: 0px;
     line-height: 40px;
@@ -24,7 +24,6 @@
     em {
       float: right;
       font-family: $font-family;
-      font-size: $font-size-3x;
       font-weight: 300;
       margin: 0px 0px 0px 0px;
       padding: 0px;
@@ -62,9 +61,7 @@
     }
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     height: 60px;
     padding: 0;
     overflow: visible;
@@ -125,9 +122,7 @@
     }
   }
 
-  @media handheld and (max-width: $breakpoint-small),
-  screen and (max-device-width: $breakpoint-small),
-  screen and (max-width: $breakpoint-small) {
+  @media only screen and (max-width: $breakpoint-small) {
 
     h1 {
       font-size: 22px;

@@ -10,16 +10,20 @@
     width: 420px;
     padding: 15px;
     font-family: "Raleway", sans-serif;
-    font-size: $font-size-0x;
+    font-size: $font-size-1x;
     font-weight: 400;
     letter-spacing: 1px;
     border-radius: 2px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   textarea {
     background-color: $blue-grey-50;
     font-family: "Raleway", sans-serif;
-    font-size: $font-size-0x;
+    font-size: $font-size-1x;
     font-weight: 400;
     border: 0;
     color: $blue-grey-900;
@@ -28,6 +32,10 @@
     padding: 15px;
     letter-spacing: 1px;
     border-radius: 2px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   ul li {
