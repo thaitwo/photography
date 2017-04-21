@@ -109,4 +109,29 @@ router.get('/gallery/food', function(req, res, next) {
   res.render('gallery-food', { title: 'Food'});
 });
 
+/* GET GALLERY TRAVEL PAGE */
+router.get('/gallery/travel', function(req, res, next) {
+  res.render('gallery-travel', { title: 'Travel'});
+});
+
+/* GET GALLERY ENGAGEMENT PAGE */
+router.get('/gallery/engagement', function(req, res, next) {
+  res.render('gallery-engagement', { title: 'Engagement'});
+});
+
+/* GET GALLERY STREET PAGE */
+router.get('/gallery/street', function(req, res, next) {
+  res.render('gallery-street', { title: 'Street'});
+});
+
+/* GET GALLERY SPORTS PAGE */
+router.get('/gallery/sports', function(req, res, next) {
+  res.render('gallery-sports', { title: 'Sports'});
+});
+
+/* GET GALLERY B&W PAGE */
+router.get('/gallery/bw', function(req, res, next) {
+  res.render('gallery-bw', { title: 'Black & White'});
+});
+
 module.exports = router;

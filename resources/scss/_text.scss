@@ -9,6 +9,18 @@ h3 {
   color: $blue-grey-700;
 }
 
+.gallery-content {
+  height: 220px;
+  padding: 40px 100px;
+  text-align: center;
+
+  p {
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
 .grid p {
   font-family: $font-family;
   font-size: $font-size-2x;
@@ -35,9 +47,7 @@ h3 {
     margin: 60px 30px 20px;
     text-align: center;
 
-    @media handheld and (max-width: $breakpoint-medium),
-    screen and (max-device-width: $breakpoint-medium),
-    screen and (max-width: $breakpoint-medium) {
+    @media only screen and (max-width: $breakpoint-medium) {
       margin: 30px 30px 30px;
 
       p {
