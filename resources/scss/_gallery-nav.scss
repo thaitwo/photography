@@ -2,21 +2,15 @@
 ============================================================== */
 
 .gallery-nav {
-  position: relative;
-  margin: 50px auto;
-  max-width: 1200px;
   list-style: none;
+  position: relative;
   text-align: center;
 
-  @media handheld and (max-width: $breakpoint-large),
-  screen and (max-device-width: $breakpoint-large),
-  screen and (max-width: $breakpoint-large) {
-    margin: 50px 10px;
+  @media only screen and (max-width: $breakpoint-large) {
+    margin: 0;
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     width: 100%;
     margin: 0;
   }
@@ -26,21 +20,19 @@
 .image-card {
   background: $black;
   position: relative;
-  border-radius: 12px;
   float: left;
   overflow: hidden;
-  width: 33.3333%;
-  height: 500px;
+  width: 25%;
+  height: 250px;
   text-align: center;
   cursor: pointer;
-  border: 10px solid $white;
   box-sizing: border-box;
 
   &:hover {
     background: $black;
 
     img {
-      opacity: 0.50;
+      opacity: .5;
     }
 
     h2,
@@ -59,12 +51,12 @@
   img {
     position: relative;
     display: block;
-    min-height: 100%;
-    opacity: 0.6;
+    height: 100%;
+    opacity: 0.65;
     transition: opacity 0.35s;
   }
 
-  figcaption, 
+  figcaption,
   figcaption > a {
     position: absolute;
     top: 0;
@@ -82,10 +74,10 @@
     &::before,
     &::after {
       position: absolute;
-      top: 30px;
-      right: 30px;
-      bottom: 30px;
-      left: 30px;
+      top: 25px;
+      right: 25px;
+      bottom: 25px;
+      left: 25px;
       content: '';
       opacity: 0;
       transition: opacity 0.35s, transform 0.35s;
@@ -120,12 +112,12 @@
 
     h2 {
     font-family: $font-family;
-    font-size: $font-size-4x;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    padding-top: 210px;
+    font-size: 28px;
+    font-weight: 700;
+    padding-top: 105px;
+    text-transform: uppercase;
     transition: transform 0.35s;
-    transform: translate3d(0,-5px,0);
+    transform: translate3d(0,0px,0);
     }
 
     p {
@@ -140,9 +132,7 @@
     transform: translate3d(0,20px,0);
     }
 
-  @media handheld and (max-width: $breakpoint-large),
-  screen and (max-device-width: $breakpoint-large),
-  screen and (max-width: $breakpoint-large) {
+  @media only screen and (max-width: $breakpoint-large) {
 
     img {
       width: auto;
@@ -153,9 +143,7 @@
     }
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     width: auto;
     height: 200px;
     display: block;

@@ -13,23 +13,71 @@ $grid-margin: 0 10px 18px;
   clear: both;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .grid-masonry {
-  margin: 80px auto 18px;
+  width: 100% !important;
+  border-bottom: 110px solid white;
+
+  &.gallery {
+    width: 100%;
+  }
+
+  .grid-sizer,
+  .grid-masonry-item {
+    width: 25%;
+  }
 
   .grid-masonry-item {
-    width: 300px;
-    margin: 0 10px 18px;
+    float: left;
+    background: #000000;
+
+    img {
+      background: #000000;
+      opacity: .9;
+      transition: .4s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   img {
-    border-radius: 2px;
+    display: block;
+    width: 100%;
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
-    margin: 20px auto;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 
+  @media only screen and (max-width: $breakpoint-large) {
+
+    .grid-sizer,
+    .grid-masonry-item {
+      width: 33.333%;
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-medium) {
+
+    .grid-sizer,
+    .grid-masonry-item {
+      width: 50%;
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-small) {
+
+    .grid-sizer,
+    .grid-masonry-item {
+      width: 100%;
+    }
   }
 }
 
@@ -44,12 +92,12 @@ $grid-margin: 0 10px 18px;
     clear: both;
   }
 
-  @for $i from 1 through 12 {   
+  @for $i from 1 through 12 {
     $width: $grid-width;
 
     @if($i > 1) {
       $num: $i - 1;
-      $width: $grid-width * $i + ($num * 20); // Account for margins on additional columns 
+      $width: $grid-width * $i + ($num * 20); // Account for margins on additional columns
     }
 
     #{$grid-column}-#{$i} {
@@ -59,9 +107,7 @@ $grid-margin: 0 10px 18px;
     }
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     width: auto;
     display: block;
     margin: 0 auto;

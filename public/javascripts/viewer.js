@@ -9,8 +9,6 @@ var $caption = $('.viewer-caption');
 var $gridMasonry = $('.grid-masonry');
 
 
-
-
 // CREATES IMAGE AND CAPTION
 // -------------------------------------------------
 function createImage(link) {
@@ -24,7 +22,7 @@ function createImage(link) {
   image.hide();               // Hides image
   $imageviewer.html(image);   // Displays image in the viewer container
   $caption.text(title);       // Displays caption in the caption container
-  image.fadeIn(500);
+  image.fadeIn(300);
 };
 
 
@@ -33,30 +31,35 @@ function createImage(link) {
 function nextImage() {
   var nextIndex;
 
-  if (currentIndex === $links.length - 1) {   // If current image is last image
+  // If current image is the last image, set next image to the first image
+  if (currentIndex === $links.length - 1) {
     currentIndex = 0;
-    nextIndex = 0;                            // Set image to first image
+    nextIndex = 0;
   }
   else {
     nextIndex = currentIndex + 1;
     currentIndex = nextIndex;
   }
 
-  createImage($links[nextIndex]);             // Display next image
+  // Display the next image
+  createImage($links[nextIndex]);
 };
 
 
 // PREVIOUS IMAGE IN GALLERY
 // ----------------------------------------
 function prevImage() {
-  if (currentIndex === 0) {           // If current image is first image
+
+  // If current image is the first image, set the previous image to the last image
+  if (currentIndex === 0) {
     currentIndex = $links.length;
   }
 
-  var prevIndex = currentIndex - 1;   // Set image to the last image
+  var prevIndex = currentIndex - 1;
   currentIndex = prevIndex;
 
-  createImage($links[prevIndex]);     // Display previous image
+  // Display the previous image
+  createImage($links[prevIndex]);
 };
 
 
@@ -65,15 +68,18 @@ function prevImage() {
 // ===============================================================
 
 function startView() {
-  // LOOPS THROUGH ARRAY OF LINKS AND DISPLAY IMAGE
+  // LOOP THROUGH ARRAY OF LINKS AND DISPLAY IMAGE
   $links.each(function(index, item) {
-    $(item).click(function(event) {       // Each time an image link is clicked
+
+    // Each time an image link is clicked, use that image link to
+    // to create an image and display it in the viewer
+    $(item).click(function(event) {
       event.preventDefault();
       currentIndex = index;
       var link = event.currentTarget;
 
       $viewer.show();
-      createImage(link);                  // Display image that is clicked on
+      createImage(link);
     });
   })
 
@@ -87,12 +93,12 @@ function startView() {
     $viewer.fadeOut(200);
   });
 
-  // Closes gallery viewer container on click anywhere within the container
+  // Close gallery viewer container on click anywhere within the container
   $viewer.click(function() {
     $viewer.fadeOut(200);
   });
 
-  // Prevents image container from closing on click by preventing bubbling
+  // Prevent image container from closing on click by preventing bubbling
   $imageviewer.click(function(event) {
     event.stopPropagation();
   });
@@ -181,13 +187,4 @@ $(document).ready(function() {
   if($('.viewer')) {
     startView();
   }
-});
-
-
-$(document).ready(function() {
-  $gridMasonry.masonry({
-    itemSelector: '.grid-masonry-item',
-    columnWdith: 60,
-    fitWidth: true
-  });
 });

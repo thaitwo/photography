@@ -4,9 +4,7 @@
 .l-center {
   text-align: center;
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     width: auto;
     display: block;
 
@@ -21,9 +19,7 @@
 .is-rounded {
   border-radius: 2px;
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     border-radius: 0;
   }
 }

@@ -4,47 +4,43 @@
 
 
 .bg-featured {
-  background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url("/images/half-dome-night.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.35), rgba(0,0,0, 0.35)), url("/images/landscape/landscape-14.jpg") no-repeat center center fixed;
 }
 
 .bg-landscape {
-  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape/landscape-1.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url("/images/landscape/landscape-12.jpg") no-repeat center center fixed;
 }
 
 .bg-about {
-  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape/landscape-8.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url("/images/landscape/landscape-8.jpg") no-repeat center bottom fixed;
 }
 
 .bg-contact {
-  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape-fall.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url("/images/landscape/landscape-7.jpg") no-repeat center bottom fixed;
 }
 
 .bg-gallery {
-  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/landscape/landscape-11.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url("/images/landscape/landscape-18.jpg") no-repeat center center fixed;
 }
 
 .bg-portrait {
-  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/portrait/portrait-15.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url("/images/portrait/portrait-15.jpg") no-repeat center center fixed;
 }
 
 .bg-food {
-  background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/images/food/food-5.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url("/images/food/food-7.jpg") no-repeat center center fixed;
 }
 
 .bg-large {
   background-size: cover;
   max-height: 100%;
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     background-position: top center;
     background-size: 165%;
   }
 
-  @media handheld and (max-width: $breakpoint-small),
-  screen and (max-device-width: $breakpoint-small),
-  screen and (max-width: $breakpoint-small) {
+  @media only screen and (max-width: $breakpoint-small) {
     background-position: top center;
     background-size: 250%;
   }
@@ -54,16 +50,12 @@
   background-size: cover;
   max-height: 100%;
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
+  @media only screen and (max-width: $breakpoint-medium) {
     background-position: top center;
     background-size: 100%;
   }
 
-  @media handheld and (max-width: $breakpoint-small),
-  screen and (max-device-width: $breakpoint-small),
-  screen and (max-width: $breakpoint-small) {
+  @media only screen and (max-width: $breakpoint-small) {
     background-position: top center;
     background-size: 130%;
   }
