@@ -1,39 +1,86 @@
 /* VIEWER
 ============================================================== */
+html,
+body,
+.viewer {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
 
 .viewer {
-  background: $black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
-  z-index: 100;
   display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  margin: auto;
   text-align: center;
 
   &.is-visible {
     display: block;
   }
 
+  .viewer-bg {
+    background: black;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+  .viewer-image-container {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    margin: 50px auto;
+    text-align: center;
+
+    img {
+      background: white;
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      background: white;
+      padding: 50px 25px 24px;
+      box-shadow: 0 0px 8px rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.24);
+    }
+  }
+
   .viewer-close-button {
+    color: $grey-600;
+    font-size: 42px;
+    padding: 4px 6px;
     position: absolute;
-    top: 10px;
-    right: 20px;
-    color: $white;
+    right: 0;
+    top: 0;
+    transition: all .2s;
+    z-index: 4;
 
     &:hover {
-      color: $blue-grey-100;
-      transition: .3s;
+      color: $white;
       cursor: pointer;
     }
   }
 
-  .viewer-arrow-forward, .viewer-arrow-back {
+  .viewer-arrow-forward,
+  .viewer-arrow-back {
     border: none;
-    color: $white;
+    color: $grey-600;
+    font-size: 80px;
     position: absolute;
-    z-index: 10;
+    transition: all .2s;
+    z-index: 5;
   }
 
   .viewer-arrow-forward {
@@ -41,7 +88,7 @@
     top: 45%;
 
     &:hover {
-      color: $blue-grey-100;
+      color: $grey-100;
       cursor: pointer;
     }
   }
@@ -51,75 +98,44 @@
     top: 45%;
 
     &:hover {
-      color: $blue-grey-100;
+      color: $grey-100;
       cursor: pointer;
     }
   }
 
   .viewer-caption {
+    color: $grey-900;
     font-family: $font-family;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.8px;
-    color: $white;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    margin-top: 60px;
-  }
-
-  .viewer-image-container {
-    height: 534px;
-    width: 800px;
-    margin: 100px auto 0;
-    text-align: center;
+    line-height: 20px;
+    padding: 67px 30px 0;
     position: relative;
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      transform: translate(0%, 0%);
-    }
+    text-align: center;
+    width: 100%;
+    z-index: 3;
   }
 
-  @media handheld and (max-width: $breakpoint-medium),
-  screen and (max-device-width: $breakpoint-medium),
-  screen and (max-width: $breakpoint-medium) {
-    
-    .viewer-arrow-forward, .viewer-arrow-back {
+  @media only screen and (max-width: $breakpoint-medium) {
+
+    .viewer-image-container {
+
+      img {
+        background: none;
+        padding: 0;
+        padding-top: 50px;
+      }
+    }
+
+    .viewer-arrow-forward,
+    .viewer-arrow-back {
       display: none;
     }
 
     .viewer-caption {
-      margin-top: 50px;
-    }
-
-    .viewer-image-container {
-      width: 100%;
-      margin-top: 85px;
-    }
-
-    .viewer-directions {
-    font-family: $font-family;
-    font-size: $font-size-3x;
-    font-weight: 800;
-    color: $grey-900;
-    letter-spacing: 1px;
-    display: block;
-    margin: 20px auto;
-    }
-  }
-
-  @media handheld and (max-height: $breakpoint-medium),
-  screen and (max-device-height: $breakpoint-medium),
-  screen and (max-height: $breakpoint-medium) {
-
-    .viewer-image-container {
-      height: 70%;
-      width: auto;
-      display: inline-block;
-      margin-left: auto;
-      margin-right: auto;
+      color: $white;
+      padding-top: 50px;
     }
   }
 }

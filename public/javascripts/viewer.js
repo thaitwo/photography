@@ -1,5 +1,6 @@
 var $viewer = $('.viewer');
 var $imageviewer = $('.viewer-image-container');
+var $image = $('<img>');
 var $links = $('.gallery a');
 var $closeviewer = $('.viewer-close-button');
 var currentIndex = 0;
@@ -24,7 +25,7 @@ function createImage(link) {
   image.hide();               // Hides image
   $imageviewer.html(image);   // Displays image in the viewer container
   $caption.text(title);       // Displays caption in the caption container
-  image.fadeIn(500);
+  image.fadeIn(300);
 };
 
 
@@ -184,10 +185,10 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
-  $gridMasonry.masonry({
-    itemSelector: '.grid-masonry-item',
-    columnWdith: 60,
-    fitWidth: true
-  });
-});
+// $(document).ready(function() {
+//   $gridMasonry.masonry({
+//     itemSelector: '.grid-masonry-item',
+//     columnWdith: 60,
+//     fitWidth: true
+//   });
+// });
