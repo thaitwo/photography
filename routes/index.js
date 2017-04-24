@@ -130,8 +130,8 @@ router.get('/gallery/sports', function(req, res, next) {
 });
 
 /* GET GALLERY B&W PAGE */
-router.get('/gallery/bw', function(req, res, next) {
-  res.render('gallery-bw', { title: 'Black & White'});
+router.get('/gallery/things', function(req, res, next) {
+  res.render('gallery-things', { title: 'Things'});
 });
 
 module.exports = router;
