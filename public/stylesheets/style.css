@@ -164,6 +164,21 @@ table {
 .bg-food {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/food/food-7.jpg") no-repeat center center fixed; }
 
+.bg-engagement {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/engagement/trongchristie-9.jpg") no-repeat bottom center fixed; }
+
+.bg-street {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/street/street-4.jpg") no-repeat center center fixed; }
+
+.bg-sports {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/sports/sports-1.jpg") no-repeat bottom center fixed; }
+
+.bg-things {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/things/things-1.jpg") no-repeat bottom center fixed; }
+
+.bg-travel {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/travel/ny-1.jpg") no-repeat bottom center fixed; }
+
 .bg-large {
   background-size: cover;
   max-height: 100%; }
@@ -459,7 +474,7 @@ h3 {
     color: #ffffff;
     margin: 26px 0 0; }
     .button.button-secondary:hover {
-      background-color: #FF7043;
+      background-color: #F4511E;
       cursor: pointer;
       transition: all .3s; }
   @media only screen and (max-width: 800px) {
@@ -481,7 +496,7 @@ h3 {
 /* FOOTER
 ============================================================== */
 footer {
-  padding: 50px 0px 20px 0px; }
+  padding: 50px 0 20px 0; }
   footer small {
     font-family: "Montserrat", sans-serif, Arial Helvetica, sans-serif;
     font-size: 12px;
@@ -531,10 +546,10 @@ footer {
   box-sizing: border-box; }
 
 .grid-masonry {
-  width: 100% !important;
-  border-bottom: 110px solid white; }
+  width: 100% !important; }
   .grid-masonry.gallery {
-    width: 100%; }
+    width: 100%;
+    padding-bottom: 110px; }
   .grid-masonry .grid-sizer,
   .grid-masonry .grid-masonry-item {
     width: 25%; }
@@ -781,7 +796,7 @@ body,
       max-height: 100%;
       margin: auto;
       background: white;
-      padding: 50px 25px 24px;
+      padding: 60px 25px 24px;
       box-shadow: 0 0px 8px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.24); }
   .viewer .viewer-close-button {
     color: #757575;
@@ -818,11 +833,11 @@ body,
   .viewer .viewer-caption {
     color: #212121;
     font-family: "Montserrat", sans-serif, Arial Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     line-height: 20px;
-    padding: 67px 30px 0;
+    padding: 73px 30px 0;
     position: relative;
     text-align: center;
     width: 100%;
@@ -837,6 +852,7 @@ body,
       display: none; }
     .viewer .viewer-caption {
       color: #ffffff;
+      font-size: 14px;
       padding-top: 50px; } }
 
 .form {
@@ -990,4 +1006,4 @@ body,
   color: rgba(255, 255, 255, 0.3); }
 
 .fa-circle {
-  color: #B0BEC5; }
+  color: #CFD8DC; }
