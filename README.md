@@ -5,7 +5,7 @@ A responsive photography portfolio website created to display my photography wor
 
 [View Project](http://www.thaitwo.com "Thai Two Photography")
 
-[![Thaitwo Photography](http://www.thaitwo.com/images/thaitwo-homepage.png)](http://www.thaitwo.com)
+[![Thaitwo Photography](https://raw.githubusercontent.com/thaitwo/photography/master/public/images/screenshot.png)](http://www.thaitwo.com)
 
 ## Technologies Used
 * [Express](http://expressjs.com/)
