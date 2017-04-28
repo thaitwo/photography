@@ -79,6 +79,16 @@
       }
     }
   }
+
+  @media only screen and (max-width: $breakpoint-small) {
+
+    &.is-large {
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+  }
 }
 
 .hero-bottom-arrow {

@@ -110,6 +110,9 @@ table {
         .hero.is-large h2 {
           font-size: 36px;
           margin-top: 0px; } }
+  @media only screen and (max-width: 480px) {
+    .hero.is-large h1 {
+      font-size: 40px; } }
 
 .hero-bottom-arrow {
   height: 70px;
@@ -495,7 +498,7 @@ h3 {
         margin: 20px auto; } }
   @media only screen and (max-width: 480px) {
     .button.button-primary {
-      display: none; } }
+      padding: 12px 15px; } }
 
 @media only screen and (max-width: 800px) {
   .ctr {
@@ -649,13 +652,6 @@ footer {
     margin: 0 10px 18px;
     float: left; }
   @media only screen and (max-width: 800px) {
-    .grid img.col-5 {
-      float: right;
-      padding: 40px 40px 15px 40px;
-      width: 380px; }
-    .grid img.col-6 {
-      display: none; } }
-  @media only screen and (max-width: 800px) {
     .grid {
       width: auto;
       display: block;
@@ -679,7 +675,13 @@ footer {
         padding: 40px 40px 0; }
       .grid .about-content-wrapper {
         padding-bottom: 50px;
-        padding-top: 0; } }
+        padding-top: 0; }
+      .grid img.col-5 {
+        float: right;
+        padding: 40px 40px 15px 40px;
+        width: 380px; }
+      .grid img.col-6 {
+        display: none; } }
   @media only screen and (max-width: 480px) {
     .grid {
       width: auto;
@@ -716,7 +718,24 @@ footer {
         .grid .col-12.is-full-width {
           margin: auto;
           width: 100%;
-          padding: 0; } }
+          padding: 0; }
+        .grid .col-1 .about-content-wrapper,
+        .grid .col-2 .about-content-wrapper,
+        .grid .col-3 .about-content-wrapper,
+        .grid .col-4 .about-content-wrapper,
+        .grid .col-5 .about-content-wrapper,
+        .grid .col-6 .about-content-wrapper,
+        .grid .col-7 .about-content-wrapper,
+        .grid .col-8 .about-content-wrapper,
+        .grid .col-9 .about-content-wrapper,
+        .grid .col-10 .about-content-wrapper,
+        .grid .col-11 .about-content-wrapper,
+        .grid .col-12 .about-content-wrapper {
+          padding-bottom: 50px;
+          padding-top: 40px; }
+      .grid img.col-5 {
+        float: none;
+        padding: 40px 40px 15px 40px; } }
 
 /* VIEWER
 ============================================================== */
@@ -930,6 +949,9 @@ body,
   @media only screen and (max-width: 480px) {
     .content-wrapper {
       padding: 20px 0 50px; } }
+  @media only screen and (max-width: 480px) {
+    .content-wrapper {
+      padding: 0 0 50px; } }
 
 /* MATERIAL DESIGN
 ============================================================== */
