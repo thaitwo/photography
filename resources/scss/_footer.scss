@@ -4,18 +4,7 @@
 footer {
   padding: 50px 0 20px 0;
 
-  small {
-    font-family: $font-family;
-    font-size: 12px;
-    font-weight: 300;
-    color: $blue-grey-200;
-    letter-spacing: 0.1em;
-    float: left;
-    line-height: 50px;
-    margin: 0px 60px;
-  }
-
-  ul {
+  .social-media-content-wrapper {
     float: right;
     margin: 0px 60px 0px 0px;
 
@@ -28,24 +17,35 @@ footer {
     }
   }
 
+  small {
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 300;
+    color: $blue-grey-200;
+    letter-spacing: 0.1em;
+    float: left;
+    line-height: 50px;
+    margin: 0px 60px;
+  }
+
   @media only screen and (max-width: $breakpoint-medium) {
     padding: 20px 0px;
     text-align: center;
+
+    .social-media-content-wrapper {
+      float: none;
+      display: block;
+      margin: 20px auto 0;
+
+      li {
+      float: none;
+      }
+    }
 
     small {
       float: none;
       margin: 10px auto;
       display: block;
-    }
-
-    ul {
-      float: none;
-      display: block;
-      margin: auto;
-
-      li {
-      float: none;
-      }
     }
   }
 

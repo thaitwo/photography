@@ -14,6 +14,7 @@ function activateDropdown() {
     }
 
     $heroTitle.toggle();
+    $buttonPrimary.toggle();
 
     $dropdownMenu.toggleClass('is-visible animated fadeIn');
   })

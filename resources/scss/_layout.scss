@@ -15,7 +15,6 @@
   }
 }
 
-/* Styles */
 .is-rounded {
   border-radius: 2px;
 
@@ -30,12 +29,5 @@
   @media only screen and (max-width: $breakpoint-small) {
 
     padding: 20px 0 50px;
-  }
-}
-
-.social-media-content-wrapper {
-
-  @media only screen and (max-width: $breakpoint-medium) {
-    margin-bottom: 50px;
   }
 }

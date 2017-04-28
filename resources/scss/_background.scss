@@ -55,6 +55,11 @@
   background-size: cover;
   max-height: 100%;
 
+  @media only screen and (max-width: $breakpoint-large) {
+    background-position: top center;
+    background-size: 100%;
+  }
+
   @media only screen and (max-width: $breakpoint-medium) {
     background-position: top center;
     background-size: 100%;
@@ -69,6 +74,11 @@
 .bg {
   background-size: cover;
   max-height: 100%;
+
+  @media only screen and (max-width: $breakpoint-large) {
+    background-position: top center;
+    background-size: 100%;
+  }
 
   @media only screen and (max-width: $breakpoint-medium) {
     background-position: top center;
