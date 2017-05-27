@@ -16,6 +16,7 @@ router.get('/about', function(req, res, next) {
 
 /* GET CONTACT PAGE */
 router.get('/contact', function(req, res, next) {
+  console.log(req);
   res.render('contact', {
     title: 'Contact',
     errors: null,
@@ -28,15 +29,17 @@ router.get('/contact', function(req, res, next) {
 
 /* POST CONTACT FORM */
 router.post('/contact', function(req, res, next) {
+  console.log('REQ', req);
+  console.log('RES', res);
   // GET VALUES FROM CONTACT FORM FIELDS
   var name = req.body.name;
   var email = req.body.email;
   var message = req.body.message;
 
   // VALIDATE USER FORM CONTENT WITH MAILGUN-JS
-  req.checkBody('name', 'PLEASE ENTER YOUR NAME').notEmpty();
-  req.checkBody('email', 'PLEASE ENTER AN EMAIL').notEmpty().isEmail().withMessage('PLEASE ENTER A VALID EMAIL');
-  req.checkBody('message', 'PLEASE ENTER YOUR MESSAGE').notEmpty();
+  req.checkBody('name', 'Name').notEmpty();
+  req.checkBody('email', 'Email').notEmpty().isEmail().withMessage('Valid email');
+  req.checkBody('message', 'Message').notEmpty();
 
   // ESCAPE USER FORM CONTENT (TAKES OUT HTML) WITH MAILGUN-JS
   req.sanitizeBody('name').toString();

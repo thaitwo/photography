@@ -10,6 +10,8 @@
     <!-- If there are errors, list error msg for each error. -->
     <% if (errors) { %>
       <ul class="form-alert">
+        <h4>PLEASE ENTER</h4>
+        <span>:</span>
         <% errors.forEach(function(obj){ %>
           <li><%= obj.msg %></li>
         <% }); %>
@@ -21,13 +23,13 @@
     <form class="form ctr" name="contactForm" method="post" action="/contact">
       <ul>
         <li>
-          <input type="text" name="name" placeholder="YOUR NAME" value="<%= name %>">
+          <input type="text" name="name" placeholder="Name" value="<%= name %>">
         </li>
         <li>
-          <input type="email" name="email" placeholder="YOUR EMAIL" value="<%= email %>">
+          <input type="email" name="email" placeholder="Email" value="<%= email %>">
         </li>
         <li>
-          <textarea name="message" placeholder="YOUR MESSAGE"><%= message %></textarea>
+          <textarea name="message" placeholder="Message"><%= message %></textarea>
         </li>
         <button class="button button-secondary">SEND MESSAGE</button>
       </ul>
