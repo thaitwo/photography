@@ -1,7 +1,7 @@
 /* TOP NAVIGATION
 ============================================================== */
 
-.top-nav {
+.topnav {
   list-style-type: none;
   position: absolute;
   top: 0px;
@@ -12,7 +12,7 @@
   padding: 30px 0px 30px 0px;
   z-index: 100;
 
-  h1 {
+  h1.topnav-logo {
     float: left;
     font-family: $font-family;
     font-size: 20px;
@@ -21,13 +21,24 @@
     padding: 0px;
     line-height: 40px;
 
-    em {
-      float: right;
-      font-family: $font-family;
-      font-weight: 300;
-      margin: 0px 0px 0px 0px;
-      padding: 0px;
+    a {
+      color: $white;
+      display: block;
       line-height: 40px;
+      text-decoration: none;
+      transition: all .1s;
+
+      em {
+        float: right;
+        font-family: $font-family;
+        font-weight: 200;
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
     }
   }
 
@@ -35,7 +46,7 @@
     display: none;
   }
 
-  ul {
+  ul.topnav-menu {
     float: right;
     margin: 0px 60px 0px 0px;
 
@@ -45,19 +56,22 @@
       font-size: $font-size-1x;
       font-weight: 400;
       margin: 0;
-      padding: 0 0 0 60px;
       letter-spacing: 0.1em;
-      line-height: 40px;
       text-transform: uppercase;
-    }
-  }
 
-  a {
-    color: $white;
-    text-decoration: none;
+      a {
+        border-radius: 3px;
+        color: $white;
+        display: block;
+        line-height: 40px;
+        padding: 0 24px;
+        text-decoration: none;
+        transition: all .3s;
 
-    &:hover {
-      color: $blue-grey-100;
+        &:hover {
+          background-color: rgba($white,.2);
+        }
+      }
     }
   }
 
@@ -86,7 +100,7 @@
       outline: none;
     }
 
-    .dropdown {
+    .topnav-menu {
       float: none;
       display: none;
       position: absolute;

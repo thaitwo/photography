@@ -60,15 +60,14 @@ table {
   height: 385px;
   margin-bottom: 2px;
   padding: 200px 0 60px 0; }
-  .hero h1 {
+  .hero h1.hero-title {
     color: #ffffff;
     font-family: "Montserrat", sans-serif, Arial Helvetica, sans-serif;
     font-size: 64px;
     font-weight: 800;
     margin-top: 10px;
     text-align: center;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
-    text-transform: uppercase; }
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.12); }
   .hero.is-large {
     height: 640px;
     margin-bottom: 2px;
@@ -147,7 +146,7 @@ table {
 /* BACKGROUND IMAGES
 ============================================================== */
 .bg-featured {
-  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/images/landscape/landscape-14.jpg") no-repeat center center fixed; }
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/images/landscape/landscape-10.jpg") no-repeat center center fixed; }
 
 .bg-landscape {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/landscape/landscape-12.jpg") no-repeat center center fixed; }
@@ -216,7 +215,7 @@ table {
 
 /* TOP NAVIGATION
 ============================================================== */
-.top-nav {
+.topnav {
   list-style-type: none;
   position: absolute;
   top: 0px;
@@ -226,7 +225,7 @@ table {
   overflow: hidden;
   padding: 30px 0px 30px 0px;
   z-index: 100; }
-  .top-nav h1 {
+  .topnav h1.topnav-logo {
     float: left;
     font-family: "Montserrat", sans-serif, Arial Helvetica, sans-serif;
     font-size: 20px;
@@ -234,41 +233,51 @@ table {
     margin: 0 0 0 60px;
     padding: 0px;
     line-height: 40px; }
-    .top-nav h1 em {
-      float: right;
-      font-family: "Montserrat", sans-serif, Arial Helvetica, sans-serif;
-      font-weight: 300;
-      margin: 0px 0px 0px 0px;
-      padding: 0px;
-      line-height: 40px; }
-  .top-nav .dropdown-button {
+    .topnav h1.topnav-logo a {
+      color: #ffffff;
+      display: block;
+      line-height: 40px;
+      text-decoration: none;
+      transition: all .1s; }
+      .topnav h1.topnav-logo a em {
+        float: right;
+        font-family: "Montserrat", sans-serif, Arial Helvetica, sans-serif;
+        font-weight: 200;
+        margin: 0px 0px 0px 0px;
+        padding: 0px; }
+      .topnav h1.topnav-logo a:hover {
+        opacity: .8; }
+  .topnav .dropdown-button {
     display: none; }
-  .top-nav ul {
+  .topnav ul.topnav-menu {
     float: right;
     margin: 0px 60px 0px 0px; }
-    .top-nav ul li {
+    .topnav ul.topnav-menu li {
       float: left;
       font-family: "Montserrat", sans-serif, Arial Helvetica, sans-serif;
       font-size: 14px;
       font-weight: 400;
       margin: 0;
-      padding: 0 0 0 60px;
       letter-spacing: 0.1em;
-      line-height: 40px;
       text-transform: uppercase; }
-  .top-nav a {
-    color: #ffffff;
-    text-decoration: none; }
-    .top-nav a:hover {
-      color: #CFD8DC; }
+      .topnav ul.topnav-menu li a {
+        border-radius: 3px;
+        color: #ffffff;
+        display: block;
+        line-height: 40px;
+        padding: 0 24px;
+        text-decoration: none;
+        transition: all .3s; }
+        .topnav ul.topnav-menu li a:hover {
+          background-color: rgba(255, 255, 255, 0.2); }
   @media only screen and (max-width: 800px) {
-    .top-nav {
+    .topnav {
       height: 60px;
       padding: 0;
       overflow: visible; }
-      .top-nav h1 {
+      .topnav h1 {
         margin: 10px 0 0 20px; }
-      .top-nav .dropdown-button {
+      .topnav .dropdown-button {
         background: none;
         border: none;
         margin-top: 10px;
@@ -278,9 +287,9 @@ table {
         line-height: 40px;
         display: block;
         cursor: pointer; }
-      .top-nav .dropdown-button:focus {
+      .topnav .dropdown-button:focus {
         outline: none; }
-      .top-nav .dropdown {
+      .topnav .topnav-menu {
         float: none;
         display: none;
         position: absolute;
@@ -288,27 +297,27 @@ table {
         top: 60px;
         left: 20px;
         right: 20px; }
-        .top-nav .dropdown.is-visible {
+        .topnav .topnav-menu.is-visible {
           display: block; }
-        .top-nav .dropdown li {
+        .topnav .topnav-menu li {
           float: none;
           margin: 0;
           padding: 0;
           line-height: 0;
           display: block;
           margin-bottom: 3px; }
-          .top-nav .dropdown li a {
+          .topnav .topnav-menu li a {
             background: rgba(0, 0, 0, 0.6);
             color: #ffffff;
             display: block;
             padding: 30px 30px;
             border-radius: 3px; }
-            .top-nav .dropdown li a:hover {
+            .topnav .topnav-menu li a:hover {
               color: #B0BEC5; } }
   @media only screen and (max-width: 480px) {
-    .top-nav h1 {
+    .topnav h1 {
       font-size: 22px; }
-      .top-nav h1 em {
+      .topnav h1 em {
         font-size: 22px; } }
 
 /* GALLERY
@@ -362,7 +371,6 @@ table {
   .image-card figcaption {
     color: #fff;
     box-sizing: border-box;
-    text-transform: uppercase;
     backface-visibility: hidden; }
     .image-card figcaption::before, .image-card figcaption::after {
       position: absolute;
@@ -396,7 +404,6 @@ table {
     font-size: 28px;
     font-weight: 700;
     padding-top: 28%;
-    text-transform: uppercase;
     transition: transform 0.35s;
     transform: translate3d(0, 0px, 0); }
   .image-card p {
@@ -407,6 +414,7 @@ table {
     font-size: 14px;
     padding: 10px;
     opacity: 0;
+    text-transform: uppercase;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(0, 20px, 0); }
 
@@ -461,19 +469,20 @@ h3 {
 .button {
   border: 0px;
   border-radius: 2px;
+  box-sizing: border-box;
   display: inline-block;
   font-family: "Montserrat", sans-serif, Arial Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 44px;
   margin: auto;
-  padding: 16px 26px;
+  padding: 0 24px;
   text-decoration: none; }
   .button.button-primary {
     border: 2px solid #ffffff;
     border-radius: 0;
     color: #ffffff;
-    letter-spacing: 1px;
     text-align: center; }
     .button.button-primary:hover {
       background: #ffffff;
@@ -519,10 +528,10 @@ footer {
       padding: 0px 0px 0px 8px; }
   footer small {
     font-family: "Montserrat", sans-serif, Arial Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 200;
     color: #B0BEC5;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     float: left;
     line-height: 50px;
     margin: 0px 60px; }
