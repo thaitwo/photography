@@ -45,19 +45,8 @@
     margin: auto;
     text-align: center;
 
-    &.button-primary {
-      padding: 18px 36px;
-    }
-
     &.button-secondary {
       margin: 20px auto;
-    }
-  }
-
-  @media only screen and (max-width: $breakpoint-small) {
-
-    &.button-primary {
-      padding: 12px 15px;
     }
   }
 }

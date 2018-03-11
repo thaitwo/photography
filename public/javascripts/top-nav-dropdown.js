@@ -1,6 +1,7 @@
-var $dropdownMenu = $('.dropdown');
+var $dropdownMenu = $('.topnav-menu');
 var $dropdownButton = $('#dropdown-button');
 var $heroTitle = $('.hero-title');
+var $heroSubtitle = $('.hero-subtitle');
 var $buttonPrimary = $('.button-primary');
 
 function activateDropdown() {
@@ -13,6 +14,7 @@ function activateDropdown() {
       $dropdownButton.text('menu')
     }
 
+    $heroSubtitle.toggle();
     $heroTitle.toggle();
     $buttonPrimary.toggle();
 
